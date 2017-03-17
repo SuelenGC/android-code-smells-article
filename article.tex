@@ -1,138 +1,149 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Journal Article
-% LaTeX Template
-% Version 1.4 (15/5/16)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
-% Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[sigconf]{acmart}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[twoside,twocolumn]{article}
-
+\usepackage{booktabs} % For formal tables
 \usepackage{blindtext} % Package to generate dummy text throughout this template 
-
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\linespread{1.05} % Line spacing - Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
-
-\usepackage[english]{babel} % Language hyphenation and typographical rules
-
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 
-\usepackage{enumitem} % Customized lists
-\setlist[itemize]{noitemsep} % Make itemize lists more compact
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
-\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+% DOI
+\acmDOI{10.475/123_4}
 
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{Running title $\bullet$ May 2016 $\bullet$ Vol. XXI, No. 1} % Custom header text
-\fancyfoot[RO,LE]{\thepage} % Custom footer text
+% ISBN
+\acmISBN{123-4567-24-567/08/06}
 
-\usepackage{titling} % Customizing the title section
+%Conference
+\acmConference[SBES'17]{SBES 2017: 31st Brazilian Symposium on Software Engineering}{Setembro 2017}{Fortaleza, Cear\'a Brasil} 
+\acmYear{2017}
+\copyrightyear{2017}
 
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\setlength{\droptitle}{-4\baselineskip} % Move the title up
-
-\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
-\posttitle{\end{center}} % Article title closing formatting
-\title{Existem boas e más práticas específicas para o desenvolvimento de aplicativos Android? Um estudo qualitativo sobre a percepção de desenvolvedores} % Article title
-\author{
-	% Firts Author
-	\normalsize \\
-	\textsc{Suelen G. Carvalho} \\
-	\normalsize University of São Paulo \\
-	\normalsize Computer Science Department \\
-	\normalsize São Paulo, Brazil \\
-	\normalsize \href{mailto:suelengc@ime.usp.br}{suelengc@ime.usp.br}
-	\and % Second Author
-	\normalsize \\
-	\textsc{Marco Aurélio Gerosa}\\
-	\normalsize University of São Paulo \\
-	\normalsize Computer Science Department \\
-	\normalsize São Paulo, Brazil \\
-	\normalsize \href{mailto:gerosa@ime.usp.br}{gerosa@ime.usp.br}
-	\and % Third Author
-	\textsc{Maurício Aniche}\\
-	\normalsize Delft University of Technology \\
-	\normalsize Software Engineer Research Group \\
-	\normalsize Delft, Netherland\\
-	\normalsize \href{mailto:m.f.aniche@tudelft.nl}{m.f.aniche@tudelft.nl}
-}
-\date{} % Leave empty to omit a date
-
-%----------------------------------------------------------------------------------------
-%	ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\renewcommand{\maketitlehookd}{
-\begin{abstract}
-\input{abstract}
-\end{abstract}
-}
+\acmPrice{15.00}
 
 
 \begin{document}
+\title{O que s\~ao consideradas boas e m\'as pr\'aticas em projetos Android e quais maus cheiros s\~ao percebidos? Um estudo qualitativo sobre a percep\c{c}\~ao de desenvolvedores}
+% \titlenote{Produces the permission block, and copyright information}
+% \subtitle{Extended Abstract}
+% \subtitlenote{The full version of the author's guide is available as
+%   \texttt{acmart.pdf} document}
+
+
+\author{Suelen G. Carvalho}
+% \authornote{Dr.~Trovato insisted his name be first.}
+% \orcid{1234-5678-9012}
+\affiliation{
+  \institution{Universidade de S\~ao Paulo}
+  \streetaddress{Rua do Mat\~ao, 1010}
+  \city{SÃ£o Paulo} 
+  \state{SP} 
+  \postcode{05508-090}
+}
+\email{suelengc@ime.usp.br}
+
+\author{Marco Aur\'elio Gerosa}
+\affiliation{
+  \institution{Universidade de S\~ao Paulo}
+  \streetaddress{Rua do Mat\~ao, 1010}
+  \city{S\~ao Paulo} 
+  \state{SP} 
+  \postcode{05508-090}
+}
+\email{gerosa@ime.usp.br}
+
+\author{Maur\'icio Aniche}
+\affiliation{
+  \institution{Delft University of Technology}
+  \streetaddress{Mekelweg 2}
+  \city{Delft} 
+  \state{Netherland} 
+  \postcode{2628}
+}
+\email{m.f.aniche@tudelft.nl}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{B. Trovato et al.}
+
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below. 
+%
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010575.10010755</concept_id>
+  <concept_desc>Computer systems organization~Redundancy</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010553.10010554</concept_id>
+  <concept_desc>Computer systems organization~Robotics</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Networks~Network reliability</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>  
+\end{CCSXML}
+
+% \ccsdesc[500]{Computer systems organization~Embedded systems}
+% \ccsdesc[300]{Computer systems organization~Redundancy}
+% \ccsdesc{Computer systems organization~Robotics}
+% \ccsdesc[100]{Networks~Network reliability}
+
+% We no longer use \terms command
+%\terms{Theory}
+
+\keywords{android, cheiros de c\'odigo, qualidade de c\'odigo}
+
 
 \maketitle
 
-%----------------------------------------------------------------------------------------
-%	ARTICLE CONTENTS
-%----------------------------------------------------------------------------------------
-
-\section{Introduction}
+\section{Introdu\c{c}\~ao}
 \input{introduction}
 
-
-\section{Methods}
-\input{methods}
-
-
-\section{Results}
-\input{results}
-
-\section{Discussion}
+\section{Trabalhos Relacionados}
 \input{discussion}
 
+\section{Metodologia}
+\input{methods}
 
-%----------------------------------------------------------------------------------------
-%	REFERENCE LIST
-%----------------------------------------------------------------------------------------
+\section{Resultados}
+\input{results}
 
-\bibliographystyle{plain}
-\bibliography{bibliograph}
+\section{Discu\c{c}\~ao}
+\input{discussion}
 
+\section{Trabalhos Futuros}
+\input{discussion}
+
+\section{Conclus\~ao}
+\input{discussion}
+
+% \input{samplebody-conf}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sigproc} 
 
 \end{document}
