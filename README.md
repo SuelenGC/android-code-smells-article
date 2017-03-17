@@ -1,1 +1,1 @@
-# android-code-smells-article
+To compile run in terminal `make all`.
