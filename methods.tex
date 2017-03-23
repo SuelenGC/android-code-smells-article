@@ -1,15 +1,87 @@
 % -*- root: article.tex -*-
-Para obter as ideias iniciais para esta pesquisa n\'os publicamos um survey online com perguntas dissertativas sobre boas e m\'as pr\'aticas em determinados elementos da plataforma android. O objetivo das perguntas dissertativas foi obter o m\'aximo de informa\c{c}\~oes dos desenvolvedores. O survey foi escrito em ingl\^es por\'em era informado que tanto respotas ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, validamos o survey com 3 desenvolvedores android, com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade de algumas respostas. 
+Nesta pesquisa objetivamos investigar a percep\c{c}\~ao de desenvolvedores android sobre boas e m\'as pr\'aticas de c\'odigo em projetos android. Desta forma, pretendemos responder as seguintes quest\~oes de pesquisa: \\
 
-O survey foi dividido em 3 sess\~oes. A primeira continha perguntas para mapeamento demogr\'afico e de perfil. A segunda continham perguntas relacionadas às boas e m\'as pr\'aticas em elementos da plataforma android. A terceira e \'ultima sess\~ao tentava obter alguma ideia n\~ao coletada na sess\~ao anterior al\'em do email do participante caso o mesmo se disponibilizasse a participar de outras etapa da pesquisa. Mais detalhes sobre a cria\c{c}\~ao do question\'ario ser\'a abordado da Sess\~ao 3.1. Ap\'os coletada as respostas, realizamos uma an\'alise qualitativa. Essa an\'alise \'e \'e detalhada na sess\~ao 3.2.
+\textbf{RQ1} O que desenvolvedores consideram boas e m\'as pr\'aticas no desenvolvimento android? \\
+
+\textbf{RQ2} Poderiam estas m\'as pr\'aticas serem consideradas \textit{code smells} android? \\
+
+\textbf{RQ3} \textit{Code smells} tradicionais s\~ao percebidos em c\'odigo android? \\
+
+Nossos resultados nos permitiram definir de forma textual um cat\'alogo com 21 android \textit{code smells}. Este cat\'alogo ir\'a contribuir como base para i) a defini\c{c}\~ao de heur\'isticas para detec\c{c}\~ao ii) automatiza\c{c}\~ao de ferramentas de detec\c{c}\~ao autom\'atica desses smells.
+
+Para obter as ideias iniciais para esta pesquisa, publicamos um question\'ario online sobre boas e m\'as pr\'aticas em determinados elementos da plataforma android. Perguntas dissertativas foram usadas para permitir respostas completas e n\~ao submeter o participante a nenhum vi\'es. O survey foi escrito em ingl\^es por\'em informava o participante que respostas em ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, fizemos um piloto com 3 desenvolvedores android, com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade de algumas perguntas. As respostas do piloto foram desconsideradas para reduzir vi\'es. 
+
+O survey foi dividido em 3 sess\~oes. A primeira continham perguntas para mapeamento demogr\'afico. A segunda continham perguntas relacionadas a boas e m\'as pr\'aticas em elementos de projetos android. A terceira e \'ultima sess\~ao continha perguntas para obter alguma ideia que n\~ao fio coletada na segunda sess\~ao al\'em do email do participante caso o mesmo se disponibilizasse a participar de outras etapa da pesquisa. 
+
+A seguir, a sess\~ao 3.1 abroda sobre a elabora\c{c}\~ao do question\'ario, na 3.2 falamos sobre os participantes e a sess\~ao 3.3 aborda a an\'alise para a defini\c{c}\~ao dos smells.
 
 \subsection{Question\'ario}
 
-O survey foi escrito em ingl\^es e continha uma mensagem informando que respotas em ingl\^es ou portugu\^es eram aceitas. Criamos e modificamos o survey coletando respostas experimentais; qualquer altera\c{c}\~ao feita no question\'ario foi baseada nas respostas que recebemos de nossos 3 participantes iniciais. Realizou-se a an\'alise qualitativa nas respostas do survey. Esse processo \'e discutido em detalhes na Se\c{c}\~ao III-F.
+Android utiliza a linguagem Java para desenvolvimento de aplicativos. Ent\~ao a primeira quest\~ao \'e: por que buscar por smells android sendo que j\'a existem tantos para Java? A resposta para esta pergunta \'e que projetos android possuem caracter\'isticas diferentes de projetos java [] e pesquisas veem mostrando que tecnologias diferentes podem apresentar \textit{code smells} espec\'ificos, como por exemplo Aniche et al. identificou 6 \textit{code smells} espec\'ificos ao framework Spring MVC, um framework Java para desenvolvimento web. 
+
+Tamb\'em notamos que diversas pesquisas sobre \textit{code smells} veem sendo feitas sobre tecnologias usadas no desenvolvimento de front-end web como CSS [] e Javascript []. Estas pesquisas nos deram motiva\c{c}\~ao para buscas entender se existem \textit{code smells} no front-end android, pois \'e nesta parte em que projetos android mais se distinguem de projetos Java pois seu front-end \'e composto de c\'odigo java mesclado com diversos recursos que podem ser arquivos xml e imagens [].
+
+Para definirmos quais seriam os elementos usados para desenvolver a camada de apresenta\c{c}\~ao do android fizemos uma extens\~ao revis\~ao da documenta\c{c}\~ao oficial [] e chegamos a seguinte lista:
+
+\begin{itemize} 
+	\item[$\circ$] Classes do tipo \textsc{Activity};
+	\item[$\circ$] Classes do tipo \textsc{Fragment};
+	\item[$\circ$] Classes do tipo \textsc{Listener};
+	\item[$\circ$] Classes do tipo \textsc{Adapter};
+	\item[$\circ$] e recursos do aplicativo com \textsc{drawbles}, \textsc{layout}, \textsc{styles}, \textsc{color}, dentre outros.
+\end{itemize}
+
+Como existem muitos tipos de recursos [], com o objetivo de limitar o tamanho do question\'ario, selecionamos os quatro recursos mais utilizados: layout, styles, string e drawable.
+
+A segunda sess\~ao do question\'ario abordou perguntas sobre boas e m\'as pr\'aticas sobre cada um dos elementos supra-citados. Baseamos nossa estrutura de perguntas usada por Aniche et al. ao pesquisar sobre smells no framework Spring MVC. Por exemplo, para Activitys fizemos as seguintes perguntas: \\
+
+\begin{itemize} 
+	\item[$\circ$] Do you have any good practices to deal with Activities?
+	\item[$\circ$] Do you have any bad practices to deal with Activities? 
+\end{itemize}
+
+A terceira sess\~ao objetivou captar qualquer \'ultima ideia sobre boas e m\'as pr\'aticas n\~ao captadas nas quest\~oes anteriores. Para isso fizemos as seguintes perguntas: \\
+
+\begin{itemize} 
+	\item[$\circ$] Are there any other *GOOD* practices in Android Presentation Layer we did not asked you or you did not said yet?
+	\item[$\circ$] Are there any other *BAD* practices in Android Presentation Layer we did not asked you or you did not said yet?
+\end{itemize}
+
 
 \subsection{Participantes}
 
-Este survey foi respondido por 45 participantes. O survey foi divulgado abertamente em redes sociais. Coletamos 36 respostas do Brasil, 7 da Europa, 1 dos Estados Unidos e 1 preferiu n\~ao responder. Quarenta dos participantes tinham 3 anos ou mais de 10 anos de experi\^encia com desenvolvimento, destes, trinta e um participantes tinham de 3 a 8 anos de experi\^encia com android. Trinta e tr\^es dos participantes tinham de 25 a 34 anos, 8 de 19 a 24 e 3 de 35 a 54.
+Com o question\'ario obtivemos 45 respostas. O survey foi divulgado em grupos de desenvolvedores android como por exemplo o Slack AndroidDevBR, maior grupo de desenvolvedores android do Brasil contando hoje com mais de 2500 participantes. Coletamos 36 respostas do Brasil, 7 de pa\'ises europeus e 1 dos Estados Unidos, 1 participantes preferiu n\~ao responder. A tabela \ref{tab:DadosDemograficos} apresenta dados sobre anos de experi\^encia dos participantes com desenvolvimento de sofware e com desenvolvimento android. Notamos que 67\% dos participantes possuem mais de 5 anos de experi\^encia com desenvolvimento de software e que 71\% possuem 3 anos ou mais de experi\^encia com desenvolvimento android.
+
+\begin{table}[h]
+\centering
+\caption{Anos de experi\^encia com desenvolvimento de software e desenvolvimento android dos participantes.}
+\begin{tabular}{c|p{2cm}p{2cm}}
+& Experi\^encia com Software & Experi\^encia com Android \\
+\hline
+1-2 anos &	5  &	13 \\
+3-5 anos &	10 &	21 \\
+6-10 anos &	30 &	11 \\
+\end{tabular}
+\label{tab:DadosDemograficos}
+\end{table}
+
+% \begin{tikzpicture}
+% \begin{axis}[
+%     ybar,
+%     enlargelimits=0.15,
+%     legend style={at={(0.5,-0.15)},
+%       anchor=north,legend columns=-1},
+%     ylabel={participantes},
+%     symbolic x coords={1-2 anos,2-5 anos,6-10 anos},
+%     xtick=data,
+%     nodes near coords,
+%     nodes near coords align={vertical},
+%     ]
+% \addplot coordinates {(1-2 anos,5) (2-5 anos,10) (6-10 anos,30)};
+% \addplot coordinates {(1-2 anos,13) (2-5 anos,21) (6-10 anos,11)};
+% \legend{experi\^encia com software,experi\^encia com android}
+% \end{axis}
+% \end{tikzpicture}
 
 \subsection{Categoriza\c{c}\~ao e Identifica\c{c}\~ao dos Smells}
 
