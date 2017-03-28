@@ -1,26 +1,23 @@
 % -*- root: article.tex -*-
-Nesta pesquisa objetivamos investigar a percep\c{c}\~ao de desenvolvedores android sobre boas e m\'as pr\'aticas de c\'odigo em projetos android. Desta forma, pretendemos responder as seguintes quest\~oes de pesquisa: \\
+Nesta pesquisa objetivamos investigar a percep\c{c}\~ao de desenvolvedores Android sobre boas e m\'as pr\'aticas de c\'odigo em projetos Android. Desta forma, pretendemos responder as seguintes quest\~oes de pesquisa: \\
 
-\textbf{RQ1} O que desenvolvedores consideram boas e m\'as pr\'aticas no desenvolvimento android? \\
+\textbf{RQ1} O que desenvolvedores consideram boas e m\'as pr\'aticas no desenvolvimento Android? \\
 
-\textbf{RQ2} Poderiam estas m\'as pr\'aticas serem consideradas \textit{code smells} android? \\
+\textbf{RQ2} C\'odigos afetados pelos \textit{code smells} propostos s\~ao percebidos pelos desenvolvedores como problem\'aticos? \\
 
-\textbf{RQ3} \textit{Code smells} tradicionais s\~ao percebidos em c\'odigo android? \\
+Para coletar dados iniciais para esta pesquisa, publicamos um question\'ario online sobre boas e m\'as pr\'aticas em determinados elementos da plataforma Android. Perguntas dissertativas foram usadas para possibilitar respostas completas e evitar vi\'es. O question\'ario foi escrito em ingl\^es por\'em informava o participante que respostas em ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, fizemos um piloto com 3 desenvolvedores Android, com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade de algumas perguntas. As respostas do piloto foram desconsideradas para efeitos de vi\'es. 
 
-Para obter as ideias iniciais para esta pesquisa, publicamos um question\'ario online sobre boas e m\'as pr\'aticas em determinados elementos da plataforma android. Perguntas dissertativas foram usadas para permitir respostas completas e n\~ao submeter o participante a nenhum vi\'es. O question\'ario foi escrito em ingl\^es por\'em informava o participante que respostas em ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, fizemos um piloto com 3 desenvolvedores android, com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade de algumas perguntas. As respostas do piloto foram desconsideradas para efeitos de vi\'es. 
+O question\'ario foi dividido em 3 se\c{c}\~oes. A primeira continham perguntas para mapeamento demogr\'afico. A segunda continham perguntas relacionadas a boas e m\'as pr\'aticas em elementos do \textit{front-end} Android, que ser\'a melhor detalhado na se\c{c}\~ao \ref{sub:front-end-android}. A terceira se\c{c}\~ao continham perguntas para obter alguma ideia que n\~ao tenha sido capturada nas quest\~oes anteriores, al\'em do email do participante caso o mesmo quisesse ser contactado para participar de outras etapas da pesquisa. 
 
-O question\'ario foi dividido em 3 se\c{c}\~oes. A primeira continham perguntas para mapeamento demogr\'afico. A segunda continham perguntas relacionadas a boas e m\'as pr\'aticas em elementos de projetos android. A terceira se\c{c}\~ao continham perguntas para obter alguma ideia que n\~ao tenha sido capturada nas quest\~oes anteriores, al\'em do email do participante caso o mesmo quisesse ser contactado para participar de outras etapas da pesquisa. 
+Com os resultados obtidos foi poss\'ivel compilar um cat\'alogo com 21 Android \textit{code smells}. Esse cat\'alogo ir\'a contribuir como base para i) a defini\c{c}\~ao de heur\'isticas para detec\c{c}\~ao ii) automatiza\c{c}\~ao de ferramentas de detec\c{c}\~ao autom\'atica desses smells. \\
 
-Com os resultados obtidos foi poss\'ivel compilar um cat\'alogo com 21 android \textit{code smells}. Esse cat\'alogo ir\'a contribuir como base para i) a defini\c{c}\~ao de heur\'isticas para detec\c{c}\~ao ii) automatiza\c{c}\~ao de ferramentas de detec\c{c}\~ao autom\'atica desses smells. \\
+A seguir, a se\c{c}\~ao \ref{sub:front-end-android} aborda sobre como chegamos a defini\c{c}\~ao dos elementos do \textit{front-end} Android, focados nesta pesquisa. A se\c{c}\~ao \ref{sub:questionario} trata sobre a elabora\c{c}\~ao do question\'ario. Na se\c{c}\~ao \ref{sub:participantes} falamos sobre os participantes e a se\c{c}\~ao \ref{sub:smells-definition} aborda de forma detalhada a an\'alise para a defini\c{c}\~ao dos smells.
 
-A seguir, a se\c{c}\~ao \ref{sub:questionario} aborda sobre a elabora\c{c}\~ao do question\'ario, na \ref{sub:participantes} falamos sobre os participantes e a se\c{c}\~ao \ref{sub:smells-definition} aborda de forma detalhada a an\'alise para a defini\c{c}\~ao dos smells.
 
-\subsection{Question\'ario}
-\label{sub:questionario}
+\subsection{\textit{Front-End} Android}
+\label{sub:front-end-android}
 
-Aplicativos Android s\~ao escritos com a linguagem de programa\c{c}\~ao Java \cite{AndroidFundamentals}. Ent\~ao a primeira quest\~ao \'e: por que buscar por \textit{smells} android sendo que j\'a existem tantos \textit{smells} Java? Pesquisas t\^em demonstrado que tecnologias diferentes podem apresentar \textit{code smells} espec\'ificos, como por exemplo Aniche et al. identificou 6 \textit{code smells} espec\'ificos ao framework Spring MVC, um framework Java para desenvolvimento web. Outras pesquisas conluem que projetos android possuem caracter\'isticas diferentes de projetos java \cite{Hecht2015, Mannan_Dig_Ahmed_Jensen_Abdullah_Almurshed, ReimannBrylski2013}, por exemplo, o \textit{front-end} \'e representado por arquivos XML e o ponto de entrada da aplica\c{c}\~ao \'e dado por \textit{event-handler} \cite{AndroidActivities2016} como o m\'etodo \textsc{onCreate}. Encontramos tamb\'em diversas pesquisas pesquisas sobre \textit{code smells} v\^em sendo feitas sobre tecnologias usadas no desenvolvimento de \textit{front-end} web como CSS \cite{CSSCodeSmell} e Javascript \cite{BB}. Estas pesquisas nos inspiraram a buscar entender se existem \textit{code smells} no \textit{front-end} android.
-
-Para definirmos quais seriam os elementos usados no desenvolvimento do \textit{front-end} do android fizemos uma extensa revis\~ao da documenta\c{c}\~ao oficial \cite{AndroidDeveloperSite2016} e chegamos na listagem a seguir:
+Para definirmos quais seriam os elementos usados no desenvolvimento do \textit{front-end} do Android fizemos uma extensa revis\~ao da documenta\c{c}\~ao oficial \cite{AndroidDeveloperSite2016} e chegamos na listagem a seguir:
 
 \begin{itemize} 
 	\item[$\circ$] classes do tipo \textsc{Activity};
@@ -32,7 +29,11 @@ Para definirmos quais seriam os elementos usados no desenvolvimento do \textit{f
 
 Como existem muitos tipos de recursos \cite{AndroidResourcesOverview}, com o objetivo de limitar o tamanho do question\'ario, selecionamos os quatro recursos mais frequentes em aplicativos: \textsc{layout}, \textsc{styles}, \textsc{string} e \textsc{drawable}.
 
-A segunda se\c{c}\~ao do question\'ario abordou perguntas sobre boas e m\'as pr\'aticas sobre cada um dos elementos supra-citados. Baseamos nossa estrutura de perguntas usada por Aniche et al. ao pesquisar sobre \textit{smells} no framework Spring MVC. Por exemplo, para \textsc{Activity}s fizemos as seguintes perguntas: como por exemplo, seu \textit{front-end} precisa de diversos tipos de arquivos xmls dentre
+
+\subsection{Question\'ario}
+\label{sub:questionario}
+
+A primeira se\c{c}\~ao do question\'ario abordou perguntas de mapeamento demogr\'afico. A segunda se\c{c}\~ao abordou perguntas sobre boas e m\'as pr\'aticas sobre cada um dos elementos citados na se\c{c}\~ao \ref{sub:front-end-android}. Baseamos a estrutura das nossas perguntas em uma pesquisa similar realizada por Aniche et al. \cite{MvcSmells:16} ao pesquisar sobre \textit{smells} no framework Spring MVC. Por exemplo, para \textsc{Activity}s fizemos as seguintes perguntas: 
 
 \begin{itemize} 
 	\item[$\circ$] Do you have any good practices to deal with Activities?
@@ -50,11 +51,11 @@ A terceira se\c{c}\~ao objetivou captar qualquer \'ultima ideia sobre boas e m\'
 \subsection{Participantes}
 \label{sub:participantes}
 
-Com o question\'ario obtivemos 45 respostas. O question\'ario foi divulgado em grupos de desenvolvedores android como por exemplo o Slack AndroidDevBR, maior grupo de desenvolvedores android do Brasil contando hoje com mais de 2500 participantes. Coletamos 36 respostas do Brasil, 7 de pa\'ises europeus e 1 dos Estados Unidos, 1 participantes preferiu n\~ao responder. A tabela \ref{tab:DadosDemograficos} apresenta dados sobre anos de experi\^encia dos participantes com desenvolvimento de sofware e com desenvolvimento android. Notamos que 67\% dos participantes possuem mais de 5 anos de experi\^encia com desenvolvimento de software e que 71\% possuem 3 anos ou mais de experi\^encia com desenvolvimento android.
+Com o question\'ario obtivemos 45 respostas. O question\'ario foi divulgado em grupos de desenvolvedores Android como por exemplo o Slack AndroidDevBR, maior grupo de desenvolvedores Android do Brasil contando hoje com mais de 2500 participantes. Coletamos 36 respostas do Brasil, 7 de pa\'ises europeus e 1 dos Estados Unidos, 1 participantes preferiu n\~ao responder. A tabela \ref{tab:DadosDemograficos} apresenta dados sobre anos de experi\^encia dos participantes com desenvolvimento de sofware e com desenvolvimento Android. Notamos que 67\% dos participantes possuem mais de 5 anos de experi\^encia com desenvolvimento de software e que 71\% possuem 3 anos ou mais de experi\^encia com desenvolvimento Android.
 
 \begin{table}[h]
 \centering
-\caption{Experi\^encia dos participantes com desenvolvimento de software e desenvolvimento android.}
+\caption{Experi\^encia dos participantes com desenvolvimento de software e desenvolvimento Android.}
 \begin{tabular}{c|p{2cm}p{2cm}}
 & Experi\^encia com Software & Experi\^encia com Android \\
 \hline
@@ -79,7 +80,7 @@ Com o question\'ario obtivemos 45 respostas. O question\'ario foi divulgado em g
 %     ]
 % \addplot coordinates {(1-2 anos,5) (2-5 anos,10) (6-10 anos,30)};
 % \addplot coordinates {(1-2 anos,13) (2-5 anos,21) (6-10 anos,11)};
-% \legend{experi\^encia com software,experi\^encia com android}
+% \legend{experi\^encia com software,experi\^encia com Android}
 % \end{axis}
 % \end{tikzpicture}
 
@@ -88,18 +89,136 @@ Com o question\'ario obtivemos 45 respostas. O question\'ario foi divulgado em g
 
 O processo de categoriza\c{c}\~ao e defini\c{c}\~ao dos smells seguiu as seguintes etapas: Verticaliza\c{c}\~ao, Limpeza dos Dados, Itera\c{c}\~oes de Categoriza\c{c}\~ao, Divis\~oes e Elimina\c{c}\~ao das D\'uvidas. Essas etapas s\~ao detalhadas a seguir.
 
-A an\'alise partiu da listagem das 45 respostas do question\'ario. A partir desta listagem realizamos o processo que denominamos como verticaliza\c{c}\~ao, ou seja, cada resposta de boa ou m\'a pr\'atica se tornou um registro individual a ser analisado, resultando em 810 respostas sobre boas ou m\'as pr\'aticas em algum elemento do front-end android. O n\'umero 810 refere-se as 18 perguntas sobre boas e m\'as pr\'aticas multiplicado pelos 45 participantes.
+A an\'alise partiu da listagem das 45 respostas do question\'ario. A partir desta listagem realizamos o processo que denominamos como verticaliza\c{c}\~ao, ou seja, cada resposta de boa ou m\'a pr\'atica se tornou um registro individual a ser analisado, resultando em 810 respostas sobre boas ou m\'as pr\'aticas em algum elemento do front-end Android. O n\'umero 810 refere-se as 18 perguntas sobre boas e m\'as pr\'aticas multiplicado pelos 45 participantes.
 
 Nosso segundo passo foi realizar a limpeza dos dados. Esta etapa consistiu em remover respostas obviamente n\~ao \'uteis como respostas em branco, que continham frases como \textit{"N\~ao"}, \textit{"N\~ao que eu saiba"}, \textit{"I don't remember"} e similares, as consideradas vagas como \textit{"Eu n\~ao tenho certeza se s\~ao boas praticas mas uso o que vejo por ai"}, as consideradas gen\'ericas como \textit{"Like all Java code, the overkill of Utils..."} e as que n\~ao eram relacionadas a boas pr\'aticas de c\'odigo. Das 810 boas e m\'as pr\'aticas, 352 foram consideradas e 458 desconsideradas. Das 352, 44,6\% foram apontadas como m\'as pr\'aticas e 55,4\% como boas pr\'aticas. 
 
-Em seguida, realizamos diversas itera\c{c}\~oes nas respostas sobre boas e m\'as pr\'aticas consideradas a fim de categoriz\'a-las em algum novo smell android ou algum smell pr\'e-existente. Essas itera\c{c}\~oes consistiam em analisar resposta a resposta e atribuir uma ou mais categorias de algum poss\'ivel novo smell android ou pr\'e-existente. Foram realizadas diversas itera\c{c}\~oes de categoriza\c{c}\~ao com o objetivo de normalizar as categorias, ou seja, evitar sin\^onimos e hom\^onimos. Um sin\^onimo \'e o mesmo conceito com dois nomes diferentes e hom\^onimos s\~ao dois conceitos diferentes com o mesmo nome. 
+Em seguida, realizamos diversas itera\c{c}\~oes nas respostas sobre boas e m\'as pr\'aticas consideradas a fim de categoriz\'a-las em algum novo smell Android ou algum smell pr\'e-existente. Essas itera\c{c}\~oes consistiam em analisar resposta a resposta e atribuir uma ou mais categorias de algum poss\'ivel novo smell Android ou pr\'e-existente. Foram realizadas diversas itera\c{c}\~oes de categoriza\c{c}\~ao com o objetivo de normalizar as categorias, ou seja, evitar sin\^onimos e hom\^onimos. Um sin\^onimo \'e o mesmo conceito com dois nomes diferentes e hom\^onimos s\~ao dois conceitos diferentes com o mesmo nome. 
 
 Durante a categoriza\c{c}\~ao houveram 30 respostas que n\~ao eram triviais de identificar uma categoria ou mesmo de dizer se estas respostas deveriam ser consideradas, essas foram marcadas como \textit{"talvez"} durante o processo e reavaliadas ao final, onde 6 permaneceram e 24 foram desconsideradas. Uma situa\c{c}\~ao interessante \'e que diversas dessas respostas indicavam que n\~ao se deve usar Fragments por\'em n\~ao apresentavam nenhum argumento sobre o motivo, por exemplo: \textit{"Fragments are the spawn of satan"} e \textit{"I try to avoid them"}. Estas respostas inicialmente seriam desconsideradas, mas pela quantidade de repeti\c{c}\~oes obtidas, 10 no caso, optamos por considerar.
 
 Tamb\'em durante a categoriza\c{c}\~ao, 9 respostas incialmente consideradas, foram desconsideradas. Para toda resposta desconsiderada foi indicado um motivo. Ao final da categoriza\c{c}\~ao, 313 boas e m\'as pr\'aticas foram de fato consideradas.
 
-Durante a categoriza\c{c}\~ao, uma mec\^anica que consideramos importante para a normaliza\c{c}\~ao das categorias, foi a cria\c{c}ã\~ao de uma lista de categorias, onde a cada nova categoria atribu\'ida, increment\'avamos a lista e preench\'iamos com descri\c{c}\~oes que indicavam que tipo de boa ou m\'a pr\'atica estava recebendo aquela categoria. Esta mec\^anica ajudou a evitar hom\^onimos e sin\^onimos e serviu como base para a defini\c{c}\~ao e avalia\c{c}\~ao da relev\^ancia dos smells a serem trabalhados nos pr\'oximos passos.
+Durante a categoriza\c{c}\~ao, uma mec\^anica que consideramos importante para a normaliza\c{c}\~ao das categorias, foi a cria\c{c}\~ao de uma lista de categorias, onde a cada nova categoria atribu\'ida, increment\'avamos a lista e preench\'iamos com descri\c{c}\~oes que indicavam que tipo de boa ou m\'a pr\'atica estava recebendo aquela categoria. Esta mec\^anica ajudou a evitar hom\^onimos e sin\^onimos e serviu como base para a defini\c{c}\~ao e avalia\c{c}\~ao da relev\^ancia dos smells a serem trabalhados nos pr\'oximos passos.
 
 Em seguida, passamos pela etapa de divis\~ao, ou seja, as respostas que receberam mais de uma categoria foram divididas em duas ou mais respostas, de acordo com o n\'umero de categorias identificadas. Por exemplo, a resposta \textit{"N\~ao fazer Activities serem callbacks de execu\c{c}\~oes ass\'incronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira ora\c{c}\~ao a categoria de smell que denominamos \textbf{Zumbi Referended Activity} e na segunda ora\c{c}\~ao, a categoria de smell \textbf{Inherit From Support Library Always}. Ao divid\'i-la mantivemos o texto da resposta apenas relativo a categoria, como se fossem duas respostas v\'alidas. Em algumas respostas que foram divididas n\~ao pudemos dividir o texto pois a resposta completa era necess\'ario para entender ambas as categoriza\c{c}\~oes, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de forma diferente. Ap\'os estas divis\~oes, as 313 respostas iniciais se tornaram 388 sendo cada uma com apenas uma categoria de smell. 
 
-Ao final de todas as etapas, conclu\'imos com 394 respostas sobre boas e m\'as pr\'aticas categorizadas em 46 smells. A seguir, descrevemos o processo de sele\c{c}\~ao dos smells trabalhados nas etapas seguintes. 
+Ao final de todas as etapas, conclu\'imos com 388 respostas sobre boas e m\'as pr\'aticas categorizadas em 47 smells. 
+
+\subsection{An\'alise e Defini\c{c}\~ao dos Smells}
+\label{sub:analisys-definition}
+
+Nosso objetivo agora \'e entender quais smells, dos 47 identificados, s\~ao de fato relevantes. Para isso, contabilizamos cada smells, em quantas respostas ele aparecia, ou seja, se duas respostas foram categorizadas com o smell "A" ent\~ao diz-se que este smell tem contagem 2. Depois da contagem, elaboramos intervalos que indicam relev\^ancia ALTA (maior ou igual a 20), M\'eDIA (dentre 6 e 19), BAIXA (dentre 3 e 5) e IRRELEVANTE (menor ou igual a 2). E obtemos o seguinte resultado:
+
+\begin{table}[h]
+\centering
+\caption{Smells identificados vs. Relev\^ancia percebida pelos participantes do survey}
+\begin{tabular}{p{3cm}|p{4cm}}
+\textbf{Relev\^ancia} & \textbf{Quantidade de Smells} \\
+\hline
+Alta  			& 5 \\
+M\'edia 		& 17 (1 smell tradicional) \\
+Baixa			& 5 \\
+Irrelevante 	& 20 \\
+\end{tabular}
+\label{tab:DadosDemograficos}
+\end{table}
+
+Os irrelevantes foram desconsiderados nesta etapa de defini\c{c}\~ao. Os demais foram definidos com a ajuda das respostas dos participantes. Para cada smell definimos os seguintes t\'opicos: 
+
+\begin{itemize} 
+	\item[$\circ$] quando ocorre, 
+	\item[$\circ$] contexto ou exemplo, 
+	\item[$\circ$] elementos afetados, 
+	\item[$\circ$] solu\c{c}\~ao, 
+	\item[$\circ$] heur\'istica para dete\c{c}\~ao.
+\end{itemize}
+
+Nossas defini\c{c}\~oes foram apoiadas nas respostas dos participantes. Se os participantes n\~ao indicaram algum ponto para o smell, o mesmo n\~ao \'e apresentado.
+
+
+\subsection{Android Code Smells}
+\label{sub:Android-code-smells}
+
+\subsubsection{Duplicated Styles Attributes}
+
+\textbf{Ocorre quando} mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua aparência. No estilo \textbf{ocorre quando} se vê mais de um style repetindo o mesmo conjunto de atributos e valores. Os \textbf{elementos afetados} s\~ao xmls de layout ou estilo. A \textbf{heur\'istica para detect\'a-lo} \'e identificar um conjunto de atributos que se repetem em um ou mais views de um ou mais layouts. Sua \textbf{solu\c{c}\~ao} \'e extrair um estilo com o conjunto de atributos repetidos relacionados a caracter\'isticas de exibi\c{c}\~ao da view. 
+
+Considere o seguinte \textbf{contexto} onde o \texttt{TextView} abaixo \'e usado em dois momentos no mesmo layout (exemplo extra\'ido da documenta\c{c}\~ao do Android\footnote{https://developer.Android.com/guide/topics/ui/themes.html}):
+
+\begin{lstlisting}[
+	language=XML, 
+	caption={\texttt{TextView} usado em mais de um layout e com estilo definido por atributos}, 
+	label={lst:AndroidManifest}
+]
+<TextView
+    Android:layout_width="match_parent"
+    Android:layout_height="wrap_content"
+    Android:textColor="#00FF00"
+    Android:typeface="monospace"
+    Android:text="@string/hello" />
+\end{lstlisting}
+
+Uma op\c{c}\~ao seria extrair o estilo acima para um recurso de estilos:
+
+\begin{lstlisting}[
+	language=XML, 
+	caption={\texttt{TextView} usando estilo ao inv\'es de atributos separados}, 
+	label={lst:AndroidManifest}
+]
+<TextView
+    Android:layout_width="match_parent"
+    Android:layout_height="wrap_content"
+    Android:textAppearance="@style/CodeFont"
+    Android:text="@string/hello" />
+\end{lstlisting}
+
+Arquivo de estilo com o estilo CodeFont criado:
+
+\begin{lstlisting}[
+	language=XML, 
+	caption={\texttt{TextView} usando estilo ao inv\'es de atributos separados}, 
+	label={lst:AndroidManifest}
+]
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CodeFont" 
+      parent="@Android:style/TextAppearance.Medium">
+        <item name="Android:textColor">
+        	#00FF00
+        </item>
+        <item name="Android:typeface">
+        	monospace
+        </item>
+    </style>
+</resources>
+\end{lstlisting}
+
+
+\subsubsection{Suspicious Extra Knowledge About Behavior}
+
+\textbf{Ocorre quando} uma view possui um conhecimento maior do que o considerado aceit\'avel sobre os detalhes de seu comportamento. Para este smell identificamos por meio das respostas que três elementos da view \textbf{podem ser afetados} por ele, s\~ao: \textsc{activity}, \textsc{fragment} e \textsc{adapter}. E a depender de qual view est\'a se tratando, o que \'e considerado aceit\'avel pode mudar. Sendo assim, chegamos a seguinte escala de conhecimento aceit\'avel:
+
+\begin{itemize} 
+	\item[$\circ$] n\'ivel 1 - implementa\c{c}\~ao de classe concreta;
+	\item[$\circ$] n\'ivel 2 - atrav\'es de \textit{implements} (polimorfismo);
+	\item[$\circ$] n\'ivel 3 - atrav\'es de classe an\^onima;
+	\item[$\circ$] n\'ivel 4 - atrav\'es de \textit{inner class}.
+\end{itemize}
+
+Para \textsc{Adapter}s, apenas o n\'ivel 1 foi considerado como aceit\'avel. Para \textsc{Activity}s e \textsc{Fragment}s, at\'e o n\'ivel 3 \'e considerado aceit\'avel, sendo que houveram indica\c{c}\~oes positivas e nenhuma negativa sobre o uso do n\'ivel 1, houveram indica\c{c}\~oes positivas e negativas sobre o n\'ivel 2 e houveram apenas indica\c{c}\~oes negativas sobre o n\'ivel 3 e 4. 
+
+Como \textbf{solu\c{c}\~ao}, segundo as respostas R666 e R672, \textit{"adapters devem ser o mais est\'upido poss\'ivel"} (tradu\c{c}\~ao livre). Podemos dizer ent\~ao que se for necess\'ario atribuir algum comportamento para alguma view que est\'a sendo populada, isso dever\'a ser feito usando a m\'etodo descrito para o n\'ivel 1. J\'a para \textsc{Activity}s e \textsc{Fragment}s a toler\^ancia de conhecimento aumenta at\'e o n\'ivel 3, sendo 1 e 2 os mais indicados e 3 toler\'avel \'as vezes (aqui talvez existam dois thresholds como n\'umero de linhas do m\'etodo do evento ou mesmo quantidade de classes an\^onimas na classe). O n\'ivel 4 \'e inaceit\'avel para todos os elementos afetados por este smell.
+
+Os \textbf{elementos afetados} s\~ao: \textsc{activity}, \textsc{fragment} e \textsc{adapters}. As \textbf{heur\'isticas} de detec\c{c}\~ao s\~ao:
+
+\begin{itemize} 
+	\item[$\circ$] [n\'ivel 4] se existe uma ou mais inner class de listener
+	\item[$\circ$] [n\'ivel 3] se existe um certo n\'umero de classes an\^onimas
+	\item[$\circ$] [n\'ivel 2 e 3] se LOC dentro do m\'etodo do listener - an\^onimo ou sobreescrito \'e maior que 1
+\end{itemize}
+
+
+
+
+
