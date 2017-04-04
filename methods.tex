@@ -1,52 +1,33 @@
 % -*- root: article.tex -*-
-Nesta pesquisa objetivamos investigar a percep\c{c}\~ao de desenvolvedores Android sobre boas e m\'as pr\'aticas de c\'odigo relacionadas ao \textit{front-end} Android. Para definirmos quais elementos representam o \textit{front-end} Android fizemos uma extensa revis\~ao da documenta\c{c}\~ao oficial e chegamos nos seguintes itens \cite{AndroidDeveloperSite2016}:
-
-\begin{itemize} 
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Activity},
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Fragment},
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Listener}, 
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Adapter} e
-	\item[$\textasteriskcentered$] os \textit{applications resources} que s\~ao arquivos XML ou imagens utilizados na interface visual como \textsc{drawable}s, \textsc{layout}s, \textsc{style}s e \textsc{color}s.
-\end{itemize}
-
-Como existem muitos tipos de \textit{applications resources} \cite{AndroidResourcesOverview}, com o objetivo de limitar o tamanho do question\'ario, selecionamos quatro recursos: \textsc{layout}, \textsc{styles}, \textsc{string} e \textsc{drawable}. Esses recursos est\~ao presentes no template padr\~ao, selecionado automaticamente ao iniciar um novo projeto no Android Studio \cite{FirstApp2017}, IDE oficial para desenvolvimento de projetos da plataforma \cite{AndroidStudio}. \\
-
-Com isso, pretendemos responder as seguintes quest\~oes de pesquisa: \\
-
-\textbf{RQ1} O que desenvolvedores consideram boas e m\'as pr\'aticas no desenvolvimento Android? \\
-
-\textbf{RQ2} C\'odigos afetados pelos \textit{code smells} propostos s\~ao percebidos pelos desenvolvedores como problem\'aticos? \\
-
-
-Para coletar os dados iniciais, publicamos um question\'ario online questionando sobre boas e m\'as pr\'aticas no \textit{front-end} Android. Perguntas dissertativas foram usadas para n\~ao limitar o participante, possibilitar respostas mais completas e evitar enviesamento. O question\'ario foi escrito em ingl\^es por\'em informava o participante que respostas em ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, realizamos um piloto com 3 desenvolvedores Android e com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade de algumas perguntas. As respostas dos participantes piloto foram desconsideradas para efeitos de vi\'es. 
-
-O question\'ario foi dividido em 3 Se\c{c}\~oes. A primeira continham perguntas para mapeamento demogr\'afico. A segunda continham perguntas sobre boas e m\'as pr\'aticas relacionadas ao \textit{front-end} Android e a terceira Se\c{c}\~ao continham perguntas para obter alguma ideia que n\~ao tenha sido capturada nas quest\~oes anteriores, al\'em do email do participante caso o mesmo quisesse ser contactado para participar de outras etapas da pesquisa. \\
-
-A seguir, a Se\c{c}\~ao \ref{sub:questionario} trata sobre a elabora\c{c}\~ao do question\'ario. Na Se\c{c}\~ao \ref{sub:participantes} falamos sobre os participantes e a Se\c{c}\~ao \ref{sub:smells-definition} aborda de forma detalhada a an\'alise para a defini\c{c}\~ao dos \textit{smells}.
-
+Conduzimos um estudo qualitativo e explorat\'orio pelo qual os dados foram coletados atrav\'es de um question\'ario online com desenvoldores Android. Esta se\c{c}\~ao descreve de forma detalhada a estrutura do question\'ario, os participantes e o an\'alise realizada sob as respostas do question\'ario.
 
 \subsection{Question\'ario}
 \label{sub:questionario}
 
-A primeira Se\c{c}\~ao do question\'ario abordou perguntas de mapeamento demogr\'afico. A segunda Se\c{c}\~ao abordou perguntas sobre boas e m\'as pr\'aticas sobre cada um dos elementos citados na Se\c{c}\~ao \ref{sub:front-end-android}. Baseamos a estrutura das nossas perguntas em uma pesquisa similar realizada por Aniche et al. \cite{MvcSmells:16} ao pesquisar sobre \textit{smells} no framework Spring MVC. Por exemplo, para \textsc{Activity}s fizemos as seguintes perguntas: 
+O question\'ario foi composto com 25 quest\~oes subdivididas em tr\^es se\c{c}\~oes: a primeira se\c{c}\~ao continha 6 perguntas demogr\'aficas, a segunda se\c{c}\~ao continha 16 perguntas sobre boas e m\'as pr\'aticas relacionadas ao \textit{front-end} Android e a terceira se\c{c}\~ao continha 3 perguntas, 2 para obter \'ultimos pensamentos sobre boas e m\'as pr\'aticas e 1 \'ultima solicitando email caso o participante tivesse interesse em etapas futuras da pesquisa. O question\'ario foi escrito em ingl\^es por\'em informava o participante que respostas em ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, realizamos um piloto com 3 desenvolvedores Android. Todos estes dados est\~ao dispon\'iveis no nosso pacote de replica\c{c}\~ao.
+
+A primeira se\c{c}\~ao consistiu de 6 quest\~oes demogr\'aficas de escolha simples ou multipla escolha e eram obrigat\'orias. Essas quest\~oes abordaram idade (18 ou menos, 19 a 24, 25 a 34 e assim por diante), estado de resid\^encia (foi dada uma lista com estados do Brasil, Estados Unidos e Europa), anos de experi\^encia com desenvolvimento de software, (1 anos ou menos, 2 anos, 3 anos, e assim por diante at\'e 10 ou mais), anos de experi\^encia com desenvolvimento Android (mesma escala de anos da quest\~ao anterior), uma quest\~ao de multipla escolha sobre linguagens que o participante se considerava proeficiente (Java, Python, Ruby, Android, dentre outras) e sobre o \'ultimo grau de escolaridade (estudante de bacharelado, bacharelado, mestrado, doutorado). As quest\~oes sobre idade, regi\~ao, linguagens e grau de escolaridade continham a op\c{c}\~ao ``outros'' para informar de manualmente.
+
+A segunda se\c{c}\~ao consistiu de 16 quest\~oes sobre boas e m\'as pr\'aticas dissertativas e opcionais. Para cada elemento do \textit{front-end} Android foram feitas duas perguntas, uma sobre boas e outra sobre m\'as pr\'aticas percebidas pelos participantes, por exemplo, para a \textsc{Activity} as perguntas foram:
 
 \begin{itemize} 
 	\item[$\textasteriskcentered$] Do you have any good practices to deal with Activities?
 	\item[$\textasteriskcentered$] Do you have any bad practices to deal with Activities? 
 \end{itemize}
 
-A terceira Se\c{c}\~ao objetivou captar qualquer \'ultima ideia sobre boas e m\'as pr\'aticas n\~ao captadas nas quest\~oes anteriores. Para isso fizemos as seguintes perguntas: 
+A terceira se\c{c}\~ao consistiu de 3 perguntas opcionais e dissertativas, 2 para captar qualquer \'ultima ideia sobre boas e m\'as pr\'aticas n\~ao captadas nas quest\~oes anteriores e 1 opcional onde solicitamos o email do participante caso o mesmo tivesse interesse em participar de etapas futuras da pesquisa. As perguntas sobre boas e m\'as pr\'aticas foram as a seguir: 
 
 \begin{itemize} 
 	\item[$\textasteriskcentered$] Are there any other *GOOD* practices in Android Presentation Layer we did not asked you or you did not said yet?
 	\item[$\textasteriskcentered$] Are there any other *BAD* practices in Android Presentation Layer we did not asked you or you did not said yet?
 \end{itemize}
 
+Antes da divulga\c{c}\~ao, realizamos um piloto com 3 desenvolvedores Android e com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade das perguntas da segunda se\c{c}\~ao, onde todas tornaram-se opcionais. As respostas dos participantes piloto foram desconsideradas para efeitos de vi\'es. 
 
 \subsection{Participantes}
 \label{sub:participantes}
 
-Obtivemos 45 respostas com o question\'ario. O mesmo foi divulgado em grupos de desenvolvedores Android, como por exemplo o grupo do Slack AndroidDevBR, maior grupo de desenvolvedores Android do Brasil que conta com mais de 2500 participantes no momento da escrita deste artigo. Coletamos 36 respostas do Brasil, 7 de pa\'ises europeus e 1 da Calif\'ornia. Um participante preferiu n\~ao responder. A Tabela \ref{tab:DadosDemograficos} apresenta dados sobre anos de experi\^encia dos participantes com desenvolvimento de sofware e com desenvolvimento Android. Notamos que 67\% dos participantes possuem mais de 5 anos de experi\^encia com desenvolvimento de software e que 71\% possuem 3 anos ou mais de experi\^encia com desenvolvimento Android.
+O question\'ario foi divulgado em redes sociais como Facebook, Twitter e Linkedin e grupos de desenvolvedores Android como os Google Groups \texttt{androidbrasil-dev@googlegroups.com} e \texttt{android-brasil-projetos@googlegroups.com} e o grupo do Slack AndroidDevBR, maior grupo de desenvolvedores Android do Brasil que conta com mais de 2500 participantes no momento da escrita deste artigo. Coletamos 36 respostas do Brasil, 7 de pa\'ises europeus e 1 da Calif\'ornia. Um participante preferiu n\~ao responder. A Tabela \ref{tab:DadosDemograficos} apresenta dados sobre anos de experi\^encia dos participantes com desenvolvimento de sofware e com desenvolvimento Android. Notamos que 67\% dos participantes possuem mais de 5 anos de experi\^encia com desenvolvimento de software e que 71\% possuem 3 anos ou mais de experi\^encia com desenvolvimento Android.
 
 \begin{table}[h]
 \centering

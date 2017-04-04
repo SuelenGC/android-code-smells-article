@@ -10,8 +10,30 @@ Nossa pesquisa complementa as anteriores no sentido de que tamb\'em buscamos \te
 
 Optamos por focar em elementos relacionados ao \textit{front-end} Android pois encontramos pesquisas com uma curiosidade similar, por\'em relacionadas a identifica\c{c}\~ao de \textit{smells} em tecnologias usadas no \textit{front-end} de projetos web \cite{CSSCodeSmell, BB, FinavaroAniche2016}. E enquanto que \textit{smells} em projetos Java j\'a foram extensivamente estudados [], o \textit{front-end} Android possui peculiaridades n\~ao encontradas, e portanto n\~ao investigadas, em c\'odigo Java tradicional. Podemos citar alguns exemplos como o ciclo de vida definido pela plataforma que \'e atribu\'ido a toda \textsc{activity} ou \textsc{fragment} ou a criação da interface visual de \textsc{Activity}s que \'e feita atrav\'es de arquivos XML chamados de \textsc{layout resources}.
 
+Nesta pesquisa objetivamos investigar a percep\c{c}\~ao de desenvolvedores Android sobre boas e m\'as pr\'aticas de c\'odigo relacionadas ao \textit{front-end} Android. Para definirmos quais elementos representam o \textit{front-end} Android fizemos uma extensa revis\~ao da documenta\c{c}\~ao oficial e chegamos nos seguintes itens \cite{AndroidDeveloperSite2016}:
+
+\begin{itemize} 
+	\item[$\textasteriskcentered$] classes do tipo \textsc{Activity},
+	\item[$\textasteriskcentered$] classes do tipo \textsc{Fragment},
+	\item[$\textasteriskcentered$] classes do tipo \textsc{Listener}, 
+	\item[$\textasteriskcentered$] classes do tipo \textsc{Adapter} e
+	\item[$\textasteriskcentered$] os \textit{applications resources} que s\~ao arquivos XML ou imagens utilizados na interface visual como \textsc{drawable}s, \textsc{layout}s, \textsc{style}s e \textsc{color}s.
+\end{itemize}
+
+Como existem muitos tipos de \textit{applications resources} \cite{AndroidResourcesOverview}, com o objetivo de limitar o tamanho do question\'ario, selecionamos quatro recursos: \textsc{layout}, \textsc{styles}, \textsc{string} e \textsc{drawable}. Esses recursos est\~ao presentes no template padr\~ao, selecionado automaticamente ao iniciar um novo projeto no Android Studio \cite{FirstApp2017}, IDE oficial para desenvolvimento de projetos da plataforma \cite{AndroidStudio}. \\
+
+Com isso, pretendemos responder as seguintes quest\~oes de pesquisa: \\
+
+\textbf{RQ1} O que desenvolvedores consideram boas e m\'as pr\'aticas no desenvolvimento Android? \\
+
+\textbf{RQ2} C\'odigos afetados pelos \textit{code smells} propostos s\~ao percebidos pelos desenvolvedores como problem\'aticos? \\
+
+Para coletar os dados iniciais, publicamos um question\'ario online questionando sobre boas e m\'as pr\'aticas no \textit{front-end} Android. Perguntas dissertativas foram usadas para n\~ao limitar o participante, possibilitar respostas mais completas e evitar enviesamento. O question\'ario foi escrito em ingl\^es por\'em informava o participante que respostas em ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, realizamos um piloto com 3 desenvolvedores Android e com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade de algumas perguntas. As respostas dos participantes piloto foram desconsideradas para efeitos de vi\'es. 
+
 Com os resultados obtidos foi poss\'ivel compilar um cat\'alogo com 21 Android \textit{code smells} classificados em alta, m\'edia e baixa recorr\^encia de percep\c{c}\~ao. Esperamos com este cat\'alogo contribuir com as ideias iniciais para a defini\c{c}\~ao de heur\'isticas para a detec\c{c}\~ao sistematizada desses \textit{smells}. \\
 
 As se\c{c}\~oes seguintes deste artigo estão organizadas da seguinte forma: na Se\c{c}\~ao 2 discutimos alguns trabalhos relacionados e o estado da arte sobre Android e \textit{code smells}. Na Se\c{c}\~ao 3 falamos sobre os m\'etodos utilizados em nosso estudo. A Se\c{c}\~ao 4 apresenta os resultados e as amea\c{c}as \`a validade do nosso estudo. Na Se\c{c}\~ao 5 discutimos e conclu\'imos.\\ 
+
+
 
 \textbf{[se\c{c}\~ao n\~ao finalizada.]}
