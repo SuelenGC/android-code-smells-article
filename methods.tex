@@ -1,4 +1,5 @@
 % -*- root: article.tex -*-
+Durante o processo de codificação das respostas para as 18 perguntas abertas sobre boas e m\'as pr\'aticas, 	
 Conduzimos um estudo qualitativo e explorat\'orio onde os dados foram coletados atrav\'es de um question\'ario online com desenvoveldores Android. Esta se\c{c}\~ao descreve de forma detalhada a estrutura do question\'ario, os participantes e a an\'alise realizada sobre as respostas obtidas.
 
 \subsection{Question\'ario}
@@ -31,25 +32,58 @@ O question\'ario foi divulgado em redes sociais como Facebook, Twitter e Linkedi
 
 O question\'ario esteve aberto por aproximadamente 3 meses e meio, de 9 de Outubro de 2016 at\'e 18 de Janeiro de 2017. Recebemos um total de 45 respostas sendo que 41 foram submetidas em Outubro, 3 no come\c{c}o de Novembro e 1 em Janeiro. Uma poss\'ivel explica\c{c}\~ao para praticamente n\~ao termos tido respostas nos meses de Novembro e Dezembro pode ser as festas comemorativas de final de ano. 
 
-Acreditamos que o question\'ario foi efetivo pois 80\% dos participantes responderam pelo menos 3 perguntas sobre boas e m\'as pr\'aticas no \textit{front-end} Android (7 responderam de 3 a 6, 6 responderam de 8 a 10 e 23 responderam 13 ou mais, sendo que desses, 14 responderam todas) e apenas 20\% responderam apenas uma (2 participantes) ou nenhuma (7 participantes). A pergunta solicitando o email foi respondida por 53\% dos participantes, o que pode indicar um interesse leg\'itimo da comunidade de desenvolvedores Android pelo tema, refor\c{c}ando a relev\^ancia do estudo. 
+80\% dos participantes responderam pelo menos 3 perguntas sobre boas e m\'as pr\'aticas no \textit{front-end} Android (7 responderam de 3 a 6, 6 responderam de 8 a 10 e 23 responderam 13 ou mais, sendo que desses, 14 responderam todas) e apenas 20\% responderam uma (2 participantes) ou nenhuma (7 participantes). A pergunta solicitando o email foi respondida por 53\% dos participantes, o que pode indicar um interesse leg\'itimo da comunidade de desenvolvedores Android pelo tema, refor\c{c}ando a relev\^ancia do estudo. A Tabela \ref{tab:ResponseRate} apresenta o percentual de respostas obtido por cada uma das 18 perguntas sobre boas e m\'as pr\'aticas, podemos notar que a menor taxa de respostas foi na quest\~ao 18 e a maior na quest\~ao 1.
+
+\begin{table*}[t]
+\centering
+\caption{Percentual de respostas das perguntas sobre boas e m\'as pr\'aticas.}
+\small
+\begin{tabular}{rp{12cm}c}
+\toprule
+\multicolumn{2}{l}{\textbf{Quest\~oes}} 	& 	\multicolumn{1}{c}{\textbf{Taxa de Respostas}} \\
+\hline
+1 & Do you have any good practices to deal with \textsc{Activities}?	& 	80 \% \\ 
+2 & Do you have anything you consider a bad practice when dealing with \textsc{Activities}?	& 	78 \% \\ 
+3 & Do you have any good practices to deal with \textsc{Fragments}?	& 	73 \% \\ 
+4 & Do you have anything you consider a bad practice when dealing with \textsc{Fragments}?	& 	69 \% \\ 
+5 & Do you have any good practices to deal with \textsc{Adapters}?	& 	67 \% \\ 
+6 & Do you have anything you consider a bad practice when dealing with \textsc{Adapters}?	& 	60 \% \\ 
+7 & Do you have any good practices to deal with \textsc{Listeners}?	& 	53 \% \\ 
+8 & Do you have anything you consider a bad practice when dealing with \textsc{Listeners}?	& 	51 \% \\ 
+9 & Do you have any good practices to deal with \textsc{Layout Resources}?	& 	62 \% \\ 
+10 & Do you have anything you consider a bad practice when dealing with \textsc{Layout Resources}?	& 	51 \% \\ 
+11 & Do you have any good practices to deal with \textsc{Styles Resources}?	& 	51 \% \\ 
+12 & Do you have anything you consider a bad practice when dealing with \textsc{Styles Resources}?	& 	49 \% \\ 
+13 & Do you have any good practices to deal with \textsc{String Resources}?	& 	62 \% \\ 
+14 & Do you have anything you consider a bad practice when dealing with \textsc{String Resources}?	& 	51 \% \\ 
+15 & Do you have any good practices to deal with \textsc{Drawable Resources}?	& 	53 \% \\ 
+16 & Do you have anything you consider a bad practice when dealing with \textsc{Drawable Resources}?	& 	47 \% \\ 
+17 & Are there any other *GOOD* practices in Android Presentation Layer we did not asked you or you did not said yet?	& 	49 \% \\ 
+18 & Are there any other *BAD* practices in Android Presentation Layer we did not asked you or you did not said yet?	& 	44 \% \\ 
+\toprule
+\end{tabular}
+\label{tab:ResponseRate}
+\end{table*}
 
 Com a an\'alise das quest\~oes demogr\'aficas foi poss\'ivel notar que atingimos com sucesso \textit{desenvolvedores Android com variados n\'iveis de experi\^encia e de diversas regi\~oes} pois: 1) 100\% dos participantes indicaram possuir alguma experi\^encia com desenvolvimento Android, 2) menos de 14\% indicaram possuir 1 anos ou menos de experi\^encia com Android e mais de 86\% indicaram 2 anos ou mais (15,5\% 2 anos, 13,3\% 4 anos, 6,5\% 5 anos, 15,5\% 6 anos, 4,4\% 7 anos e 4,4\% 8 anos), 4) 36 respostas foram do Brasil, 7 de pa\'ises europeus e 1 dos Estados Unidos (Calif\'ornia). Vale lembrar que a plarforma Android completa 10 anos em 2017, ou seja, 5 anos de experi\^encia nessa plataforma representa 50\% do tempo de vida dela desde seu an\'uncio em 2007. Esses dados, sobre a experi\^encia dos participantes, s\~ao apresentados na Tabela \ref{tab:DadosDemograficos}.
 
 \begin{table}[h]
 \centering
 \caption{Experi\^encia dos participantes com desenvolvimento Android.}
-\begin{tabular}{c|c}
-Experi\^encia com Android & Total de Participantes \\
+\small
+\begin{tabular}{l|c|r}
+\toprule
+\textbf{Anos de Experi\^encia} & \textbf{Participantes} & \multicolumn{1}{c}{\textbf{\%}}  \\
 \hline
-at\'e 1 ano 	&	6 (13,33\%) \\
-2 anos 			& 	 7 (15,56\%) \\
-3 anos 			& 	 12 (26,67\%) \\
-4 anos 			& 	 6 (13,33\%) \\
-5 anos 			& 	 3 (6,67\%) \\
-6 anos 			& 	 7 (15,56\%) \\
-7 anos 			& 	 2 (4,44\%) \\
-8 anos 			& 	 2 (4,44\%) \\
-
+1 ano ou menos 	&	 6 		& 	13,3 \%	 \\
+2 anos 			& 	 7 		& 	15,6 \%	 \\
+3 anos 			& 	 12		& 	26,7 \%	 \\
+4 anos 			& 	 6 		& 	13,3 \%	 \\
+5 anos 			& 	 3 		& 	 6,7 \%	 \\
+6 anos 			& 	 7 		& 	15,6 \%	 \\
+7 anos 			& 	 2 		& 	 4,4 \%	 \\
+8 anos 			& 	 2 		& 	 4,4 \%	 \\
+\toprule
 \end{tabular}
 \label{tab:DadosDemograficos}
 \end{table}
@@ -77,50 +111,8 @@ at\'e 1 ano 	&	6 (13,33\%) \\
 
 O processo de an\'alise partiu da listagem das 45 respostas do question\'ario e se deu em 4 passos: verticaliza\c{c}\~ao, limpeza dos dados, codifica\c{c}\~ao e divis\~ao. 
 
-O processo que denominamos de \textit{verticaliza\c{c}\~ao} consistiu em considerar cada resposta de boa ou m\'a pr\'atica como um registro individual a ser analisado. Ou seja, cada participante respondeu 18 perguntas sobre boas e m\'as pr\'aticas no \textit{front-end} Android (2 perguntas para cada elemento e mais duas perguntas gen\'ericas). Com o processo de \textit{verticaliza\c{c}\~ao}, cada uma dessas respostas se tornou um registro, ou seja, cada participante resultava em 18 respostas a serem analisadas, resultando em 810 respostas (18 perguntas multiplicado por 45 participantes) sobre boas ou m\'as pr\'aticas.
+O processo que denominamos de \textit{verticaliza\c{c}\~ao} consistiu em considerar cada resposta de boa ou m\'a pr\'atica como um registro individual a ser analisado. Ou seja, cada participante respondeu 18 perguntas sobre boas e m\'as pr\'aticas no \textit{front-end} Android (2 perguntas para cada elemento e mais duas perguntas gen\'ericas). Com o processo de \textit{verticaliza\c{c}\~ao}, cada uma dessas respostas se tornou um registro, ou seja, cada participante resultava em 18 respostas a serem analisadas, totalizando 810 respostas (18 perguntas multiplicado por 45 participantes) sobre boas e m\'as pr\'aticas.
 
 O passo seguinte foi realizar a \textit{limpeza dos dados}. Esse passo consistiu em remover respostas obviamente n\~ao \'uteis como respostas em branco, que continham frases como \textit{"N\~ao"}, \textit{"N\~ao que eu saiba"}, \textit{"Eu n\~ao me lembro"} e similares, as consideradas vagas como \textit{"Eu n\~ao tenho certeza se s\~ao boas praticas mas uso o que vejo por ai"}, as consideradas gen\'ericas como \textit{"Como todo c\'odigo java..."} e as que n\~ao eram relacionadas a boas pr\'aticas de c\'odigo. Das 810 boas e m\'as pr\'aticas, 352 foram consideradas e 458 desconsideradas. Das 352, 44,6\% foram apontadas como m\'as pr\'aticas e 55,4\% como boas pr\'aticas. 
 
-Em seguida realizamos a codifica\c{c}\~ao sobre as boas e m\'as pr\'aticas. Durante esse processo, categorias foram emergindo a partir das respostas. Durante a codifica\c{c}\~ao, houveram 30 respostas que n\~ao eram triviais de identificar uma categoria ou mesmo de dizer se essas respostas deveriam ser consideradas, sendo marcadas como \textit{"talvez"} durante o processo e reavaliadas ao final, onde 6 permaneceram e 24 foram desconsideradas. Durante a codifica\c{c}\~ao, 9 respostas incialmente consideradas, foram desconsideradas. Para toda resposta desconsiderada foi indicado um motivo.
-
-% SOBRE NÃO USAR FRAGMENTS / MOVER PARA RESULTADOS
-% Uma situa\c{c}\~ao interessante \'e que diversas dessas respostas indicavam que n\~ao se deve usar \textsc{Fragments} por\'em n\~ao apresentavam nenhum argumento sobre o motivo, por exemplo: ``Eu tento evit\'a-los.' (tradu\c{c}\~ao livre). Essas respostas inicialmente seriam desconsideradas, mas pela quantidade de repeti\c{c}\~oes obtidas, 10 no caso, optamos por considerar. 
-
-% Em seguida, realizamos diversas itera\c{c}\~oes nas respostas sobre boas e m\'as pr\'aticas consideradas a fim de categoriz\'a-las em algum novo smell Android ou algum smell pr\'e-existente. Essas itera\c{c}\~oes consistiram em analisar resposta a resposta e atribuir uma ou mais categorias de algum poss\'ivel novo smell Android ou pr\'e-existente. Foram realizadas diversas itera\c{c}\~oes de categoriza\c{c}\~ao com o objetivo de normalizar as categorias, ou seja, evitar sin\^onimos e hom\^onimos. Um sin\^onimo \'e o mesmo conceito com dois nomes diferentes e hom\^onimos s\~ao dois conceitos diferentes com o mesmo nome. 
-
-% Durante a categoriza\c{c}\~ao, uma mec\^anica que consideramos importante para a normaliza\c{c}\~ao das categorias, foi a cria\c{c}\~ao de uma lista de categorias, onde a cada nova categoria atribu\'ida, increment\'avamos a lista e preench\'iamos com descri\c{c}\~oes que indicavam que tipo de boa ou m\'a pr\'atica estava recebendo aquela categoria. Esta mec\^anica ajudou a evitar hom\^onimos e sin\^onimos e serviu como base para a defini\c{c}\~ao e avalia\c{c}\~ao da relev\^ancia dos \textit{smells} a serem trabalhados nos pr\'oximos passos.
-
-O \'ultimo passo foi a etapa que denominamos de \textit{divis\~ao}. Nesse passo, as respostas que receberam mais de uma categoria foram divididas em duas ou mais respostas (de acordo com o n\'umero de categorias identificadas). Por exemplo, a resposta \textit{"N\~ao fazer Activities serem callbacks de execu\c{c}\~oes ass\'incronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira ora\c{c}\~ao uma categoria e na segunda ora\c{c}\~ao outra categoria. Ao divid\'i-la mantivemos o texto da resposta apenas relativo a categoria, como se fossem duas respostas v\'alidas. Em algumas respostas que foram divididas n\~ao pudemos dividir o texto pois a resposta completa era necess\'ario para entender ambas as categoriza\c{c}\~oes, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de forma diferente. Ap\'os as divis\~oes, conclu\'imos com 388 respostas sobre boas e m\'as pr\'aticas no \textit{front-end} Android, sendo cada uma com apenas uma categoria. 
-
-%  MOVER PARA RESULTADOS
-% Ao final de todas as etapas, conclu\'imos com 388 respostas sobre boas e m\'as pr\'aticas distribu\'idas em 47 categorias. 
-
-\subsection{An\'alise e Defini\c{c}\~ao dos Smells}
-\label{sub:analisys-definition}
-
-Nosso objetivo nesta etapa foi entender quais \textit{smells}, dos 47 identificados, eram mais recorr\^entes. Para isso, contabilizamos cada \textit{smell}, em quantas respostas ele aparecia, ou seja, se duas respostas foram categorizadas com o \textit{smell} "A" ent\~ao diz-se que esse \textit{smell} tem contagem 2. Depois da contagem, elaboramos intervalos que indicam recorr\^encia ALTA, maior ou igual a 20, M\'EDIA, dentre 6 e 19 e BAIXA, dentre 3 e 5. Abaixo de 3 classificamos como IRRELEVANTE. Obtemos o seguinte resultado:
-
-\begin{table}[h]
-\centering
-\caption{Smells identificados vs. recorr\^encia percebida pelos participantes do question\'ario}
-\begin{tabular}{p{3cm}|p{4cm}}
-\textbf{Recorr\^encia} & \textbf{Quantidade de Smells} \\
-\hline
-Alta  			& 5 \\
-M\'edia 		& 17 (1 \textit{smell} tradicional) \\
-Baixa			& 5 \\
-Irrelevante 	& 20 \\
-\end{tabular}
-\label{tab:DadosDemograficos2}
-\end{table}
-
-Os irrelevantes foram desconsiderados nesta etapa de defini\c{c}\~ao. Os demais foram definidos com a ajuda das respostas dos participantes. Para cada \textit{smell} definimos os seguintes t\'opicos: 
-
-\begin{itemize} 
-	\item[$\textasteriskcentered$] \textbf{Quando ocorre}. Indicamos os motivos pelo qual foi considerado uma m\'a pr\'atica.   
-	\item[$\textasteriskcentered$] \textbf{Contexto/exemplo}. Indicamos algum exemplo ou contexto pr\'atico. 
-	\item[$\textasteriskcentered$] \textbf{Elementos afetados}. Eventualmente algum \textit{smell} afeta mais de um elemento, nesse t\'opico abordamos em quais os elementos este \textit{smell} pode estar presente. 
-	\item[$\textasteriskcentered$] \textbf{Solu\c{c}\~ao}. Indicamos poss\'iveis refatora\c{c}\~oes para reduzir ou eliminar o \textit{smell}. \\
-\end{itemize}
-
-\'E importante ressaltar que todas as defini\c{c}\~oes dos \textit{smells} foram apoiadas nas respostas dos participantes. Se os participantes n\~ao indicaram algum t\'opico para algum \textit{smell}, o mesmo n\~ao foi definido. \\
+Em seguida realizamos a codifica\c{c}\~ao sobre as boas e m\'as pr\'aticas. Durante esse processo, categorias foram emergindo a partir das respostas. Durante a codifica\c{c}\~ao, houveram 30 respostas que n\~ao eram triviais de identificar uma categoria ou mesmo de dizer se essas respostas deveriam ser consideradas, sendo marcadas como \textit{"talvez"} durante o processo e reavaliadas ao final, onde 6 permaneceram e 24 foram desconsideradas. Ainda durante a codifica\c{c}\~ao, 9 respostas incialmente consideradas, foram desconsideradas. Para toda resposta desconsiderada foi indicado um motivo.
