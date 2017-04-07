@@ -8,19 +8,11 @@ Determinar o que \'e ou n\~ao um \textit{code smells} \'e subjetivo e pode varia
 
 Nossa pesquisa complementa as anteriores no sentido de que tamb\'em buscamos \textit{code smells} Android, e se difere delas pois estamos buscando \textit{smells} relacionados \`a qualidade do c\'odigo Android, ou seja, qualidade relacionada a c\'odigos espec\'ificos dessa plataforma. Por exemplo \textsc{activity}s, \textsc{fragment}s e \textsc{adapter}s s\~ao classes usadas na constru\c{c}\~ao de telas e \textsc{listener}s s\~ao respons\'aveis pelas intera\c{c}\~oes com o usu\'ario. Buscamos responder quest\~oes como \textit{``quais s\~ao as \textbf{boas e m\'as} pr\'aticas ao lidar com \textsc{activity}s, \textsc{fragment}s, \textsc{adapter}s e \textsc{listener}s?''} ou \textit{``quais s\~ao as \textbf{boas e m\'as} pr\'aticas para a constru\c{c}\~ao da interface visual?''}. Respondemos a essas e outras quest\~oes com base na percep\c{c}\~ao de desenvolvedores dessa plataforma. 
 
-Optamos por focar em elementos relacionados ao \textit{front-end} Android pois encontramos pesquisas com uma curiosidade similar, por\'em relacionadas a identifica\c{c}\~ao de \textit{smells} em tecnologias usadas no \textit{front-end} de projetos web \cite{CSSCodeSmell, BB, FinavaroAniche2016}. E enquanto que \textit{smells} em projetos Java j\'a foram extensivamente estudados [], o \textit{front-end} Android possui peculiaridades n\~ao encontradas, e portanto n\~ao investigadas, em c\'odigo Java tradicional. Podemos citar alguns exemplos como o ciclo de vida definido pela plataforma que \'e atribu\'ido a toda \textsc{activity} ou \textsc{fragment} ou a criação da interface visual de \textsc{Activity}s que \'e feita atrav\'es de arquivos XML chamados de \textsc{layout resources}.
+Optamos por focar em elementos relacionados ao \textit{front-end} Android pois encontramos pesquisas com uma curiosidade similar, por\'em relacionadas a identifica\c{c}\~ao de \textit{smells} em tecnologias usadas no \textit{front-end} de projetos web \cite{CSSCodeSmell, BB, FinavaroAniche2016}. E enquanto que \textit{smells} em projetos Java j\'a foram extensivamente estudados [], o \textit{front-end} Android possui peculiaridades n\~ao encontradas, e portanto n\~ao investigadas, em c\'odigo Java tradicional. Podemos citar alguns exemplos como o ciclo de vida definido pela plataforma que \'e atribu\'ido a toda \textsc{activity} ou \textsc{fragment} e a criação da interface visual de \textsc{Activity}s que \'e feita atrav\'es de arquivos XML chamados de \textsc{layout resources}.
 
-Nesta pesquisa objetivamos investigar a percep\c{c}\~ao de desenvolvedores Android sobre boas e m\'as pr\'aticas de c\'odigo relacionadas ao \textit{front-end} Android. Para definirmos quais elementos representam o \textit{front-end} Android fizemos uma extensa revis\~ao da documenta\c{c}\~ao oficial e chegamos nos seguintes itens \cite{AndroidDeveloperSite2016}:
+Para definirmos quais elementos representam o \textit{front-end} Android fizemos uma extensa revis\~ao da documenta\c{c}\~ao oficial \cite{AndroidDeveloperSite2016} e chegamos nos seguintes itens: \textsc{Activity}s, \textsc{Fragment}s, \textsc{Listener}s, \textsc{Adapter}s e os \textit{applications resources}, que s\~ao arquivos XML ou imagens utilizados na interface visual como por exemplo \textsc{drawable}s, \textsc{layout}s, \textsc{style}s e \textsc{color}s.
 
-\begin{itemize} 
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Activity},
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Fragment},
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Listener}, 
-	\item[$\textasteriskcentered$] classes do tipo \textsc{Adapter} e
-	\item[$\textasteriskcentered$] os \textit{applications resources} que s\~ao arquivos XML ou imagens utilizados na interface visual como \textsc{drawable}s, \textsc{layout}s, \textsc{style}s e \textsc{color}s.
-\end{itemize}
-
-Como existem muitos tipos de \textit{applications resources} \cite{AndroidResourcesOverview}, com o objetivo de limitar o tamanho do question\'ario, selecionamos quatro recursos: \textsc{layout}, \textsc{styles}, \textsc{string} e \textsc{drawable}. Esses recursos est\~ao presentes no template padr\~ao, selecionado automaticamente ao iniciar um novo projeto no Android Studio \cite{FirstApp2017}, IDE oficial para desenvolvimento de projetos da plataforma \cite{AndroidStudio}. \\
+Como existem muitos tipos de \textit{applications resources} \cite{AndroidResourcesOverview}, com o objetivo de limitar o tamanho do question\'ario, selecionamos quatro: \textsc{layout}, \textsc{styles}, \textsc{string} e \textsc{drawable}. Esses recursos est\~ao presentes no template padr\~ao do Android Studio \cite{FirstApp2017}, IDE oficial para desenvolvimento de projetos da plataforma \cite{AndroidStudio}. \\
 
 Com isso, pretendemos responder as seguintes quest\~oes de pesquisa: \\
 
@@ -28,12 +20,8 @@ Com isso, pretendemos responder as seguintes quest\~oes de pesquisa: \\
 
 \textbf{RQ2} C\'odigos afetados pelos \textit{code smells} propostos s\~ao percebidos pelos desenvolvedores como problem\'aticos? \\
 
-Para coletar os dados iniciais, publicamos um question\'ario online questionando sobre boas e m\'as pr\'aticas no \textit{front-end} Android. Perguntas dissertativas foram usadas para n\~ao limitar o participante, possibilitar respostas mais completas e evitar enviesamento. O question\'ario foi escrito em ingl\^es por\'em informava o participante que respostas em ingl\^es ou portugu\^es eram aceitas. Antes da divulga\c{c}\~ao, realizamos um piloto com 3 desenvolvedores Android e com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade de algumas perguntas. As respostas dos participantes piloto foram desconsideradas para efeitos de vi\'es. 
+Para coletar os dados iniciais, publicamos um question\'ario online sobre boas e m\'as pr\'aticas no \textit{front-end} Android. Perguntas dissertativas foram usadas para n\~ao limitar o participante, possibilitar respostas mais completas e evitar enviesamento. 
 
-Com os resultados obtidos foi poss\'ivel compilar um cat\'alogo com 21 Android \textit{code smells} classificados em alta, m\'edia e baixa recorr\^encia de percep\c{c}\~ao. Esperamos com este cat\'alogo contribuir com as ideias iniciais para a defini\c{c}\~ao de heur\'isticas para a detec\c{c}\~ao sistematizada desses \textit{smells}. \\
+% Com os resultados obtidos foi poss\'ivel compilar um cat\'alogo com 21 Android \textit{code smells} classificados em alta, m\'edia e baixa recorr\^encia de percep\c{c}\~ao. Esperamos com este cat\'alogo contribuir com as ideias iniciais para a defini\c{c}\~ao de heur\'isticas para a detec\c{c}\~ao sistematizada desses \textit{smells}. \\
 
 As se\c{c}\~oes seguintes deste artigo estão organizadas da seguinte forma: na Se\c{c}\~ao 2 discutimos alguns trabalhos relacionados e o estado da arte sobre Android e \textit{code smells}. Na Se\c{c}\~ao 3 falamos sobre os m\'etodos utilizados em nosso estudo. A Se\c{c}\~ao 4 apresenta os resultados e as amea\c{c}as \`a validade do nosso estudo. Na Se\c{c}\~ao 5 discutimos e conclu\'imos.\\ 
-
-
-
-\textbf{[se\c{c}\~ao n\~ao finalizada.]}

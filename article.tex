@@ -5,6 +5,57 @@
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 \usepackage{listings} % para formatar código-fonte (ex. em Java)
 
+\renewcommand{\lstlistingname}{C\'odigo-Fonte}
+
+\definecolor{Maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+\lstdefinelanguage{XML_android}
+{
+  basicstyle=\ttfamily\footnotesize,
+  morestring=[b]",
+  moredelim=[s][\color{Maroon}]{<}{\ },
+  moredelim=[s][\color{Maroon}]{</}{>},
+  moredelim=[l][\color{Maroon}]{/>},
+  moredelim=[l][\color{Maroon}]{>},
+  morecomment=[s]{<?}{?>},
+  morecomment=[s]{<!--}{-->},
+  commentstyle=\color{darkgreen},
+  stringstyle=\color{blue},
+  identifierstyle=\color{red}
+}
+
+\lstdefinelanguage{XML_SYNTAX}{%
+    morekeywords={id},
+    alsoletter=-,
+    morestring=[b]",
+    stringstyle=\color[rgb]{0,0,1},
+    morecomment=[s]{<?}{?>},
+    morecomment=[s]{<!--}{-->},
+    morecomment=[s]{<!}{>},
+    commentstyle=\color{darkgreen},
+    moredelim=[s][\color{black}]{![}{]]},
+    moredelim=*[s][\color{Maroon}]{<}{>},
+    keywordstyle=\color{red}
+}
+
+\lstset{
+    % Basic design
+    backgroundcolor=\color[rgb]{0.9,0.9,0.9},
+    basicstyle={\small\ttfamily},
+    breaklines=true,
+    frame=l,
+    tabsize=2,
+    % Line numbers
+    xleftmargin={0.75cm},
+    numbers=left,
+    stepnumber=1,
+    firstnumber=1,
+    numberfirstline=true,
+    % HTML formatting
+    language=XML_SYNTAX,
+}
+
 % Pacotes de Gráficos
 \usepackage{tikz} \usetikzlibrary{calc,plotmarks}  
 \usepackage{pgfplots}
@@ -34,8 +85,8 @@
 
 \acmPrice{15.00}
 
-
 \begin{document}
+
 \title{Sobre a Percep\c{c}\~ao dos Desenvolvedores Android em Rela\c{c}\~ao aos Maus Cheiros de C\'odigo}
 % \titlenote{Produces the permission block, and copyright information}
 % \subtitle{Extended Abstract}

@@ -1,6 +1,7 @@
 % -*- root: article.tex -*-
-Durante o processo de codificação das 18 perguntas abertas sobre boas e más práticas, 27 categorias emergiram (excluindo irrelevantes). A Tabela X apresenta o número de citações e quantos participantes a responderam. 
+Durante o processo de codifica\c{c}\~ao das 18 perguntas abertas sobre boas e m\'as pr\'aticas, 27 categorias emergiram (excluindo as irrelevantes, que s\~ao as categorias que tiveram menos de 3 ocorrências). A Tabela \ref{tab:Categories} apresenta o n\'umero de ocorr\^encias por categoria e quest\~ao. A \'ultima linha da Tabela mostra quantas categorias emergiram de cada quest\~ao. 
 
+A partir das categorias foi poss\'ivel criar defini\c{c}\~oes textuais de alguns code smells Android pois as respostas indicavam os sintomas e poss\'iveis solu\c{c}\~oes, entretando, outras categorias n\~ao foi possivel extrair um smells, pois apareceram nas respostas mais como uma discuss\~ao.
 
 \begin{table*}[t]
 \centering
@@ -10,140 +11,140 @@ Durante o processo de codificação das 18 perguntas abertas sobre boas e más p
 \toprule
 \textbf{Categoria} & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 & Q9 & Q10 & Q11 & Q12 & Q13 & Q14 & Q15 & Q16 & Q17 & Q18 \\
 \hline
-No Logic In View									& \multicolumn{1}{c}{12}	& \multicolumn{1}{c}{15}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}  \\
-Resource Name Pattern								& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Magic [Possible] Resource							& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{9}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Nested Layout										& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{9}	& \multicolumn{1}{c}{9}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{1} 		 \\
-MVP													& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.} 		 \\
-View Coupled To View								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Life Cycle											& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Use Include											& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{12}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.} 	 \\
-Use View Holder Pattern								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{12}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 	 \\
-Drawable Size Matters								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Suspicious Extra Knowledge About Behavior			& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-God Class											& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Use Fragment										& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Use Vector Drawables								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{11}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 	 \\
-Use Well Know Architectures							& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{1} 		 \\
-Use Fragment Just If Needed							& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Messy Style Resources								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Messy String Resources								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Avoid Images										& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Duplicated Styles Attributes						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.} 		 \\
-Zumbi Referended Activity							& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-DI													& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.} 		 \\
-Reuse String Resources Too Much						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Flex Adapter										& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Base Class											& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Hided Listener										& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
-Opened Activity										& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+No Logic In View							& \multicolumn{1}{c}{12}	& \multicolumn{1}{c}{15}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}  \\
+Resource Name Pattern						& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Magic [Possible] Resource					& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{9}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Nested Layout								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{9}	& \multicolumn{1}{c}{9}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{1} 		 \\
+MVP											& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.} 		 \\
+View Coupled To View						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Life Cycle									& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Use Include									& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{12}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.} 	 \\
+Use View Holder Pattern						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{12}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 	 \\
+Drawable Size Matters						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{6}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Suspicious Extra Knowledge About Behavior	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+God Class									& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Use Fragment								& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Use Vector Drawables						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{11}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 	 \\
+Use Well Know Architectures					& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{1} 		 \\
+Use Fragment Just If Needed					& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{8}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Messy Style Resources						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{5}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Messy String Resources						& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Avoid Images								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Duplicated Styles Attributes				& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.} 		 \\
+Zumbi Referended Activity					& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+DI											& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.} 		 \\
+Reuse String Resources Too Much				& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{4}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Flex Adapter								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Base Class									& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Hided Listener								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{3}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
+Opened Activity								& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{2}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{1}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.}	& \multicolumn{1}{c}{.} 		 \\
 \hline
 \multicolumn{1}{c}{\textbf{\# Categorias}}	& \multicolumn{1}{c}{10} & \multicolumn{1}{c}{8} & \multicolumn{1}{c}{9} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{2} \\
 \toprule
 \end{tabular}
-\label{tab:DadosDemograficos2}
+\label{tab:Categories}
 \end{table*}
 
 
-% SOBRE NÃO USAR FRAGMENTS / MOVER PARA RESULTADOS
-% Uma situa\c{c}\~ao interessante \'e que diversas dessas respostas indicavam que n\~ao se deve usar \textsc{Fragments} por\'em n\~ao apresentavam nenhum argumento sobre o motivo, por exemplo: ``Eu tento evit\'a-los.' (tradu\c{c}\~ao livre). Essas respostas inicialmente seriam desconsideradas, mas pela quantidade de repeti\c{c}\~oes obtidas, 10 no caso, optamos por considerar. 
+\subsection{Categorias de Discuss\~oes}
 
-% Em seguida, realizamos diversas itera\c{c}\~oes nas respostas sobre boas e m\'as pr\'aticas consideradas a fim de categoriz\'a-las em algum novo smell Android ou algum smell pr\'e-existente. Essas itera\c{c}\~oes consistiram em analisar resposta a resposta e atribuir uma ou mais categorias de algum poss\'ivel novo smell Android ou pr\'e-existente. Foram realizadas diversas itera\c{c}\~oes de categoriza\c{c}\~ao com o objetivo de normalizar as categorias, ou seja, evitar sin\^onimos e hom\^onimos. Um sin\^onimo \'e o mesmo conceito com dois nomes diferentes e hom\^onimos s\~ao dois conceitos diferentes com o mesmo nome. 
+\subsubsection{Use Fragments Just If Needed} 
+Esta categoria agrupa 10 respostas que indicam que se deve evitar a utilização de \textsc{Fragment}s e s\'o usá-los se for realmente necessário. Por exemplo, P4 indica como boa pr\'atica sobre \textsc{Fragments} que ``Tente substituir Fragments o m\'aximo poss\'ivel por ViewGroups. Apenas use-os se tiver uma boa raz\~ao para isso'' (tradu\c{c}\~ao livre), P28 diz ``Se poss\'ivel, evitar a todo custo''. 
 
-% Durante a categoriza\c{c}\~ao, uma mec\^anica que consideramos importante para a normaliza\c{c}\~ao das categorias, foi a cria\c{c}\~ao de uma lista de categorias, onde a cada nova categoria atribu\'ida, increment\'avamos a lista e preench\'iamos com descri\c{c}\~oes que indicavam que tipo de boa ou m\'a pr\'atica estava recebendo aquela categoria. Esta mec\^anica ajudou a evitar hom\^onimos e sin\^onimos e serviu como base para a defini\c{c}\~ao e avalia\c{c}\~ao da relev\^ancia dos \textit{smells} a serem trabalhados nos pr\'oximos passos.
+\subsubsection{Use Fragments} 
+Esta categoria agrupa 11 respostas onde os participantes recomendam o uso de \textsc{Fragments}. Por exemplo, P14 diz ``gosto de sempre usar fragmento, mesmo que seja uma tela simples com somente um fragmento'', j\'a P19 diz ``[...] utilizar Fragments sempre que poss\'ivel''. 
 
-O \'ultimo passo foi a etapa que denominamos de \textit{divis\~ao}. Nesse passo, as respostas que receberam mais de uma categoria foram divididas em duas ou mais respostas (de acordo com o n\'umero de categorias identificadas). Por exemplo, a resposta \textit{"N\~ao fazer Activities serem callbacks de execu\c{c}\~oes ass\'incronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira ora\c{c}\~ao uma categoria e na segunda ora\c{c}\~ao outra categoria. Ao divid\'i-la mantivemos o texto da resposta apenas relativo a categoria, como se fossem duas respostas v\'alidas. Em algumas respostas que foram divididas n\~ao pudemos dividir o texto pois a resposta completa era necess\'aria para entender ambas as categoriza\c{c}\~oes, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de forma diferente. Ap\'os as divis\~oes, conclu\'imos com 388 respostas sobre boas e m\'as pr\'aticas no \textit{front-end} Android, sendo cada uma com apenas uma categoria. 
+\subsubsection{Nested Layout} 
+Esta categoria agrupa 21 respostas onde os participantes indicam \textsc{layout resources} com aninhamento de elementos muito profundos como uma má prática. De fato, esta categoria poderia ser considerada um android code smell, mas já existe uma ferramenta oficial do Android [] que valida este sintoma, logo, já é um problema endereçado.
 
-%  MOVER PARA RESULTADOS
-% Ao final de todas as etapas, conclu\'imos com 388 respostas sobre boas e m\'as pr\'aticas distribu\'idas em 47 categorias. 
+\subsubsection{No Logic In View}
 
-\subsection{An\'alise e Defini\c{c}\~ao dos Smells}
-\label{sub:analisys-definition}
+% \begin{table}[h]
+% \centering
+% \caption{Smells identificados vs. recorr\^encia percebida pelos participantes do question\'ario}
+% \small
+% \begin{tabular}{p{3cm}|p{4cm}}
+% \toprule
+% \textbf{Recorr\^encia} & \textbf{Quantidade de Smells} \\
+% \hline
+% Alta  			& 5 \\
+% M\'edia 		& 17 (1 \textit{smell} tradicional) \\
+% Baixa			& 5 \\
+% Irrelevante 	& 20 \\
+% \toprule
+% \end{tabular}
+% \label{tab:DadosDemograficos2}
+% \end{table}
 
-Nosso objetivo nesta etapa foi entender quais \textit{smells}, dos 47 identificados, eram mais recorr\^entes. Para isso, contabilizamos cada \textit{smell}, em quantas respostas ele aparecia, ou seja, se duas respostas foram categorizadas com o \textit{smell} "A" ent\~ao diz-se que esse \textit{smell} tem contagem 2. Depois da contagem, elaboramos intervalos que indicam recorr\^encia ALTA, maior ou igual a 20, M\'EDIA, dentre 6 e 19 e BAIXA, dentre 3 e 5. Abaixo de 3 classificamos como IRRELEVANTE. Obtemos o seguinte resultado:
+% Os irrelevantes foram desconsiderados nesta etapa de defini\c{c}\~ao. Os demais foram definidos com a ajuda das respostas dos participantes. Para cada \textit{smell} definimos os seguintes t\'opicos: 
 
-\begin{table}[h]
-\centering
-\caption{Smells identificados vs. recorr\^encia percebida pelos participantes do question\'ario}
-\small
-\begin{tabular}{p{3cm}|p{4cm}}
-\toprule
-\textbf{Recorr\^encia} & \textbf{Quantidade de Smells} \\
-\hline
-Alta  			& 5 \\
-M\'edia 		& 17 (1 \textit{smell} tradicional) \\
-Baixa			& 5 \\
-Irrelevante 	& 20 \\
-\toprule
-\end{tabular}
-\label{tab:DadosDemograficos2}
-\end{table}
+% \begin{itemize} 
+% 	\item[$\textasteriskcentered$] \textbf{Quando ocorre}. Indicamos os motivos pelo qual foi considerado uma m\'a pr\'atica.   
+% 	\item[$\textasteriskcentered$] \textbf{Contexto/exemplo}. Indicamos algum exemplo ou contexto pr\'atico. 
+% 	\item[$\textasteriskcentered$] \textbf{Elementos afetados}. Eventualmente algum \textit{smell} afeta mais de um elemento, nesse t\'opico abordamos em quais os elementos este \textit{smell} pode estar presente. 
+% 	\item[$\textasteriskcentered$] \textbf{Solu\c{c}\~ao}. Indicamos poss\'iveis refatora\c{c}\~oes para reduzir ou eliminar o \textit{smell}. \\
+% \end{itemize}
 
-Os irrelevantes foram desconsiderados nesta etapa de defini\c{c}\~ao. Os demais foram definidos com a ajuda das respostas dos participantes. Para cada \textit{smell} definimos os seguintes t\'opicos: 
-
-\begin{itemize} 
-	\item[$\textasteriskcentered$] \textbf{Quando ocorre}. Indicamos os motivos pelo qual foi considerado uma m\'a pr\'atica.   
-	\item[$\textasteriskcentered$] \textbf{Contexto/exemplo}. Indicamos algum exemplo ou contexto pr\'atico. 
-	\item[$\textasteriskcentered$] \textbf{Elementos afetados}. Eventualmente algum \textit{smell} afeta mais de um elemento, nesse t\'opico abordamos em quais os elementos este \textit{smell} pode estar presente. 
-	\item[$\textasteriskcentered$] \textbf{Solu\c{c}\~ao}. Indicamos poss\'iveis refatora\c{c}\~oes para reduzir ou eliminar o \textit{smell}. \\
-\end{itemize}
-
-\'E importante ressaltar que todas as defini\c{c}\~oes dos \textit{smells} foram apoiadas nas respostas dos participantes. Se os participantes n\~ao indicaram algum t\'opico para algum \textit{smell}, o mesmo n\~ao foi definido. \\
+% \'E importante ressaltar que todas as defini\c{c}\~oes dos \textit{smells} foram apoiadas nas respostas dos participantes. Se os participantes n\~ao indicaram algum t\'opico para algum \textit{smell}, o mesmo n\~ao foi definido. \\
 
 
 \subsection{Android Code Smells}
 \label{sub:Android-code-smells}
 
 \subsubsection{Duplicated Styles Attributes (DSA)}
+Este smell foi identificado em 7 respostas. Segundo os participantes, ccorre quando mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua apar\^encia. Por exemplo, segundo P34 \textit{``Sempre que eu noto que tenho mais de um recurso usando o mesmo estilo, eu tento movê-lo para o meu \textit{style resource}.''} (tradução livre). Passando a mesma ideia, P32 diz \textit{``Utilizar muitas propriedades em um único componente. Se tiver que usar muitas, prefiro colocar no arquivo de styles.''}. Ou seja, os elementos afetados por este smell são layout ou style resources. E as soluções indicadas são extrair um novo estilo que agrupe o conjunto de atributos duplicados e passar a usar o estilo criado.
 
-\textbf{Ocorre quando} mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua apar\^encia. No estilo \textbf{ocorre quando} se v\^e mais de um style repetindo o mesmo conjunto de atributos e valores. Os \textbf{elementos afetados} s\~ao xmls de layout ou estilo. A \textbf{heur\'istica para detect\'a-lo} \'e identificar um conjunto de atributos que se repetem em um ou mais views de um ou mais layouts. Sua \textbf{solu\c{c}\~ao} \'e extrair um estilo com o conjunto de atributos repetidos relacionados a caracter\'isticas de exibi\c{c}\~ao da view. 
-
-Considere o seguinte \textbf{contexto} onde o \texttt{TextView} abaixo \'e usado em dois momentos no mesmo layout (exemplo extra\'ido da documenta\c{c}\~ao do Android\footnote{https://developer.Android.com/guide/topics/ui/themes.html}):
+Por exemplo, considere o seguinte \textbf{contexto} onde o \texttt{TextView} abaixo \'e usado em dois momentos no mesmo layout (exemplo extra\'ido da documenta\c{c}\~ao do Android\footnote{https://developer.Android.com/guide/topics/ui/themes.html}):
 
 \begin{lstlisting}[
-	language=XML, 
-	caption={\texttt{TextView} usado em mais de um layout e com estilo definido por atributos}, 
-	label={lst:AndroidManifest}
+	language=XML_android, 
+	caption={\texttt{TextView} usado em mais de um layout e com estilo definido por atributos.}, 
+	label={lst:AndroidManifest},
+	frame=lines
 ]
 <TextView
-    Android:layout-width="match-parent"
-    Android:layout-height="wrap-content"
-    Android:textColor="#00FF00"
-    Android:typeface="monospace"
-    Android:text="@string/hello" />
+  android:layout-width="match-parent"
+  android:layout-height="wrap-content"
+  android:textColor="#00FF00"
+  android:typeface="monospace"
+  android:text="@string/hello" />
 \end{lstlisting}
 
-Uma op\c{c}\~ao seria extrair o estilo acima para um recurso de estilos:
+Visto que o estilo de cor e formatação do texto será replicado, uma op\c{c}\~ao é extrair esse estilo para um style resource e utilizá-lo no layout. A seguir, criamos o estilo \textit{CodeFont} e o aplicamos no \textsc{TextView}.
 
 \begin{lstlisting}[
-	language=XML, 
-	caption={\texttt{TextView} usando estilo ao inv\'es de atributos separados}, 
-	label={lst:AndroidManifest}
+	language=XML_android, 
+	label={lst:AndroidManifest},
+	frame=lines,
+	caption={main\_activity.xml},
 ]
+<!-- ... -->
 <TextView
-    Android:layout-width="match-parent"
-    Android:layout-height="wrap-content"
-    Android:textAppearance="@style/CodeFont"
-    Android:text="@string/hello" />
+  android:layout-width="match-parent"
+  android:layout-height="wrap-content"
+  android:textAppearance="@style/CodeFont"
+  android:text="@string/hello" />
+<!-- ... -->
 \end{lstlisting}
 
-Arquivo de estilo com o estilo CodeFont criado:
+Arquivo de estilo com o estilo estilo  criado:
 
 \begin{lstlisting}[
-	language=XML, 
-	caption={\texttt{TextView} usando estilo em vez de atributos separados}, 
-	label={lst:AndroidManifest}
+	language=XML_android, 
+	caption={styles.xml}, 
+	label={lst:AndroidManifest},
+	frame=lines
 ]
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="CodeFont" ...>
-        <item name="Android:textColor">
-        	#00FF00
-        </item>
-        <item name="Android:typeface">
-        	monospace
-        </item>
-    </style>
+  <style name="CodeFont" ...>
+    <item name="Android:textColor">
+      #00FF00
+    </item>
+    <item name="Android:typeface">
+      monospace
+    </item>
+  </style>
 </resources>
 \end{lstlisting}
 
