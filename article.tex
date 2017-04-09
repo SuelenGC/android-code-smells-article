@@ -9,10 +9,12 @@
 
 \definecolor{Maroon}{rgb}{0.5,0,0}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{eclipseBlue}{RGB}{42,0.0,255}
+\definecolor{eclipseGreen}{RGB}{63,127,95}
+\definecolor{eclipsePurple}{RGB}{127,0,85}
 
 \lstdefinelanguage{XML_android}
 {
-  basicstyle=\ttfamily\footnotesize,
   morestring=[b]",
   moredelim=[s][\color{Maroon}]{<}{\ },
   moredelim=[s][\color{Maroon}]{</}{>},
@@ -36,25 +38,32 @@
     commentstyle=\color{darkgreen},
     moredelim=[s][\color{black}]{![}{]]},
     moredelim=*[s][\color{Maroon}]{<}{>},
-    keywordstyle=\color{red}
+    % keywordstyle=\color{red}
 }
 
+% Set Language
 \lstset{
-    % Basic design
-    backgroundcolor=\color[rgb]{0.9,0.9,0.9},
-    basicstyle={\small\ttfamily},
-    breaklines=true,
-    frame=l,
-    tabsize=2,
-    % Line numbers
-    xleftmargin={0.75cm},
-    numbers=left,
-    stepnumber=1,
-    firstnumber=1,
-    numberfirstline=true,
-    % HTML formatting
-    language=XML_SYNTAX,
+  language={XML},
+  basicstyle=\small\ttfamily, % Global Code Style
+  captionpos=b, % Position of the Caption (t for top, b for bottom)
+  extendedchars=true, % Allows 256 instead of 128 ASCII characters
+  tabsize=2, % number of spaces indented when discovering a tab 
+  columns=fixed, % make all characters equal width
+  keepspaces=true, % does not ignore spaces to fit width, convert tabs to spaces
+  showstringspaces=false, % lets spaces in strings appear as real spaces
+  breaklines=true, % wrap lines if they don't fit
+  frame=trbl, % draw a frame at the top, right, left and bottom of the listing
+  % frameround=tttt, % make the frame round at all four corners
+  % framesep=4pt, % quarter circle size of the round corners
+  % numbers=left, % show line numbers at the left
+  % numberstyle=\tiny\ttfamily, % style of the line numbers
+  % commentstyle=\color{eclipseGreen}, % style of comments
+  % keywordstyle=\color{eclipsePurple}, % style of keywords
+  % stringstyle=\color{eclipseBlue}, % style of strings
+  stringstyle=\color[rgb]{0,0,0},
 }
+
+\renewcommand{\arraystretch}{1.3}
 
 % Pacotes de Gráficos
 \usepackage{tikz} \usetikzlibrary{calc,plotmarks}  
