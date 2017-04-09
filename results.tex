@@ -1,9 +1,9 @@
 % -*- root: article.tex -*-
 Durante o processo de codifica\c{c}\~ao das 18 perguntas sobre boas e m\'as pr\'aticas, 56 categorias emergiram. Agrupamos essas categorias em 6 temas: Conceitos Tradicionais, Problemas Arquiteturais, Problemas Pontuais, Ferramentas Utilit\'arias, Conhecimento e Estrutura de Arquivos. 
 
-Classificamos as categorias de acordo com sua recorr\^encia, ou seja, a quantidade de respostas que a recebeu. Baix\'issima recorr\^encia significa menos de 3 respostas, baixa recorr\^encia significa de 3 a 7 respostas, m\'edia recorr\^encia significa de 8 a 20 respostas e alta recorr\^encia significa acima de 20 respostas.
+Classificamos as categorias de acordo com sua recorr\^encia, ou seja, a quantidade de respostas a qual ela foi atribu\'ida. Utilizamos a seguinte escala: baix\'issima recorr\^encia significa menos de 3 respostas, baixa recorr\^encia significa de 3 a 7 respostas, m\'edia recorr\^encia significa de 8 a 20 respostas e alta recorr\^encia significa acima de 20 respostas.
 
-A Tabela \ref{tab:Categories} apresenta o n\'umero de recorr\^encias, em cada quest\~ao sobre boas ou m\'as pr\'aticas, das categorias de alta, m\'edia e baixa recorr\^encia agrupadas por temas. A \'ultima linha da Tabela, \#Categorias, apresenta quantas categorias emergiram de cada quest\~ao, ou seja, \textbf{com base em um elemento Android}, quais s\~ao os pontos de aten\c{c}\~ao (boas e m\'as pr\'aticas) que devemos avaliar pensando em qualidade de c\'odigo. J\'a a \'ultima coluna da Tabela, \#Quest\~oes, apresenta em quantas quest\~oes cada categoria surgiu, ou seja, \textbf{com base na categoria} (que agrupa observa\c{c}\~oes sobre boas e m\'as pr\'aticas), quais elementos devem ser investigados pensando em qualdiade de c\'odigo. 
+A Tabela \ref{tab:Categories} apresenta o n\'umero de recorr\^encias, em cada quest\~ao sobre boas e m\'as pr\'aticas, das categorias de alta, m\'edia e baixa recorr\^encia agrupadas por temas. A \'ultima linha da Tabela, \#Categorias, apresenta quantas categorias emergiram de cada quest\~ao, ou seja, \textbf{com base em um elemento Android}, quais s\~ao os pontos de aten\c{c}\~ao (boas e m\'as pr\'aticas) que devemos avaliar pensando em qualidade de c\'odigo. J\'a a \'ultima coluna da Tabela, \#Quest\~oes, apresenta em quantas quest\~oes cada categoria surgiu, ou seja, \textbf{com base na categoria} (que agrupa observa\c{c}\~oes sobre boas e m\'as pr\'aticas), quais elementos devem ser investigados pensando em qualdiade de c\'odigo. 
 
 % Quando se criam categoriza\c{c}\~oes para auxiliar desenvolvedores a identificar pontos de aten\c{c}\~ao a serem avaliados e onde este pontos devem ser investigados especificamente no c\'odigo, pensando em qualidade de c\'odigo d\'a-se o nome de \textit{smells}. Portanto, nesta se\c{c}\~ao iremos compilar este conjunto de Android \textit{code smells} que identificamos atrav\'es das categoriza\c{c}\~oes.
 
@@ -47,7 +47,7 @@ Opened Activity								& \multicolumn{1}{c}{--}		& \multicolumn{1}{c}{2}		& \mul
 \hline
 \multicolumn{1}{c}{\textbf{\#Categorias}}	& \multicolumn{1}{|c}{10} & \multicolumn{1}{c}{8} & \multicolumn{1}{c}{9} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{6} & \multicolumn{1}{c|}{2} \\
 \hline
-\multicolumn{20}{@{}l}{* God Classe \cite{Riel} e Large Class \cite{RefactoringFowler1999} s\~ao \textit{code smells} tradicionais previamente definidos em literaturas.} \\
+\multicolumn{20}{@{}l}{* \textit{God Classe} \cite{Riel} e \textit{Large Class} \cite{RefactoringFowler1999} s\~ao \textit{code smells} tradicionais previamente definidos em literaturas.} \\
 \multicolumn{20}{@{}l}{** \textit{Inheritance}, ou heran\c{c}a, \'e um conceito da Programa\c{c}\~ao Orientada a Objetos \cite{WikipediaInhiritance}.} \\
 \toprule
 \end{tabular}
@@ -56,9 +56,14 @@ Opened Activity								& \multicolumn{1}{c}{--}		& \multicolumn{1}{c}{2}		& \mul
 
 Esta se\c{c}\~ao est\'a organizada em 6 subse\c{c}\~oes. As primeiras 5 subse\c{c}\~oes abordam as categorias apenas de alta, m\'edia e baixa recorr\^encia dos temas: Conceitos Tradicionais, Problemas Arquiteturais, Problemas Pontuais, Ferramentas Utilit\'arias e Conhecimento (n\~ao h\'a categorias com essas recorr\^encias no grupo Estrutura de Arquivos). Por \'ultimo temos uma subse\c{c}\~ao para falar apenas das categorias de baix\'issima recorr\^encia.
 
-\subsection{Conceitos Tradicionais}
+\subsection{Categorias de Alta Recorr\^encia}
+Obtivemos 4 categorias consideradas de alta recorr\^encia: No Logic In View, Resource Name Pattern, Magic [Possible] Resource e Nested Layout.
 
-\subsection{Problemas Arquiteturais}
+\subsubsection{No Logic In View} \
+Esta categoria re\'une frases que indicam como m\'a pr\'atica haver regra de neg\'ocio nos elementos Android afetados. De forma similar, respostas indicam  como boas pr\'aticas n\~ao haver c\'odigo de regra de neg\'ocio. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P16 sobre \textsc{Activitys} diz \textit{``Fazer l\'ogica de neg\'ocio''} (tradu\c{c}\~ao livre), j\'a P19 diz \textit{``Colocar regra de neg\'ocio no adapter''} e P11 diz \textit{``Manter l\'ogica de neg\'ocio em Fragments''} (tradu\c{c}\~ao livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P16 diz sobre \textsc{Activitys} \textit{``Elas representam uma \'unica tela e apenas interagem com a UI, qualquer l\'ogica deve ser delegada para outra classe''} (tradu\c{c}\~ao livre), P23 diz \textit{``Apenas c\'odigo relacionado \`a Interface de Usu\'ario nas Activities''}, P40 diz \textit{``Adapters devem apenas se preocupar sobre como mostrar os dados, sem trabalh\'a-los''}. Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
+
+% \subsubsection{God/Large Class} s\~ao \textit{code smells} previamente definidos nas literaturas de Arthur Riel (\textit{God Class}) \cite{Riel} e Martin Fowler (\textit{Large Class}) \cite{RefactoringFowler1999} e tratam de classes grandes que cont\'em muitas responsabilidades e depend\^encias. Percebemos que esse \textit{smell} tamb\'em \'e uma preocupa\c{c}\~ao dos desenvolvedores Android ao lidarem com \textsc{Activities} (8 participantes), \textsc{Fragments} (3 participantes), \textsc{Listeners} (1 participante) e \textsc{Style Resources} (1 participante). P8 indicou como m\'a pr\'atica em Activity ``Considerar Activities como \textit{God Classes}'' (tradu\c{c}\~ao livre). 
+
 
 \subsubsection{Use Fragments Just If Needed} 
 Esta categoria agrupa 10 respostas que indicam que se deve evitar a utiliza\c{c}\~ao de \textsc{Fragment}s e s\'o us\'a-los se for realmente necess\'ario. Por exemplo, P4 indica como boa pr\'atica sobre \textsc{Fragments} que ``Tente substituir Fragments o m\'aximo poss\'ivel por ViewGroups. Apenas use-os se tiver uma boa raz\~ao para isso'' (tradu\c{c}\~ao livre), P28 diz ``Se poss\'ivel, evitar a todo custo''. 
@@ -69,7 +74,7 @@ Esta categoria agrupa 11 respostas onde os participantes recomendam o uso de \te
 \subsubsection{Nested Layout} 
 Esta categoria agrupa 21 respostas onde os participantes indicam \textsc{layout resources} com aninhamento de elementos muito profundos como uma m\'a pr\'atica. De fato, esta categoria poderia ser considerada um android code smell, mas j\'a existe uma ferramenta oficial do Android [] que valida este sintoma, logo, j\'a \'e um problema endere\c{c}ado.
 
-\subsubsection{No Logic In View}
+
 
 % \begin{table}[h]
 % \centering
