@@ -1,15 +1,15 @@
 % -*- root: article.tex -*-
-Durante o processo de codifica\c{c}\~ao das 18 perguntas sobre boas e m\'as pr\'aticas, 27 categorias emergiram (excluindo as irrelevantes, que s\~ao as categorias que tiveram menos de 3 ocorr\^encias). A Tabela \ref{tab:Categories} apresenta o n\'umero de ocorr\^encias de uma categoria por quest\~ao. 
+Durante o processo de codifica\c{c}\~ao das 18 perguntas sobre boas e m\'as pr\'aticas, 56 categorias emergiram agrupadas por temas, resultando em 6 grupos de boas e m\'as pr\'aticas: Tradicional, Arquitetural, Problemas Pontuais, Conhecimento, Utilit\'ario e Estrutural. As categorias foram classificadas de acordo com sua recorr\^encia, ou seja, a quantidade de respostas que a recebeu. Alta recorr\^encia significa acima de 20 respostas, m\'edia recorr\^encia significa de 8 a 20 respostas, baixa recorr\^encia significa de 3 a 7 respostas e baix\'issima recorr\^encia significa menos de 3 respostas. Tivemos 4 categorias de alta recorr\^encia, 15 de m\'edia, 8 de baixa e 29 de baix\'issima.
 
-A \'ultima linha da Tabela, \#Categorias, apresenta quantas categorias emergiram de cada quest\~ao. Como cada quest\~ao est\'a ligada a uma boa ou m\'a pr\'atica relacionada a algum elemento do \textit{front-end} Android, podemos ler esta linha como, com base em um elemento Android, quais s\~ao os pontos de aten\c{c}\~ao (boas e m\'as pr\'aticas) que devemos avaliar pensando em qualidade de c\'odigo. J\'a a \'ultima coluna da Tabela, \#Quest\~oes, apresenta em quantas quest\~oes cada categoria surgiu, ou seja, com base na categoria (que agrupa observa\c{c}\~oes sobre boas e m\'as pr\'aticas), quais elementos devem ser investigados pensando em qualdiade de c\'odigo. 
+A Tabela \ref{tab:Categories} apresenta o n\'umero de recorr\^encias de uma categoria de alta, m\'edia ou baixa recorr\^encia, por quest\~ao. A \'ultima linha da Tabela, \#Categorias, apresenta quantas categorias emergiram de cada quest\~ao. Como cada quest\~ao est\'a ligada a uma boa ou m\'a pr\'atica relacionada a algum elemento do \textit{front-end} Android, podemos ler esta linha como, com base em um elemento Android, quais s\~ao os pontos de aten\c{c}\~ao (boas e m\'as pr\'aticas) que devemos avaliar pensando em qualidade de c\'odigo. J\'a a \'ultima coluna da Tabela, \#Quest\~oes, apresenta em quantas quest\~oes cada categoria surgiu, ou seja, com base na categoria (que agrupa observa\c{c}\~oes sobre boas e m\'as pr\'aticas), quais elementos devem ser investigados pensando em qualdiade de c\'odigo. 
 
-Quando se criam categoriza\c{c}\~oes para auxiliar desenvolvedores a identificar pontos de aten\c{c}\~ao a serem avaliados e onde este pontos devem ser investigados especificamente no código, pensando em qualidade de código dá-se o nome de \textit{smells}. Portanto, nesta se\c{c}\~ao iremos compilar este conjunto de Android \textit{code smells} que identificamos através das categoriza\c{c}\~oes.
+% Quando se criam categoriza\c{c}\~oes para auxiliar desenvolvedores a identificar pontos de aten\c{c}\~ao a serem avaliados e onde este pontos devem ser investigados especificamente no c\'odigo, pensando em qualidade de c\'odigo d\'a-se o nome de \textit{smells}. Portanto, nesta se\c{c}\~ao iremos compilar este conjunto de Android \textit{code smells} que identificamos atrav\'es das categoriza\c{c}\~oes.
 
-A partir das categorias foi poss\'ivel criar defini\c{c}\~oes textuais de alguns code smells Android pois as respostas indicavam os sintomas e poss\'iveis solu\c{c}\~oes, entretando, outras categorias n\~ao foi possivel extrair um smells, pois apareceram nas respostas mais como uma discuss\~ao.
+% A partir das categorias foi poss\'ivel criar defini\c{c}\~oes textuais de alguns code smells Android pois as respostas indicavam os sintomas e poss\'iveis solu\c{c}\~oes, entretando, outras categorias n\~ao foi possivel extrair um smells, pois apareceram nas respostas mais como uma discuss\~ao.
 
 \begin{table*}[t]
 \centering
-\caption{Lista de categorias que emergiram durante o processo de codifica\c{c}\~ao vs. ocorr\^encia nas quest\~oes sobre boas e m\'as pr\'aticas.}
+\caption{Lista de categorias de alta, m\'edia e baixa recorr\^encia vs. ocorr\^encia nas quest\~oes sobre boas e m\'as pr\'aticas.}
 \footnotesize
 \begin{tabular}{@{}p{4cm}|p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}|p{1.5cm}@{}}
 \toprule
@@ -52,8 +52,11 @@ Opened Activity								& \multicolumn{1}{c}{--}		& \multicolumn{1}{c}{2}		& \mul
 \label{tab:Categories}
 \end{table*}
 
+Esta se\c{c}\~ao est\'a organizada em 5 subse\c{c}\~oes. As primeiras 4 subse\c{c}\~oes abordam as categorias apenas de alta, m\'edia e baixa recorr\^encia dos grupos Arquitetural, Problemas Pontuais, Utilit\'ario e Conhecimento (não há categorias nesta recorr\^encia no grupo Estrutural). E por último temos uma subse\c{c}ão para falar apenas das categorias de baix\'issima recorr\^encia.
 
-\subsection{Categorias de Discuss\~oes}
+\subsection{Grupo Tradicional}
+
+\subsection{Grupo Arquitetural}
 
 \subsubsection{Use Fragments Just If Needed} 
 Esta categoria agrupa 10 respostas que indicam que se deve evitar a utiliza\c{c}\~ao de \textsc{Fragment}s e s\'o us\'a-los se for realmente necess\'ario. Por exemplo, P4 indica como boa pr\'atica sobre \textsc{Fragments} que ``Tente substituir Fragments o m\'aximo poss\'ivel por ViewGroups. Apenas use-os se tiver uma boa raz\~ao para isso'' (tradu\c{c}\~ao livre), P28 diz ``Se poss\'ivel, evitar a todo custo''. 
@@ -95,11 +98,11 @@ Esta categoria agrupa 21 respostas onde os participantes indicam \textsc{layout 
 % \'E importante ressaltar que todas as defini\c{c}\~oes dos \textit{smells} foram apoiadas nas respostas dos participantes. Se os participantes n\~ao indicaram algum t\'opico para algum \textit{smell}, o mesmo n\~ao foi definido. \\
 
 
-\subsection{Android Code Smells}
-\label{sub:Android-code-smells}
+% \subsection{Android Code Smells}
+% \label{sub:Android-code-smells}
 
 \subsubsection{Duplicated Styles Attributes (DSA)}
-Este smell foi identificado em 7 respostas. Segundo os participantes, ccorre quando mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua apar\^encia. Por exemplo, segundo P34 \textit{``Sempre que eu noto que tenho mais de um recurso usando o mesmo estilo, eu tento movê-lo para o meu \textit{style resource}.''} (tradu\c{c}\~ao livre). Passando a mesma ideia, P32 diz \textit{``Utilizar muitas propriedades em um único componente. Se tiver que usar muitas, prefiro colocar no arquivo de styles.''}. Ou seja, os elementos afetados por este smell s\~ao layout ou style resources. E as solu\c{c}\~oes indicadas s\~ao extrair um novo estilo que agrupe o conjunto de atributos duplicados e passar a usar o estilo criado.
+Este smell foi identificado em 7 respostas. Segundo os participantes, ccorre quando mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua apar\^encia. Por exemplo, segundo P34 \textit{``Sempre que eu noto que tenho mais de um recurso usando o mesmo estilo, eu tento mov\^e-lo para o meu \textit{style resource}.''} (tradu\c{c}\~ao livre). Passando a mesma ideia, P32 diz \textit{``Utilizar muitas propriedades em um único componente. Se tiver que usar muitas, prefiro colocar no arquivo de styles.''}. Ou seja, os elementos afetados por este smell s\~ao layout ou style resources. E as solu\c{c}\~oes indicadas s\~ao extrair um novo estilo que agrupe o conjunto de atributos duplicados e passar a usar o estilo criado.
 
 Por exemplo, considere o seguinte \textbf{contexto} onde o \texttt{TextView} abaixo \'e usado em dois momentos no mesmo layout (exemplo extra\'ido da documenta\c{c}\~ao do Android\footnote{https://developer.Android.com/guide/topics/ui/themes.html}):
 
@@ -260,12 +263,20 @@ Sobre drawables e estilos n\~ao foi sugerida uma maneira espec\'ifica de nomencl
 
 
 
+\subsection{Grupo Problemas Pontuais}
+
+\subsection{Grupo de Utilit\'arias}
+
+\subsection{Grupo de Conhecimento}
+
+\subsection{Categorias de Baix\'issima Recorr\^encia}
+
+
 \subsection{Interpreta\c{c}\~ao dos Dados}
 
 As vezes o que era indicado como boa pr\'atica para um elemento era um smell percebido em outro elemento, por exemplo, a R1 diz que \textit{"Sempre que noto ter mais de um [layout] resource usando o mesmo estilo eu tento mov\^e-lo [o estilo] para meu recurso de estilo"} (tradu\c{c}\~ao livre) ao responder sobre boa pr\'atica para o style resource, por\'em esta resposta foi considerada para definir o smell Duplicated Styles Attributes que \'e percebido em recursos de layout ou styles.
 
 
-\subsection{Afirma\c{c}\~ao sobre o \textit{front-end} Android}
+% \subsection{Afirma\c{c}\~ao sobre o \textit{front-end} Android}
 
-Uma opini\~ao que foi un\^anime em muitas respostas foi que de fato, desenvolvedores tratam \textsc{Activitys}, \textsc{Fragments} e \textsc{Adapters} como elementos do front-end Android, conforme constatamos na se\c{c}\~ao 3.1. Isso pode ser observado diversas vezes com respostas por exemplo, P25 indicou como boa pr\'atica na Activity "Nenhuma l\'ogica [de neg\'ocio] aqui" (tradu\c{c}\~ao livre), o P40 afirma sobre m\'a pr\'atica em adapter \'e \textit{"L\'ogica de neg\'ocio em adapters \'e n\~ao-n\~ao"} (tradu\c{c}\~ao livre), ao falarem sobre fragments, muitos indicaram \textit{"O mesmo da Activity"}. Ou seja, primeiramente estas respostas refor\c{c}am nossa defini\c{c}\~ao inicial sobre elementos que compo\^em o front-end Android, e por outro lado, vimos que muitas vezes fragments s\~ao tratados como Activitys, ao se falar de boas e m\'as pr\'aticas de c\'odigo.
-
+% Uma opini\~ao que foi un\^anime em muitas respostas foi que de fato, desenvolvedores tratam \textsc{Activitys}, \textsc{Fragments} e \textsc{Adapters} como elementos do front-end Android, conforme constatamos na se\c{c}\~ao 3.1. Isso pode ser observado diversas vezes com respostas por exemplo, P25 indicou como boa pr\'atica na Activity "Nenhuma l\'ogica [de neg\'ocio] aqui" (tradu\c{c}\~ao livre), o P40 afirma sobre m\'a pr\'atica em adapter \'e \textit{"L\'ogica de neg\'ocio em adapters \'e n\~ao-n\~ao"} (tradu\c{c}\~ao livre), ao falarem sobre fragments, muitos indicaram \textit{"O mesmo da Activity"}. Ou seja, primeiramente estas respostas refor\c{c}am nossa defini\c{c}\~ao inicial sobre elementos que compo\^em o front-end Android, e por outro lado, vimos que muitas vezes fragments s\~ao tratados como Activitys, ao se falar de boas e m\'as pr\'aticas de c\'odigo.
