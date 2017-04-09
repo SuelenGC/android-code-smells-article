@@ -1,7 +1,9 @@
 % -*- root: article.tex -*-
-Durante o processo de codifica\c{c}\~ao das 18 perguntas sobre boas e m\'as pr\'aticas, 56 categorias emergiram agrupadas por temas, resultando em 6 grupos de boas e m\'as pr\'aticas: Tradicional, Arquitetural, Problemas Pontuais, Conhecimento, Utilit\'ario e Estrutural. As categorias foram classificadas de acordo com sua recorr\^encia, ou seja, a quantidade de respostas que a recebeu. Alta recorr\^encia significa acima de 20 respostas, m\'edia recorr\^encia significa de 8 a 20 respostas, baixa recorr\^encia significa de 3 a 7 respostas e baix\'issima recorr\^encia significa menos de 3 respostas. Tivemos 4 categorias de alta recorr\^encia, 15 de m\'edia, 8 de baixa e 29 de baix\'issima.
+Durante o processo de codifica\c{c}\~ao das 18 perguntas sobre boas e m\'as pr\'aticas, 56 categorias emergiram. Agrupamos essas categorias em 6 temas: Conceitos Tradicionais, Problemas Arquiteturais, Problemas Pontuais, Ferramentas Utilit\'arias, Conhecimento e Estrutura de Arquivos. 
 
-A Tabela \ref{tab:Categories} apresenta o n\'umero de recorr\^encias de uma categoria de alta, m\'edia ou baixa recorr\^encia, por quest\~ao. A \'ultima linha da Tabela, \#Categorias, apresenta quantas categorias emergiram de cada quest\~ao. Como cada quest\~ao est\'a ligada a uma boa ou m\'a pr\'atica relacionada a algum elemento do \textit{front-end} Android, podemos ler esta linha como, com base em um elemento Android, quais s\~ao os pontos de aten\c{c}\~ao (boas e m\'as pr\'aticas) que devemos avaliar pensando em qualidade de c\'odigo. J\'a a \'ultima coluna da Tabela, \#Quest\~oes, apresenta em quantas quest\~oes cada categoria surgiu, ou seja, com base na categoria (que agrupa observa\c{c}\~oes sobre boas e m\'as pr\'aticas), quais elementos devem ser investigados pensando em qualdiade de c\'odigo. 
+Classificamos as categorias de acordo com sua recorr\^encia, ou seja, a quantidade de respostas que a recebeu. Baix\'issima recorr\^encia significa menos de 3 respostas, baixa recorr\^encia significa de 3 a 7 respostas, m\'edia recorr\^encia significa de 8 a 20 respostas e alta recorr\^encia significa acima de 20 respostas.
+
+A Tabela \ref{tab:Categories} apresenta o n\'umero de recorr\^encias, em cada quest\~ao sobre boas ou m\'as pr\'aticas, das categorias de alta, m\'edia e baixa recorr\^encia agrupadas por temas. A \'ultima linha da Tabela, \#Categorias, apresenta quantas categorias emergiram de cada quest\~ao, ou seja, \textbf{com base em um elemento Android}, quais s\~ao os pontos de aten\c{c}\~ao (boas e m\'as pr\'aticas) que devemos avaliar pensando em qualidade de c\'odigo. J\'a a \'ultima coluna da Tabela, \#Quest\~oes, apresenta em quantas quest\~oes cada categoria surgiu, ou seja, \textbf{com base na categoria} (que agrupa observa\c{c}\~oes sobre boas e m\'as pr\'aticas), quais elementos devem ser investigados pensando em qualdiade de c\'odigo. 
 
 % Quando se criam categoriza\c{c}\~oes para auxiliar desenvolvedores a identificar pontos de aten\c{c}\~ao a serem avaliados e onde este pontos devem ser investigados especificamente no c\'odigo, pensando em qualidade de c\'odigo d\'a-se o nome de \textit{smells}. Portanto, nesta se\c{c}\~ao iremos compilar este conjunto de Android \textit{code smells} que identificamos atrav\'es das categoriza\c{c}\~oes.
 
@@ -52,11 +54,11 @@ Opened Activity								& \multicolumn{1}{c}{--}		& \multicolumn{1}{c}{2}		& \mul
 \label{tab:Categories}
 \end{table*}
 
-Esta se\c{c}\~ao est\'a organizada em 5 subse\c{c}\~oes. As primeiras 4 subse\c{c}\~oes abordam as categorias apenas de alta, m\'edia e baixa recorr\^encia dos grupos Arquitetural, Problemas Pontuais, Utilit\'ario e Conhecimento (não há categorias nesta recorr\^encia no grupo Estrutural). E por último temos uma subse\c{c}ão para falar apenas das categorias de baix\'issima recorr\^encia.
+Esta se\c{c}\~ao est\'a organizada em 6 subse\c{c}\~oes. As primeiras 5 subse\c{c}\~oes abordam as categorias apenas de alta, m\'edia e baixa recorr\^encia dos temas: Conceitos Tradicionais, Problemas Arquiteturais, Problemas Pontuais, Ferramentas Utilit\'arias e Conhecimento (n\~ao h\'a categorias com essas recorr\^encias no grupo Estrutura de Arquivos). Por \'ultimo temos uma subse\c{c}\~ao para falar apenas das categorias de baix\'issima recorr\^encia.
 
-\subsection{Grupo Tradicional}
+\subsection{Conceitos Tradicionais}
 
-\subsection{Grupo Arquitetural}
+\subsection{Problemas Arquiteturais}
 
 \subsubsection{Use Fragments Just If Needed} 
 Esta categoria agrupa 10 respostas que indicam que se deve evitar a utiliza\c{c}\~ao de \textsc{Fragment}s e s\'o us\'a-los se for realmente necess\'ario. Por exemplo, P4 indica como boa pr\'atica sobre \textsc{Fragments} que ``Tente substituir Fragments o m\'aximo poss\'ivel por ViewGroups. Apenas use-os se tiver uma boa raz\~ao para isso'' (tradu\c{c}\~ao livre), P28 diz ``Se poss\'ivel, evitar a todo custo''. 
@@ -102,7 +104,7 @@ Esta categoria agrupa 21 respostas onde os participantes indicam \textsc{layout 
 % \label{sub:Android-code-smells}
 
 \subsubsection{Duplicated Styles Attributes (DSA)}
-Este smell foi identificado em 7 respostas. Segundo os participantes, ccorre quando mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua apar\^encia. Por exemplo, segundo P34 \textit{``Sempre que eu noto que tenho mais de um recurso usando o mesmo estilo, eu tento mov\^e-lo para o meu \textit{style resource}.''} (tradu\c{c}\~ao livre). Passando a mesma ideia, P32 diz \textit{``Utilizar muitas propriedades em um único componente. Se tiver que usar muitas, prefiro colocar no arquivo de styles.''}. Ou seja, os elementos afetados por este smell s\~ao layout ou style resources. E as solu\c{c}\~oes indicadas s\~ao extrair um novo estilo que agrupe o conjunto de atributos duplicados e passar a usar o estilo criado.
+Este smell foi identificado em 7 respostas. Segundo os participantes, ccorre quando mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua apar\^encia. Por exemplo, segundo P34 \textit{``Sempre que eu noto que tenho mais de um recurso usando o mesmo estilo, eu tento mov\^e-lo para o meu \textit{style resource}.''} (tradu\c{c}\~ao livre). Passando a mesma ideia, P32 diz \textit{``Utilizar muitas propriedades em um \'unico componente. Se tiver que usar muitas, prefiro colocar no arquivo de styles.''}. Ou seja, os elementos afetados por este smell s\~ao layout ou style resources. E as solu\c{c}\~oes indicadas s\~ao extrair um novo estilo que agrupe o conjunto de atributos duplicados e passar a usar o estilo criado.
 
 Por exemplo, considere o seguinte \textbf{contexto} onde o \texttt{TextView} abaixo \'e usado em dois momentos no mesmo layout (exemplo extra\'ido da documenta\c{c}\~ao do Android\footnote{https://developer.Android.com/guide/topics/ui/themes.html}):
 
@@ -263,11 +265,11 @@ Sobre drawables e estilos n\~ao foi sugerida uma maneira espec\'ifica de nomencl
 
 
 
-\subsection{Grupo Problemas Pontuais}
+\subsection{Problemas Pontuais}
 
-\subsection{Grupo de Utilit\'arias}
+\subsection{Ferramentas Utilit\'arias}
 
-\subsection{Grupo de Conhecimento}
+\subsection{Conhecimento}
 
 \subsection{Categorias de Baix\'issima Recorr\^encia}
 
