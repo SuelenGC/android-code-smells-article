@@ -17,24 +17,17 @@ A segunda se\c{c}\~ao continha 16 quest\~oes opcionais e dissertativas sobre boa
 
 A terceira se\c{c}\~ao continha 3 perguntas opcionais e dissertativas, 2 para captar qualquer \'ultima ideia sobre boas e m\'as pr\'aticas n\~ao captadas nas quest\~oes anteriores e 1 solicitando o email do participante caso o mesmo tivesse interesse em participar de etapas futuras da pesquisa. 
 
-% As perguntas sobre boas e m\'as pr\'aticas foram as a seguir: 
-% \begin{itemize} 
-% 	\item[$\textasteriskcentered$] Existem outras *BOAS* pr\'aticas sobre a Camada de Apresenta\c{c}\~ao Android que n\'os n\~ao perguntamos ou que voc\^e n\~ao disse ainda?
-% 	\item[$\textasteriskcentered$] Existem outras *M\'AS* pr\'aticas sobre a Camada de Apresenta\c{c}\~ao Android que n\'os n\~ao perguntamos ou que voc\^e n\~ao disse ainda?
-% \end{itemize}
-
 Antes da divulga\c{c}\~ao, realizamos um piloto com 3 desenvolvedores Android e com o feedback deles fizemos alguns ajustes relacionados a obrigatoriedade das perguntas da segunda se\c{c}\~ao do question\'ario, onde todas tornaram-se opcionais. As respostas dos participantes piloto foram desconsideradas para efeitos de vi\'es. 
 
 Todas as 18 quest\~oes sobre boas e m\'as pr\'aticas (16 na segunda se\c{c}\~ao e 2 da terceira) s\~ao apresentadas na Tabela \ref{tab:RespostasXParticipantes}.
 
 \begin{table*}[t]
 \centering
-\caption{Total de respostas obtidas por cada quest\~ao sobre boas e m\'as pr\'aticas no \textit{front-end} Android}
 \footnotesize
 \begin{tabular}{@{}lp{8.5cm}ccp{6cm}@{}}
 \toprule
-	\multirow{2}{*}{\textbf{Id}}  & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Quest\~oes}}} 	& \multicolumn{2}{c}{\textbf{Respostas}}	& \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Participantes}}} \\ \cmidrule{3-4}
-					 & 								& \textbf{Total} & \textbf{\%} & \\
+\multirow{2}{*}{\textbf{Id}}& \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Quest\~oes}}} 	& \multicolumn{2}{c}{\textbf{Respostas}}	& \multicolumn{1}{c}{\multirow{2}{*}{\textbf{Participantes}}} \\ \cmidrule{3-4}
+					 		& 															& \textbf{Total} & \textbf{\%} & \\
 \hline
 
 Q1	& Voc\^e tem alguma boa pr\'atica para lidar com Activities?															&36 &80\%	&P1, P2, P4--P12, P14--P17, P19, P22, P23, P25--P32, P34--P37, P39--P43, P45 \\
@@ -59,6 +52,7 @@ Q18	& Existem outras *M\'AS* pr\'aticas sobre a Camada de Apresenta\c{c}\~ao And
 \multicolumn{5}{@{}l}{\textit{* Os participantes P3, P13, P20, P21, P24, P33 e P38 n\~ao responderam nenhuma das quest\~oes da segunda e terceira se\c{c}\~ao.}} \\
 \toprule
 \end{tabular}
+\caption{Total de respostas obtidas por cada quest\~ao sobre boas e m\'as pr\'aticas no \textit{front-end} Android.}
 \label{tab:RespostasXParticipantes}
 \end{table*}
 
@@ -75,7 +69,6 @@ Com a an\'alise das quest\~oes demogr\'aficas foi poss\'ivel notar que atingimos
 
 \begin{table}[h]
 \centering
-\caption{Experi\^encia dos participantes com desenvolvimento Android.}
 \small
 \begin{tabular}{@{}l|c|r@{}}
 \toprule
@@ -91,26 +84,9 @@ Com a an\'alise das quest\~oes demogr\'aficas foi poss\'ivel notar que atingimos
 8 anos 			& 	 2 		& 	 4,4 \%	 \\
 \toprule
 \end{tabular}
+\caption{Experi\^encia dos participantes com desenvolvimento Android.}
 \label{tab:DadosDemograficos}
 \end{table}
-
-% \begin{tikzpicture}
-% \begin{axis}[
-%     ybar,
-%     enlargelimits=0.15,
-%     legend style={at={(0.5,-0.15)},
-%       anchor=north,legend columns=-1},
-%     ylabel={participantes},
-%     symbolic x coords={1-2 anos,2-5 anos,6-10 anos},
-%     xtick=data,
-%     nodes near coords,
-%     nodes near coords align={vertical},
-%     ]
-% \addplot coordinates {(1-2 anos,5) (2-5 anos,10) (6-10 anos,30)};
-% \addplot coordinates {(1-2 anos,13) (2-5 anos,21) (6-10 anos,11)};
-% \legend{experi\^encia com software,experi\^encia com Android}
-% \end{axis}
-% \end{tikzpicture}
 
 \subsection{An\'alise dos Dados}
 \label{sub:smells-definition}
@@ -120,8 +96,6 @@ O processo de an\'alise partiu da listagem das 45 respostas do question\'ario e 
 O processo que denominamos de \textit{verticaliza\c{c}\~ao} consistiu em considerar cada resposta de boa ou m\'a pr\'atica como um registro individual a ser analisado. Ou seja, cada participante respondeu 18 perguntas sobre boas e m\'as pr\'aticas no \textit{front-end} Android (2 perguntas para cada elemento e mais duas perguntas gen\'ericas). Com o processo de \textit{verticaliza\c{c}\~ao}, cada uma dessas respostas se tornou um registro, ou seja, cada participante resultava em 18 respostas a serem analisadas, totalizando 810 respostas (18 perguntas multiplicado por 45 participantes) sobre boas e m\'as pr\'aticas.
 
 O passo seguinte foi realizar a \textit{limpeza dos dados}. Esse passo consistiu em remover respostas obviamente n\~ao \'uteis como respostas em branco, que continham frases como \textit{"N\~ao"}, \textit{"N\~ao que eu saiba"}, \textit{"Eu n\~ao me lembro"} e similares, as consideradas vagas como \textit{"Eu n\~ao tenho certeza se s\~ao boas praticas mas uso o que vejo por ai"}, as consideradas gen\'ericas como \textit{"Como todo c\'odigo java..."} e as que n\~ao eram relacionadas a boas pr\'aticas de c\'odigo. Das 810 boas e m\'as pr\'aticas, 352 foram consideradas e 458 desconsideradas. Das 352, 44,6\% foram apontadas como m\'as pr\'aticas e 55,4\% como boas pr\'aticas. 
-
-% Durante o processo de codifica\c{c}\~ao das respostas para as 18 perguntas abertas sobre boas e m\'as pr\'aticas, 
 
 Em seguida, realizamos a codifica\c{c}\~ao sobre as boas e m\'as pr\'aticas. O processo de codifica\c{c}\~ao consistiu em analisar cada resposta e atribuir uma ou mais categorias. Durante esse processo, houveram 30 respostas que n\~ao eram triviais de identificar uma categoria ou mesmo de dizer se essas respostas deveriam ser consideradas. Essas respostas foram marcadas como \textit{"talvez"} e reavaliadas ao final, onde 6 permaneceram e 24 foram desconsideradas. Ainda durante a codifica\c{c}\~ao, 9 respostas incialmente consideradas, foram desconsideradas. Para toda resposta desconsiderada nesse passo, foi indicado um motivo. Ao final da codifica\c{c}\~ao, as categorias foram agrupadas por temas.
 
