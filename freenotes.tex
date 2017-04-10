@@ -130,68 +130,6 @@ Os \textbf{elementos afetados} s\~ao: \textsc{activity}, \textsc{fragment} e \te
 Como \textbf{solu\c{c}\~ao}, R578 e R647 sugerem que, caso os condicionais sejam para decidir sobre a exibi\c{c}\~ao ou n\~ao de views, separa em duas ou mais views. Sobre adaptar mais de um tipo de objeto, a resposta R577 sugere a delega\c{c}\~ao para outros adapters especialistas em lidar com cada objeto.
 
 
-\subsubsection{Magic Resource (MR)}
-
-\textbf{Ocorre quando} se encontra uma string, integer, color ou dimension em arquivos que n\~ao sejam os seus respectivos onde \'e poss\'ivel atribuir um nome e reutiliz\'a-los. 
-
-
-\subsubsection{Resource Name Pattern (RNP)}
-
-\textbf{Ocorre quando} seus recursos n\~ao seguem um padr\~ao de nomenclatura. Tornando dif\'icil encontr\'a-los e reaproveit\'a-los. A seguir apresentamos uma pasta res desorganizada e despadronizada:
-
-\begin{lstlisting}[
-	language=, 
-	caption={Recursos de aplica\c{c}\~ao sem padr\~ao de nomenclatura}, 
-	label={lst:AndroidManifest}
-]
-- res
-  - layout
-    - tela-de-login.xml
-    - cadastro-act.xml
-    - propaganda-frag.xml
-    - item1.xml
-    - item2.xml
-  - values
-    - strings.xml 
-    - styles.xml
-    - colors.xml
-  - drawables
-    - ic-app.jpg
-    - tela-cadastro.png
-    - bg.xml
-\end{lstlisting}
-
-Agora, uma pasta res seguindo as sugest\~oes de solu\c{c}\~ao:
-
-\begin{lstlisting}[
-	language=, 
-	caption={Recursos de aplica\c{c}\~ao com padr\~ao de nomenclatura}, 
-	label={lst:AndroidManifest}
-]
-- res 
-  - layout 
-    - activity-login.xml 
-    - activity-cadastro.xml 
-    - fragment-propaganda.xml 
-    - item-lista-propaganda-tipo1.xml 
-    - item-lista-propaganda-tipo2.xml 
-  - values 
-    - strings-login.xml  
-    - strings-cadastro.xml  
-    - strings-propaganda.xml  
-    - styles-login.xml 
-    - colors.xml 
-  - drawables 
-    - icone-app.jpg 
-    - icone-cadastro.png 
-    - background.xml 
-\end{lstlisting}
-
-Em se falando de strings resources, segundo P27 "Iniciar o nome de uma string com o nome da tela onde vai ser usada", e P2 refor\c{c}a essa ideia sugerindo <screen>-<type>-<text>. Eg.: welcome-message-title, registration-field-name, registration-hint-edit-name. P34 e P4 sugere que o nome do elemento usando a string como parte do nome da string: dialog.STRING-NAME or hint.STRING-NAME
-
-Em se falando de layout resources, P11 sugere sempre come\c{c}ar com "activity-", "fragment-", "ui-" (para UI customizadas) j\'a P12 sugere o uso de sufixos, como por exemplo "xxx-activity".
-
-Sobre drawables e estilos n\~ao foi sugerida uma maneira espec\'ifica de nomenclatura, apenas enfatizaram para definir um padr\~ao e us\'a-lo em toda a aplica\c{c}\~ao.
 
 
 \subsubsection{Messy String Resources (MStringR)} 
