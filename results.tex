@@ -59,231 +59,27 @@ Esta se\c{c}\~ao est\'a organizada em 6 subse\c{c}\~oes. As primeiras 5 subse\c{
 \subsection{Categorias de Alta Recorr\^encia}
 Obtivemos 4 categorias consideradas de alta recorr\^encia: No Logic In View, Resource Name Pattern, Magic [Possible] Resource e Nested Layout.
 
-\subsubsection{No Logic In View} \
-Esta categoria re\'une frases que indicam como m\'a pr\'atica haver regra de neg\'ocio nos elementos Android afetados. De forma similar, respostas indicam  como boas pr\'aticas n\~ao haver c\'odigo de regra de neg\'ocio. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P16 sobre \textsc{Activitys} diz \textit{``Fazer l\'ogica de neg\'ocio''} (tradu\c{c}\~ao livre), j\'a P19 diz \textit{``Colocar regra de neg\'ocio no adapter''} e P11 diz \textit{``Manter l\'ogica de neg\'ocio em Fragments''} (tradu\c{c}\~ao livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P16 diz sobre \textsc{Activitys} \textit{``Elas representam uma \'unica tela e apenas interagem com a UI, qualquer l\'ogica deve ser delegada para outra classe''} (tradu\c{c}\~ao livre), P23 diz \textit{``Apenas c\'odigo relacionado \`a Interface de Usu\'ario nas Activities''}, P40 diz \textit{``Adapters devem apenas se preocupar sobre como mostrar os dados, sem trabalh\'a-los''}. Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
+\subsubsection{No Logic In View (NLIV)}
+Esta categoria re\'une respostas que indicam como m\'a pr\'atica haver regra de neg\'ocio nos elementos Android afetados. De forma similar, respostas indicam como boas pr\'aticas n\~ao haver c\'odigo de regra de neg\'ocio. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P16 sobre \textsc{Activitys} diz \textit{``Fazer l\'ogica de neg\'ocio''} (tradu\c{c}\~ao livre), P19 diz \textit{``Colocar regra de neg\'ocio no adapter''} e P11 diz \textit{``Manter l\'ogica de neg\'ocio em Fragments''} (tradu\c{c}\~ao livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P16 diz sobre \textsc{Activitys} \textit{``Elas representam uma \'unica tela e apenas interagem com a UI, qualquer l\'ogica deve ser delegada para outra classe''} (tradu\c{c}\~ao livre), P23 diz \textit{``Apenas c\'odigo relacionado \`a Interface de Usu\'ario nas Activities''}, P40 diz \textit{``Adapters devem apenas se preocupar sobre como mostrar os dados, sem trabalh\'a-los''}. Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
 
-% \subsubsection{God/Large Class} s\~ao \textit{code smells} previamente definidos nas literaturas de Arthur Riel (\textit{God Class}) \cite{Riel} e Martin Fowler (\textit{Large Class}) \cite{RefactoringFowler1999} e tratam de classes grandes que cont\'em muitas responsabilidades e depend\^encias. Percebemos que esse \textit{smell} tamb\'em \'e uma preocupa\c{c}\~ao dos desenvolvedores Android ao lidarem com \textsc{Activities} (8 participantes), \textsc{Fragments} (3 participantes), \textsc{Listeners} (1 participante) e \textsc{Style Resources} (1 participante). P8 indicou como m\'a pr\'atica em Activity ``Considerar Activities como \textit{God Classes}'' (tradu\c{c}\~ao livre). 
-
-
-\subsubsection{Use Fragments Just If Needed} 
-Esta categoria agrupa 10 respostas que indicam que se deve evitar a utiliza\c{c}\~ao de \textsc{Fragment}s e s\'o us\'a-los se for realmente necess\'ario. Por exemplo, P4 indica como boa pr\'atica sobre \textsc{Fragments} que ``Tente substituir Fragments o m\'aximo poss\'ivel por ViewGroups. Apenas use-os se tiver uma boa raz\~ao para isso'' (tradu\c{c}\~ao livre), P28 diz ``Se poss\'ivel, evitar a todo custo''. 
-
-\subsubsection{Use Fragments} 
-Esta categoria agrupa 11 respostas onde os participantes recomendam o uso de \textsc{Fragments}. Por exemplo, P14 diz ``gosto de sempre usar fragmento, mesmo que seja uma tela simples com somente um fragmento'', j\'a P19 diz ``[...] utilizar Fragments sempre que poss\'ivel''. 
-
-\subsubsection{Nested Layout} 
-Esta categoria agrupa 21 respostas onde os participantes indicam \textsc{layout resources} com aninhamento de elementos muito profundos como uma m\'a pr\'atica. De fato, esta categoria poderia ser considerada um android code smell, mas j\'a existe uma ferramenta oficial do Android [] que valida este sintoma, logo, j\'a \'e um problema endere\c{c}ado.
-
-
-
-% \begin{table}[h]
-% \centering
-% \caption{Smells identificados vs. recorr\^encia percebida pelos participantes do question\'ario}
-% \small
-% \begin{tabular}{p{3cm}|p{4cm}}
-% \toprule
-% \textbf{Recorr\^encia} & \textbf{Quantidade de Smells} \\
-% \hline
-% Alta  			& 5 \\
-% M\'edia 		& 17 (1 \textit{smell} tradicional) \\
-% Baixa			& 5 \\
-% Irrelevante 	& 20 \\
-% \toprule
-% \end{tabular}
-% \label{tab:DadosDemograficos2}
-% \end{table}
-
-% Os irrelevantes foram desconsiderados nesta etapa de defini\c{c}\~ao. Os demais foram definidos com a ajuda das respostas dos participantes. Para cada \textit{smell} definimos os seguintes t\'opicos: 
-
-% \begin{itemize} 
-% 	\item[$\textasteriskcentered$] \textbf{Quando ocorre}. Indicamos os motivos pelo qual foi considerado uma m\'a pr\'atica.   
-% 	\item[$\textasteriskcentered$] \textbf{Contexto/exemplo}. Indicamos algum exemplo ou contexto pr\'atico. 
-% 	\item[$\textasteriskcentered$] \textbf{Elementos afetados}. Eventualmente algum \textit{smell} afeta mais de um elemento, nesse t\'opico abordamos em quais os elementos este \textit{smell} pode estar presente. 
-% 	\item[$\textasteriskcentered$] \textbf{Solu\c{c}\~ao}. Indicamos poss\'iveis refatora\c{c}\~oes para reduzir ou eliminar o \textit{smell}. \\
-% \end{itemize}
-
-% \'E importante ressaltar que todas as defini\c{c}\~oes dos \textit{smells} foram apoiadas nas respostas dos participantes. Se os participantes n\~ao indicaram algum t\'opico para algum \textit{smell}, o mesmo n\~ao foi definido. \\
-
-
-% \subsection{Android Code Smells}
-% \label{sub:Android-code-smells}
-
-\subsubsection{Duplicated Styles Attributes (DSA)}
-Este smell foi identificado em 7 respostas. Segundo os participantes, ccorre quando mais de um view de um ou mais layouts usam o mesmo conjunto de atributos para definir sua apar\^encia. Por exemplo, segundo P34 \textit{``Sempre que eu noto que tenho mais de um recurso usando o mesmo estilo, eu tento mov\^e-lo para o meu \textit{style resource}.''} (tradu\c{c}\~ao livre). Passando a mesma ideia, P32 diz \textit{``Utilizar muitas propriedades em um \'unico componente. Se tiver que usar muitas, prefiro colocar no arquivo de styles.''}. Ou seja, os elementos afetados por este smell s\~ao layout ou style resources. E as solu\c{c}\~oes indicadas s\~ao extrair um novo estilo que agrupe o conjunto de atributos duplicados e passar a usar o estilo criado.
-
-Por exemplo, considere o seguinte \textbf{contexto} onde o \texttt{TextView} abaixo \'e usado em dois momentos no mesmo layout (exemplo extra\'ido da documenta\c{c}\~ao do Android\footnote{https://developer.Android.com/guide/topics/ui/themes.html}):
-
-\begin{lstlisting}[
-	language=XML, 
-	caption={\texttt{TextView} usado em mais de um layout e com estilo definido por atributos.}, 
-	label={lst:AndroidManifest},
-]
-<TextView
-  android:layout-width="match-parent"
-  android:layout-height="wrap-content"
-  android:textColor="#00FF00"
-  android:typeface="monospace"
-  android:text="@string/hello" />
-\end{lstlisting}
-
-Visto que o estilo de cor e formata\c{c}\~ao do texto ser\'a replicado, uma op\c{c}\~ao \'e extrair esse estilo para um style resource e utiliz\'a-lo no layout. A seguir, criamos o estilo \textit{CodeFont} e o aplicamos no \textsc{TextView}.
-
-\begin{lstlisting}[
-	language=XML, 
-	label={lst:AndroidManifest},
-	caption={main\_activity.xml},
-]
-<!-- ... -->
-<TextView
-  android:layout-width="match-parent"
-  android:layout-height="wrap-content"
-  android:textAppearance="@style/CodeFont"
-  android:text="@string/hello" />
-<!-- ... -->
-\end{lstlisting}
-
-Arquivo de estilo com o estilo estilo  criado:
-
-\begin{lstlisting}[
-	language=XML, 
-	caption={styles.xml}, 
-	label={lst:AndroidManifest},
-]
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <style name="CodeFont" ...>
-    <item name="Android:textColor">
-      #00FF00
-    </item>
-    <item name="Android:typeface">
-      monospace
-    </item>
-  </style>
-</resources>
-\end{lstlisting}
-
-
-\subsubsection{Suspicious Extra Knowledge About Behavior (SEKAB)}
-
-\textbf{Ocorre quando} uma view possui um conhecimento maior do que o considerado aceit\'avel sobre os detalhes de seu comportamento. Para este smell identificamos por meio das respostas que tr\^es elementos da view \textbf{podem ser afetados} por ele, s\~ao: \textsc{activity}, \textsc{fragment} e \textsc{adapter}. E a depender de qual view est\'a se tratando, o que \'e considerado aceit\'avel pode mudar. Sendo assim, chegamos a seguinte escala de conhecimento aceit\'avel:
-
-\begin{itemize} 
-	\item[$\circ$] n\'ivel 1 - implementa\c{c}\~ao de classe concreta;
-	\item[$\circ$] n\'ivel 2 - atrav\'es de \textit{implements} (polimorfismo);
-	\item[$\circ$] n\'ivel 3 - atrav\'es de classe an\^onima;
-	\item[$\circ$] n\'ivel 4 - atrav\'es de \textit{inner class}.
-\end{itemize}
-
-Para \textsc{Adapter}s, apenas o n\'ivel 1 foi considerado como aceit\'avel. Para \textsc{Activity}s e \textsc{Fragment}s, at\'e o n\'ivel 3 \'e considerado aceit\'avel, sendo que houveram indica\c{c}\~oes positivas e nenhuma negativa sobre o uso do n\'ivel 1, houveram indica\c{c}\~oes positivas e negativas sobre o n\'ivel 2 e houveram apenas indica\c{c}\~oes negativas sobre o n\'ivel 3 e 4. 
-
-Como \textbf{solu\c{c}\~ao}, segundo as respostas R666 e R672, \textit{"adapters devem ser o mais est\'upido poss\'ivel"} (tradu\c{c}\~ao livre). Podemos dizer ent\~ao que se for necess\'ario atribuir algum comportamento para alguma view que est\'a sendo populada, isso dever\'a ser feito usando a m\'etodo descrito para o n\'ivel 1. J\'a para \textsc{Activity}s e \textsc{Fragment}s a toler\^ancia de conhecimento aumenta at\'e o n\'ivel 3, sendo 1 e 2 os mais indicados e 3 toler\'avel \'as vezes (aqui talvez existam dois thresholds como n\'umero de linhas do m\'etodo do evento ou mesmo quantidade de classes an\^onimas na classe). O n\'ivel 4 \'e inaceit\'avel para todos os elementos afetados por este smell.
-
-Os \textbf{elementos afetados} s\~ao: \textsc{activity}, \textsc{fragment} e \textsc{adapters}. As \textbf{heur\'isticas} de detec\c{c}\~ao s\~ao:
-
-\begin{itemize} 
-	\item[$\circ$] [n\'ivel 4] se existe uma ou mais inner class de listener
-	\item[$\circ$] [n\'ivel 3] se existe um certo n\'umero de classes an\^onimas
-	\item[$\circ$] [n\'ivel 2 e 3] se LOC dentro do m\'etodo do listener - an\^onimo ou sobreescrito \'e maior que 1
-\end{itemize}
-
-
-\subsubsection{Flex Adapter (FA)}
-
-\textbf{Ocorre quando} um adapter precisa de condicionais para decidir se determinada view deve estar visivel ou n\~ao ou quando um adapter recebe mais de um tipo de objeto para ser colocado na view.
-
-Como \textbf{solu\c{c}\~ao}, R578 e R647 sugerem que, caso os condicionais sejam para decidir sobre a exibi\c{c}\~ao ou n\~ao de views, separa em duas ou mais views. Sobre adaptar mais de um tipo de objeto, a resposta R577 sugere a delega\c{c}\~ao para outros adapters especialistas em lidar com cada objeto.
-
-
-\subsubsection{Magic Resource (MR)}
-
-\textbf{Ocorre quando} se encontra uma string, integer, color ou dimension em arquivos que n\~ao sejam os seus respectivos onde \'e poss\'ivel atribuir um nome e reutiliz\'a-los. 
 
 
 \subsubsection{Resource Name Pattern (RNP)}
+Esta categoria re\'une respostas que indicam como m\'a pr\'atica o n\~ao uso de um padr\~ao de nomenclatura a ser usado nos recursos da aplica\c{c}\~ao. De forma similar, respostas indicam como boas pr\'aticas o uso de um padr\~ao de nomenclatura a ser usados nos recursos. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P8 sobre \textsc{Style Resources} diz \textit{``[...] o nome das strings sem um contexto''} (tradu\c{c}\~ao livre), P37 tamb\'em sobre \textsc{Style Resources} diz \textit{``Nada al\'em de ter uma boa conven\c{c}\~ao de nomes''} (tradu\c{c}\~ao livre), ainda P37, por\'em sobre \textsc{Layout Resources} diz \textit{``Mantenha uma conven\c{c}\~ao de nomes da sua escolha [...]''} (tradu\c{c}\~ao livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P27 diz sobre \textsc{String Resources} \textit{``Iniciar o nome de uma string com o nome da tela onde vai ser usada''}, P43 sobre \textsc{Layout Resources} diz \textit{``Ter uma boa conven\c{c}\~ao de nomea\c{c}\~ao''} (tradu\c{c}\~ao livre), P11 diz sobre \textsc{Style Resources} \textit{``[...] colocar um bom nome [...]''} (tradu\c{c}\~ao livre). Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Layout Resources}, \textsc{String Resources} \textsc{Style Resources} e \textsc{Drawable Resources}. 
 
-\textbf{Ocorre quando} seus recursos n\~ao seguem um padr\~ao de nomenclatura. Tornando dif\'icil encontr\'a-los e reaproveit\'a-los. A seguir apresentamos uma pasta res desorganizada e despadronizada:
-
-\begin{lstlisting}[
-	language=, 
-	caption={Recursos de aplica\c{c}\~ao sem padr\~ao de nomenclatura}, 
-	label={lst:AndroidManifest}
-]
-- res
-  - layout
-    - tela-de-login.xml
-    - cadastro-act.xml
-    - propaganda-frag.xml
-    - item1.xml
-    - item2.xml
-  - values
-    - strings.xml 
-    - styles.xml
-    - colors.xml
-  - drawables
-    - ic-app.jpg
-    - tela-cadastro.png
-    - bg.xml
-\end{lstlisting}
-
-Agora, uma pasta res seguindo as sugest\~oes de solu\c{c}\~ao:
-
-\begin{lstlisting}[
-	language=, 
-	caption={Recursos de aplica\c{c}\~ao com padr\~ao de nomenclatura}, 
-	label={lst:AndroidManifest}
-]
-- res 
-  - layout 
-    - activity-login.xml 
-    - activity-cadastro.xml 
-    - fragment-propaganda.xml 
-    - item-lista-propaganda-tipo1.xml 
-    - item-lista-propaganda-tipo2.xml 
-  - values 
-    - strings-login.xml  
-    - strings-cadastro.xml  
-    - strings-propaganda.xml  
-    - styles-login.xml 
-    - colors.xml 
-  - drawables 
-    - icone-app.jpg 
-    - icone-cadastro.png 
-    - background.xml 
-\end{lstlisting}
-
-Em se falando de strings resources, segundo P27 "Iniciar o nome de uma string com o nome da tela onde vai ser usada", e P2 refor\c{c}a essa ideia sugerindo <screen>-<type>-<text>. Eg.: welcome-message-title, registration-field-name, registration-hint-edit-name. P34 e P4 sugere que o nome do elemento usando a string como parte do nome da string: dialog.STRING-NAME or hint.STRING-NAME
-
-Em se falando de layout resources, P11 sugere sempre come\c{c}ar com "activity-", "fragment-", "ui-" (para UI customizadas) j\'a P12 sugere o uso de sufixos, como por exemplo "xxx-activity".
-
-Sobre drawables e estilos n\~ao foi sugerida uma maneira espec\'ifica de nomenclatura, apenas enfatizaram para definir um padr\~ao e us\'a-lo em toda a aplica\c{c}\~ao.
-
-
-\subsubsection{Messy String Resources (MStringR)} 
-
-\textbf{Ocorre quando} se tem um \'unico arquivo strings.xml para guardar todas as strings da aplica\c{c}\~ao ou quando os arquivos string encontram-se desorganizados, sem seguir nenhum padr\~ao espec\'ifico. Como \textbf{solu\c{c}\~ao}, P28 e P42 sugerem separar as strings por arquivos que indiquem a qual tela aquelas strings pertencem. P42 tamb\'em sugere ter um arquivo de strings comuns a toda aplica\c{c}\~ao. P41 sugere ainda separar os arquivos de acordo com contextos como: urls, mensagens de erro. P32 sugere usar um \'unico arquivo por\'em separando-o em blocos, onde casa bloco indica uma tela.
+Dentre as respostas, algumas indicaram padr\~oes de prefer\^encia. P11 indica usar prefixos nos \textsc{Layout Resources}: \textit{activity\_}, \textit{fragment\_}, \textit{ui\_} (para UI customizadas). P12 indica um padr\~ao similar, por\'em sufixo para \textsc{Activitys}: \textit{\_Activity}. Os padr\~oes indicados para \textsc{String Resources} foram: P27 indicou \textit{``Iniciar o nome da string com o nome da tela onde vai ser usada''}, P34 indicou que deve-se usar como prefixo o recurso usando a string, por exemplo \texttt{dialog.STRING\_NAME} ou \texttt{hint.STRING\_NAME}. De forma similar por\'em sem sugerir um exemplo, P4 sugeriu basear o nome da string no nome do recurso que a esta usando. P6 sugeriu a conven\c{c}\~ao \texttt{[screen]\_[type]\_[text]} e citou como exemplo \texttt{welcome\_message\_title} e \texttt{registration\_field\_name}. N\~ao foram sugeridos nenhum padr\~ao para \textsc{Styles Resources} e \textsc{Drawable Resources}.
 
 
 
-\subsubsection{Messy Style Resources (MStyleR)} 
-
-\textbf{Ocorre quando} se tem um \'unico arquivo styles.xml para guardar todos os estilos e temas da aplica\c{c}\~ao ou quando os arquivos styles encontram-se desorganizados, sem seguir nenhum padr\~ao espec\'ifico. Como \textbf{solu\c{c}\~ao}, P7, P42 e P40 sugerem criar um styles para estilos de componentes e outro para temas. P8 j\'a sugere quebrar em v\'arios arquivos estilos e um para o tema.
 
 
 
-\subsection{Problemas Pontuais}
-
-\subsection{Ferramentas Utilit\'arias}
-
-\subsection{Conhecimento}
-
-\subsection{Categorias de Baix\'issima Recorr\^encia}
 
 
-\subsection{Interpreta\c{c}\~ao dos Dados}
-
-As vezes o que era indicado como boa pr\'atica para um elemento era um smell percebido em outro elemento, por exemplo, a R1 diz que \textit{"Sempre que noto ter mais de um [layout] resource usando o mesmo estilo eu tento mov\^e-lo [o estilo] para meu recurso de estilo"} (tradu\c{c}\~ao livre) ao responder sobre boa pr\'atica para o style resource, por\'em esta resposta foi considerada para definir o smell Duplicated Styles Attributes que \'e percebido em recursos de layout ou styles.
 
 
-% \subsection{Afirma\c{c}\~ao sobre o \textit{front-end} Android}
 
-% Uma opini\~ao que foi un\^anime em muitas respostas foi que de fato, desenvolvedores tratam \textsc{Activitys}, \textsc{Fragments} e \textsc{Adapters} como elementos do front-end Android, conforme constatamos na se\c{c}\~ao 3.1. Isso pode ser observado diversas vezes com respostas por exemplo, P25 indicou como boa pr\'atica na Activity "Nenhuma l\'ogica [de neg\'ocio] aqui" (tradu\c{c}\~ao livre), o P40 afirma sobre m\'a pr\'atica em adapter \'e \textit{"L\'ogica de neg\'ocio em adapters \'e n\~ao-n\~ao"} (tradu\c{c}\~ao livre), ao falarem sobre fragments, muitos indicaram \textit{"O mesmo da Activity"}. Ou seja, primeiramente estas respostas refor\c{c}am nossa defini\c{c}\~ao inicial sobre elementos que compo\^em o front-end Android, e por outro lado, vimos que muitas vezes fragments s\~ao tratados como Activitys, ao se falar de boas e m\'as pr\'aticas de c\'odigo.
+
+
+
+
