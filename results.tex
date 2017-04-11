@@ -105,8 +105,7 @@ Obtivemos 4 categorias consideradas de alta recorr\^encia: L\'ogica em Views, Pa
 % \end{table*}
 
 \subsubsection{L\'ogica em Views}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica haver regra de neg\'ocio nos elementos Android afetados. De forma similar, respostas indicam como boas pr\'aticas n\~ao haver c\'odigo de regra de neg\'ocio. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P16 sobre \textsc{Activitys} diz \textit{``Fazer l\'ogica de neg\'ocio''} (tradu\c{c}\~ao livre), P19 diz \textit{``Colocar regra de neg\'ocio no adapter''} e P11 diz \textit{``Manter l\'ogica de neg\'ocio em Fragments''} (tradu\c{c}\~ao livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P16 diz sobre \textsc{Activitys} \textit{``Elas representam uma \'unica tela e apenas interagem com a UI, qualquer l\'ogica deve ser delegada para outra classe''} (tradu\c{c}\~ao livre), P23 diz \textit{``Apenas c\'odigo relacionado \`a Interface de Usu\'ario nas Activities''}, P40 diz \textit{``Adapters devem apenas se preocupar sobre como mostrar os dados, sem trabalh\'a-los''}. Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
-
+Esta categoria re\'une respostas que indicam como m\'a pr\'atica haver regras de neg\'ocio nos elementos \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. De forma similar, respostas indicam como boas pr\'aticas que esses elementos apenas contenham c\'odigos relacionados a interface com o usuário, e para isso sugerem o uso de alguns padrões, foram eles: MVP (\textit{Model-View-Presenter}) \cite{MartinFowlerGUIArchitectures, WikipediaMVP}, MVVM (\textit{Model-View-ViewModel}) \cite{WikipediaMVVM} e \textit{Clean Architecture} \cite{CleanArchitecture}. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P16 sobre \textsc{Activitys} diz \textit{``Fazer l\'ogica de neg\'ocio''} (tradu\c{c}\~ao livre), P19 diz \textit{``Colocar regra de neg\'ocio no adapter''} e P11 diz \textit{``Manter l\'ogica de neg\'ocio em Fragments''} (tradu\c{c}\~ao livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P16 diz sobre \textsc{Activitys} \textit{``Elas representam uma \'unica tela e apenas interagem com a UI, qualquer l\'ogica deve ser delegada para outra classe''} (tradu\c{c}\~ao livre), P23 diz \textit{``Apenas c\'odigo relacionado \`a Interface de Usu\'ario nas Activities''}, P40 diz \textit{``Adapters devem apenas se preocupar sobre como mostrar os dados, sem trabalh\'a-los''}, P2 diz \textit{``As activitys que eu crio normalmente tem um propósito único e estado básico [...] eu uso MVP a maior parte do tempo, então minhas activitys normalmente representam uma view no MVP''}. Os elementos afetados por essa categoria são: \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
 
 \subsubsection{Padr\~ao de Nome de Recursos}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica o n\~ao uso de um padr\~ao de nomenclatura a ser usado nos recursos da aplica\c{c}\~ao. De forma similar, respostas indicam como boas pr\'aticas o uso de um padr\~ao de nomenclatura a ser usados nos recursos. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P8 sobre \textsc{Style Resources} diz \textit{``[...] o nome das strings sem um contexto''} (tradu\c{c}\~ao livre), P37 tamb\'em sobre \textsc{Style Resources} diz \textit{``Nada al\'em de ter uma boa conven\c{c}\~ao de nomes''} (tradu\c{c}\~ao livre), ainda P37, por\'em sobre \textsc{Layout Resources} diz \textit{``Mantenha uma conven\c{c}\~ao de nomes da sua escolha [...]''} (tradu\c{c}\~ao livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P27 diz sobre \textsc{String Resources} \textit{``Iniciar o nome de uma string com o nome da tela onde vai ser usada''}, P43 sobre \textsc{Layout Resources} diz \textit{``Ter uma boa conven\c{c}\~ao de nomea\c{c}\~ao''} (tradu\c{c}\~ao livre), P11 diz sobre \textsc{Style Resources} \textit{``[...] colocar um bom nome [...]''} (tradu\c{c}\~ao livre). Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Layout Resources}, \textsc{String Resources}, \textsc{Style Resources} e \textsc{Drawable Resources}. 
@@ -119,9 +118,11 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica o uso direto de
 \subsubsection{Views Aninhados} 
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica o uso de profundos aninhamentos na constru\c{c}\~ao de layouts. De forma similar, respostas indicam como boas pr\'aticas evitar ao m\'aximo o aninhamento de \textit{views}. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P26 diz \textit{``Hierarquia de views longas''} (tradu\c{c}\~ao livre), P4 aborda a mesma ideia ao dizer \textit{``Estruturas profundamente aninhadas''} (tradu\c{c}\~ao livre), P39 diz \textit{``Hierarquias desnecess\'arias''} e P45 diz \textit{``Criar muitos ViewGroups dentro de ViewGroups''}. Exemplos de frases que indicaram boas pr\'atica s\~ao: P4 diz \textit{``tento usar o m\'inimo de layout aninhado''}, P19 diz \textit{``Utilizar o m\'inimo de camadas poss\'ivel''}, P8 diz \textit{``[...] n\~ao fazer uma hierarquia profunda de ViewGroups [...]''}. Apenas o elemento \textsc{Layout Resources} recebeu esta categoria. O site oficial do Android conta com informa\c{c}\~oes e ferramentas automatizadas para lidar com esse sintoma \cite{OptmizingViewHierarchies}. 
 
+
+
+
 \subsection{Categorias de M\'edia Recorr\^encia}
 Obtivemos 16 categorias consideradas de m\'edia recorr\^encia: Acoplamento Entre Views, Padr\~ao MVP, Ciclo de Vida, Use Include, Padr\~ao View Holder, Comportamento Suspeito, Tamanho de Imagens Importam, Classe Deus/Longa, Use Fragment, Use Imagens Vetoriais, Fragment Apenas Se Necess\'ario, Use Arquiteturas Conhecidas, Recurso de Estilo Deus, Recurso de Strings Bagun\c{c}ado e Atributos de Estilos Duplicados.
-
 
 \subsubsection{Acoplamento Entre Views}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica o acoplamento entre \textsc{Activitys}, \textsc{Fragments}, \textsc{Adapters} e \textsc{Listeners}, ou seja, a exist\^encia de refer\^encias diretas entre elas. De forma similar, respostas indicam como boas pr\'aticas que estas classes n\~ao se conhe\c{c}am diretamente. Com base nas respostas, identificamos 3 situa\c{c}\~oes onde essa m\'a pr\'atica \'e percebida.
@@ -134,12 +135,8 @@ A terceira situa\c{c}\~ao \'e quando o \textsc{Adapter} est\'a acoplado \`a \tex
 
 Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
 
-
-\subsubsection{Padr\~ao MVP}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
-
 \subsubsection{Ciclo de Vida}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
+Esta categoria re\'une respostas que indicam como m\'a pr\'atica o uso incorreto do ciclo de vida \textsc{Activitys} e \textsc{Fragments}. De forma similar, respostas indicam como boas pr\'aticas respeitar o ciclo de vida desses elementos e não confundir o ciclo de vida de ambos. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P23 diz \textit{``código que depende de estado e não se adapta ao ciclo de vida das Activities.''}, P28 diz \textit{``Erros ao interpretar o ciclo de vida''}, P8 diz \textit{``considerar o ciclo de vida de fragments como os de activitys''} (tradução livre). Exemplos de frases que indicaram boas pr\'atica s\~ao: P43 diz \textit{``Conhecer seu [da activity] ciclo de vida''}, P28, P31 e P15 falam \textit{``tomar cuidado e respeitar o ciclo de vida de \textsc{fragments} e \textsc{activitys}''}. Os elementos que entraram nessa categoria foram: \textsc{Activitys} e \textsc{Fragments}. 
 
 \subsubsection{Use Include}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
@@ -151,9 +148,6 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 \subsubsection{Tamanho de Imagens Importam}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
-
-\subsubsection{Classe Deus/Longa}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 \subsubsection{Use Fragment}
@@ -206,13 +200,8 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De
 \subsubsection{Opera\c{c}\~oes de IO}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
-
-\subsubsection{Heran\c{c}a}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
-
-
 \subsubsection{Listener Escondido}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
+Esta categoria re\'une respostas que indicam como m\'a pr\'atica o uso de métodos de eventos do usuário no XML de layout, como por exemplo o método \textsc{onClick}. Respostas indicam como boas pr\'aticas o uso da biblioteca \textit{ButterKnife} \cite{ButterKnife}. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: P34 diz \textit{``Nunca crie um listener dentro do XML. Isso esconde o listener de outros desenvolvedores e pode causar problemas até que ele seja encontrado''}, P39 e P41 expressam a mesma opinião, P41 ainda complementa dizendo que \textit{``XML de layout deve lidar apenas com a view e não com ações''}. Exemplos de frases que indicaram boas pr\'atica s\~ao: P39 diz apenas \textit{``Uso ButterKnife''}, P34 também expressa sua preferência por essa biblioteca. Apenas \textsc{Listeners} entraram nessa categoria.
 
 
 
