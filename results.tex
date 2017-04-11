@@ -1,7 +1,7 @@
 % -*- root: article.tex -*-
 Durante o processo de codifica\c{c}\~ao das 18 perguntas sobre boas e m\'as pr\'aticas, 56 categorias emergiram. Classificamos as categorias de acordo com sua recorr\^encia, ou seja, a quantidade de respostas a qual ela foi atribu\'ida. Utilizamos a seguinte escala: baix\'issima recorr\^encia significa menos de 3 respostas, baixa recorr\^encia significa de 3 a 7 respostas, m\'edia recorr\^encia significa de 8 a 20 respostas e alta recorr\^encia significa acima de 20 respostas.
 
-Na Figura \ref{fig:CategoriaXRecorrencia} \'e poss\'ivel observar que o maior conjunto de categorias é o de baix\'issima recorr\^encia, ou seja, pouqu\'issimos participantes comentaram sobre esses assuntos. Em seguida, temos o conjunto de m\'edia, baixa e alta recorr\^encia, respectivamente.
+Na Figura \ref{fig:CategoriaXRecorrencia} \'e poss\'ivel observar que o maior conjunto de categorias \'e o de baix\'issima recorr\^encia, ou seja, pouqu\'issimos participantes comentaram sobre esses assuntos. Em seguida, temos o conjunto de m\'edia, baixa e alta recorr\^encia, respectivamente.
 
 \begin{figure}[!htb]
 	\centering
@@ -123,15 +123,19 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica o uso de profun
 Obtivemos 16 categorias consideradas de m\'edia recorr\^encia: Acoplamento Entre Views, Padr\~ao MVP, Ciclo de Vida, Use Include, Padr\~ao View Holder, Comportamento Suspeito, Tamanho de Imagens Importam, Classe Deus/Longa, Use Fragment, Use Imagens Vetoriais, Fragment Apenas Se Necess\'ario, Use Arquiteturas Conhecidas, Recurso de Estilo Deus, Recurso de Strings Bagun\c{c}ado e Atributos de Estilos Duplicados.
 
 
-\subsubsection{Views Aninhados}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
-
-
 \subsubsection{Acoplamento Entre Views}
-Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
+Esta categoria re\'une respostas que indicam como m\'a pr\'atica o acoplamento entre \textsc{Activitys}, \textsc{Fragments}, \textsc{Adapters} e \textsc{Listeners}, ou seja, a exist\^encia de refer\^encias diretas entre elas. De forma similar, respostas indicam como boas pr\'aticas que estas classes n\~ao se conhe\c{c}am diretamente e dentre as sugestões dadas, \'e usar \textit{interfaces} para a comunica\c{c}\~ao. Com base nas respostas, identificamos 3 situa\c{c}ões onde essa m\'a pr\'atica \'e percebida.
+
+O primeira situa\c{c}\~ao \'e quando o \textsc{Fragment} est\'a acoplado \`a \textsc{Activitys}, outros \textsc{Fragments} ou componentes. Sobre o acoplamento de \textsc{Fragments} com \textsc{Activitys}, P19 diz \textit{``Acoplar o fragment a activity ao inv\'es de utilizar interfaces \'e uma pr\'atica ruim''}. P10, P31 e P45 indicam como m\'a pr\'atica \textit{``acoplar o \textsc{Fragment} com a \textsc{Activity}''} (tradu\c{c}\~ao livre). Sobre o acoplamento de \textsc{Fragments} com outros \textsc{Fragments}, P37 diz que \textit{``Fragments nunca devem tentar falar uns com os outros diretamente''} e P45 diz \textit{``[\'e uma m\'a pr\'atica] integragir com outro Fragment diretamente''} (tradu\c{c}\~ao livre). Sobre o \textsc{Fragments} serem acoplados a outros componentes, P6 diz \textit{``Seja um componente de UI reutiliz\'avel. Ent\~ao evite depend\^encia de oitros componentes da aplica\c{c}\~ao''}. Como boa pr\'atica \'e indicado o uso de \textit{interfaces}, do m\'etodo \textsc{onAttach} ou a biblioteca \textit{EventBus} \cite{EventBusAndroid} para a comunica\c{c}\~ao com \textit{Activitys}, P36 diz \textit{``Criar uma interface para a comunica\c{c}\~ao entre Activity e Fragment, ou utilizar o EventBus.''} e P44 diz \textit{``Use e abuse do m\'etodo onAttach para se comunicar com Activity''}. \textsc{onAttach} \'e um m\'etodo do \textsc{Fragment} disparado pelo Android ao associar um \textsc{Fragment} a uma \textsc{Activity}. 
+
+A segunda situa\c{c}\~ao \'e quando o \textsc{Listener} est\'a acoplados \`a \textsc{Activitys}. P40 diz que \'e uma m\'a pr\'atica \textit{``[o \textsc{Listener}] conter uma refer\^encia forte \`a Activitys''} (tradu\c{c}\~ao livre), P4 exprime a mesma ideia com uma frase um pouco diferente. 
+
+A terceira situa\c{c}\~ao \'e quando o \textsc{Adapter} est\'a acoplados \`a \textsc{Activitys} ou \textsc{Fragments}. P10 indicou como m\'a pr\'atica em \textit{Adapters} o \textit{``alto acoplamento com a Activity''} e P45 exprime a mesma ideia ao dizer \textit{``Acessar Activitys ou Fragments diretamente''}. 
+
+Os elementos que entraram nessa categoria foram: \textsc{Activitys}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
 
 
-\subsubsection{Padrão MVP}
+\subsubsection{Padr\~ao MVP}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 \subsubsection{Ciclo de Vida}
@@ -140,7 +144,7 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De
 \subsubsection{Use Include}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
-\subsubsection{Padrão View Holder}
+\subsubsection{Padr\~ao View Holder}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 \subsubsection{Comportamento Suspeito}
@@ -158,7 +162,7 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De
 \subsubsection{Use Imagens Vetoriais}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
-\subsubsection{Fragment Apenas Se Necessário}
+\subsubsection{Fragment Apenas Se Necess\'ario}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 \subsubsection{Use Arquiteturas Conhecidas}
@@ -167,7 +171,7 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De
 \subsubsection{Recurso de Estilo Deus}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
-\subsubsection{Recurso de Strings Bagunçado}
+\subsubsection{Recurso de Strings Bagun\c{c}ado}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 \subsubsection{Atributos de Estilos Duplicados}
@@ -195,15 +199,15 @@ Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 
-\subsubsection{Adapter Flexível}
+\subsubsection{Adapter Flex\'ivel}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 
-\subsubsection{Operações de IO}
+\subsubsection{Opera\c{c}\~oes de IO}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 
-\subsubsection{Herança}
+\subsubsection{Heran\c{c}a}
 Esta categoria re\'une respostas que indicam como m\'a pr\'atica -----------. De forma similar, respostas indicam como boas pr\'aticas --------. Exemplos de frases que indicaram m\'as pr\'aticas s\~ao: ---------. Exemplos de frases que indicaram boas pr\'atica s\~ao: --------------------. Os elementos que entraram nessa categoria foram: ---------------. 
 
 
