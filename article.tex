@@ -1,12 +1,15 @@
 \documentclass[sigconf]{acmart}
+\usepackage{etex}
 
 \usepackage{booktabs} % For formal tables
 \usepackage{blindtext} % Package to generate dummy text throughout this template 
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 \usepackage{listings} % para formatar código-fonte (ex. em Java)
 
-\usepackage{multirow}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=2em, label=\boldmath$\cdot$}
 
+\usepackage{multirow}
 
 \renewcommand{\lstlistingname}{C\'odigo-Fonte}
 \renewcommand{\tablename}{Tabela}
