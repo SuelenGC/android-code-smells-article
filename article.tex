@@ -6,6 +6,9 @@
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 \usepackage{listings} % para formatar código-fonte (ex. em Java)
 
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=2em, label=\boldmath$\cdot$}
 
@@ -14,6 +17,9 @@
 \renewcommand{\lstlistingname}{C\'odigo-Fonte}
 \renewcommand{\tablename}{Tabela}
 \renewcommand{\figurename}{Figura}
+
+\newcommand{\remark}[2]{{\small\textsl{\textbf{#1: #2}}}}
+\newcommand{\mau}[1]{\remark{Maurício:}{\textcolor{red}{#1}}} 
 
 
 \definecolor{Maroon}{rgb}{0.5,0,0}
@@ -211,9 +217,13 @@
 \input{results}
 
 \section{Discuss\~ao}
+
+\mau{vc sabe o que escrever aqui? qualquer coisa grita}
 \input{discussion}
 
 \section{Amea\c{c}as a Validade}
+
+\mau{aqui veja também o paper da michaela, para ver como se escreve ameacas em trabalhos qualitativos.}
 \input{discussion}
 
 \section{Conclus\~ao}
