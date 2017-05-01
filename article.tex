@@ -21,7 +21,6 @@
 \newcommand{\remark}[2]{{\small\textsl{\textbf{#1: #2}}}}
 \newcommand{\mau}[1]{\remark{Maurício:}{\textcolor{red}{#1}}} 
 
-
 \definecolor{Maroon}{rgb}{0.5,0,0}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
 \definecolor{eclipseBlue}{RGB}{42,0.0,255}
@@ -84,6 +83,8 @@
 \usepackage{tikz} \usetikzlibrary{calc,plotmarks}  
 \usepackage{pgfplots}
 \usepackage{graphicx}
+\usepackage{subcaption}
+
 
 \graphicspath{{./images/}} % caminho das figuras (recomendável)
 
@@ -207,14 +208,14 @@
 \section{Introdu\c{c}\~ao}
 \input{introduction}
 
-\section{Trabalhos Relacionados}
-\input{related-work}
-
 \section{Metodologia}
 \input{methods}
 
-\section{Resultados}
-\input{results}
+\section{RQ1: Boas e más práticas Android}
+\input{results-1}
+
+\section{RQ2: Percepção dos desenvolvedores sobre as boas e más práticas Android identificadas}
+\input{results-2}
 
 \section{Discuss\~ao}
 
@@ -225,6 +226,9 @@
 
 \mau{aqui veja também o paper da michaela, para ver como se escreve ameacas em trabalhos qualitativos.}
 \input{discussion}
+
+\section{Trabalhos Relacionados}
+\input{related-work}
 
 \section{Conclus\~ao}
 \input{discussion}
