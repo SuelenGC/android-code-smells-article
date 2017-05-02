@@ -1,1 +1,1 @@
-[__Home__](/) | [Tabelas](tables)
+[Home](/android-code-smells-article) | [Tabelas](tables)
