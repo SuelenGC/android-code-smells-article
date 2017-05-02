@@ -1,20 +1,25 @@
 % -*- root: article.tex -*-
-O \emph{objetivo} deste estudo é investigar boas e más práticas no desenvolvimento do \textit{front-end} Android. Portanto, conduzimos um estudo qualitativo e exploratório no qual coletamos dados através de dios questionários online com desenvoveldores Android. O primeiro questionário (\textit{S1}) teve foco em investigar boas e más práticas no desenvolvimento Android. O segundo questionário (\textit{S2}) teve foco em avaliar a percepção dos desenvolvedores sobre as más práticas definidas a partir de \textit{S1}. 
+O \emph{objetivo} deste estudo é investigar a existência de boas e más práticas no desenvolvimento do \textit{front-end} Android. Portanto, conduzimos um estudo qualitativo e exploratório no qual coletamos dados através de dois questionários online com desenvoveldores Android. O primeiro questionário (\textit{S1}) teve foco em investigar boas e más práticas no desenvolvimento Android. O segundo questionário (\textit{S2}) teve foco em avaliar a percepção dos desenvolvedores sobre as más práticas definidas a partir de \textit{S1}. 
 
-\mau{defenda aqui o uso de estudos qualitativos, veja como Michaela Greiler fez 'test confessions'}
+Segundo Strauss e Corbin \cite{Strauss2007}, há muitos motivos válidos para se fazer pesquisa qualitativa, dentre eles a natureza do problema de pesquisa e para obter mais informações sobre áreas cujo ainda se sabe pouco, como é o caso de cheiros de código Android. Muitas vezes, a pesquisa qualitativa, constitui-se na primeira etapa de uma investigação mais ampla na qual se busca o entendimento de um assunto específico por meio de descrições, comparações e interpretações dos dados \cite{Prikladnicki, Prates2015}.
 
-Esta seção descreve de forma detalhada a estrutura dos questionários, os participantes e as análises realizadas sobre as respostas obtidas.
+% Além disso, na análise dos dados coletados, não há preocupação em comprovar hipóteses previamente estabelecidas. Algumas características básicas da pesquisa qualitativa, como \textit{a)} o fato de não apresentar foco na quantificação, apresentando-se centrada na interpretação que os participantes possuem quanto à situação investigada e \textit{b)} o fato de enfatizar a subjetividade e a flexibilidade no processo de condução da pesquisa, orientando-se para o processo e não para o resultado, justificam seu uso neste artigo \cite{Prates2015, King1994}.
+
+Algumas características básicas da pesquisa qualitativa, como \textit{a)} o foco na interpretação que os participantes possuem quanto à situação investigada e \textit{b)} o fato de enfatizar a subjetividade e a flexibilidade, orientando-se para o processo e não para o resultado, justificam seu uso neste artigo \cite{Prates2015, King1994}.
+
+Para análise dos dados seguimos a abordagem de \textit{Ground Theory} (GT), um método de pesquisa exploratória originada nas ciências sociais \cite{Strauss2007, GlaserStrauss1999}, mas cada vez mais popular em pesquisas de engenharia de software \cite{Adolph2011}. A GT é uma abordagem indutiva, pelo qual dados provindos, por exemplo de, entrevistas ou questionários, são analisadas para derivar uma teoria. O objetivo é descobrir novas perspectivas mais do que confirmar alguma já existente.
+
+Esta seção está organizada de forma que, na seção \ref{sub:smells} abordamos o processo de descoberta das boas e más práticas Android e na subseção \ref{sub:perception} abordamos o processo de validação da percepção dos desenvolvedores sobre as boas e más práticas definidas. Ambas as subseções apresentam de forma detalhada a estrutura do questionário, os participantes e a análise realizada. 
 
 \subsection{Boas e Más Práticas Android}
+\label{sub:smells}
 
 Para responder a \textbf{QP1}, buscamos entender o que desenvolvedores consideram boas e más práticas no desenvolvimento do \textit{front-end} Android. Os dados foram coletados através de um questionário online (\textit{S1}) respondido por 45 desenvolvedores. Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 categorias de boas e más práticas Android. Estas categorias foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas que determinada categoria é percebidas, quanto mais respostas, maior a recorrência.
 
 \subsubsection{Questionário}
-\label{sub:questionario}
+\label{sub:smells-survey}
 
-O questionário continha 25 questões divididas em três seções. A primeira seção continha 6 perguntas demográficas, a segunda seção continha 16 perguntas sobre boas e más práticas relacionadas ao \textit{front-end} Android e a terceira seção continha 3 perguntas, 2 para obter últimos pensamentos sobre boas e más práticas e 1 solicitando email caso o participante tivesse interesse em etapas futuras da pesquisa. O questionário foi escrito em inglês porém informava o participante que respostas em inglês ou português eram aceitas. Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android. O questionário completo pode ser encontrado em nosso pacote de replicação disponível em nosso apêndice online\footnote{Apêndice online: http://suelengc.com/android-code-smells-article}.
-
-\mau{mencionar em algum lugar que as perguntas eram opcionais, e explicar o pq.}
+O questionário continha 25 questões divididas em três seções. A primeira seção continha 6 perguntas demográficas, a segunda seção continha 16 perguntas sobre boas e más práticas relacionadas ao \textit{front-end} Android e a terceira seção continha 3 perguntas, 2 para obter últimos pensamentos sobre boas e más práticas e 1 solicitando email caso o participante tivesse interesse em etapas futuras da pesquisa. O questionário foi escrito em inglês porém informava o participante que respostas em inglês ou português eram aceitas. Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android onde os \textit{feedbacks} nos fizeram configurar as perguntas da segunda e terceira seção como opcionais. O questionário completo pode ser encontrado em nosso apêndice online.
 
 A primeira seção continha 6 questões demográficas obrigatórias de multipla escolha. Abordavam sobre idade (18 ou menos, 19 a 24, 25 a 34 e assim por diante até 55 ou mais), estado de residência (foi dada uma lista com estados do Brasil, Estados Unidos e Europa), anos de experiência com desenvolvimento de software, (1 anos ou menos, 2 anos, 3 anos, e assim por diante até 10 ou mais), anos de experiência com desenvolvimento Android (mesma escala de anos da questão anterior), uma questão sobre linguagens que o participante se considerava proeficiente (Java, Python, Ruby, Android, dentre outras) e sobre o último grau de escolaridade (estudante de bacharelado, bacharel, mestrado e doutorado). As questões sobre idade, região, linguagens e grau de escolaridade continham a opção ``outros'' para o caso de nenhuma das opções atenderem, ao selecionar ``outros'' era possível escrever uma resposta.
 
@@ -67,7 +72,7 @@ Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android e com 
 % \end{table*}
 
 \subsubsection{Participantes}
-\label{sub:participantes}
+\label{sub:smells-participants}
 
 
 % \mau{a tabela 1 nao eh tao importante. vc pode coloca-la no apendice online. mencione que ela existe no apendice online.}
@@ -85,16 +90,16 @@ Com a análise das questões demográficas foi possível notar que atingimos com
 \begin{figure*}
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{survey1-exp.jpg}
-  \caption{Desenvolvimento de Software}
-  \label{fig:sub1}
+ \centering
+ \includegraphics[width=.8\linewidth]{survey1-exp.jpg}
+ \caption{Desenvolvimento de Software}
+ \label{fig:sub1}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{survey1-android-exp.jpg}
-  \caption{Desenvolvimento Android}
-  \label{fig:sub2}
+ \centering
+ \includegraphics[width=.8\linewidth]{survey1-android-exp.jpg}
+ \caption{Desenvolvimento Android}
+ \label{fig:sub2}
 \end{subfigure}
 \caption{Experiência dos desenvolvedores em \textit{S1}.}
 \label{fig:DadosDemograficos-Exp}
@@ -106,7 +111,7 @@ Com a análise das questões demográficas foi possível notar que atingimos com
 % \small
 % \begin{tabular}{@{}l|c|r@{}}
 % \toprule
-% \textbf{Anos de Experiência} & \textbf{Participantes} & \multicolumn{1}{c}{\textbf{\%}}  \\
+% \textbf{Anos de Experiência} & \textbf{Participantes} & \multicolumn{1}{c}{\textbf{\%}} \\
 % \hline
 % 1 ano ou menos 	&	 6 		& 	13,3 \%	 \\
 % 2 anos 			& 	 7 		& 	15,6 \%	 \\
@@ -125,15 +130,15 @@ Com a análise das questões demográficas foi possível notar que atingimos com
 \subsubsection{Análise dos Dados}
 \label{sub:smells-definition}
 
-O processo de análise partiu da listagem das 45 respostas do questionário e se deu em 4 passos: verticalização, limpeza dos dados, codificação e divisão. \mau{encaixar o processo de análise com alguma literatura sobre o assunto, veja como a michaela também fez no paper dela ou meu paper no MSR desse ano (está no meu site).}
+O processo de análise partiu da listagem das 45 respostas do questionário e se deu em 4 passos: \textit{verticalização}, \textit{limpeza dos dados}, \textit{codificação} e \textit{divisão}.
 
 O processo que denominamos de \textit{verticalização} consistiu em considerar cada resposta de boa ou má prática como um registro individual a ser analisado. Ou seja, cada participante respondeu 18 perguntas sobre boas e más práticas no \textit{front-end} Android (2 perguntas para cada elemento e mais duas perguntas genéricas). Com o processo de \textit{verticalização}, cada uma dessas respostas se tornou um registro, ou seja, cada participante resultava em 18 respostas a serem analisadas, totalizando 810 respostas (18 perguntas multiplicado por 45 participantes) sobre boas e más práticas.
 
 O passo seguinte foi realizar a \textit{limpeza dos dados}. Esse passo consistiu em remover respostas obviamente não úteis como respostas em branco, que continham frases como \textit{"Não"}, \textit{"Não que eu saiba"}, \textit{"Eu não me lembro"} e similares, as consideradas vagas como \textit{"Eu não tenho certeza se são boas praticas mas uso o que vejo por ai"}, as consideradas genéricas como \textit{"Como todo código java..."} e as que não eram relacionadas a boas práticas de código. Das 810 boas e más práticas, 352 foram consideradas e 458 desconsideradas. Das 352, 44,6\% foram apontadas como más práticas e 55,4\% como boas práticas. 
 
-Em seguida, realizamos a codificação sobre as boas e más práticas. O processo de codificação consistiu em analisar cada resposta e atribuir uma ou mais categorias. Durante esse processo, houveram 30 respostas que não eram triviais de identificar uma categoria ou mesmo de dizer se essas respostas deveriam ser consideradas. Essas respostas foram marcadas como \textit{"talvez"} e reavaliadas ao final, onde 6 permaneceram e 24 foram desconsideradas. Ainda durante a codificação, 9 respostas incialmente consideradas, foram desconsideradas. Para toda resposta desconsiderada nesse passo, foi indicado um motivo. Ao final da codificação, as categorias foram agrupadas por temas.
+Em seguida, realizamos a \textit{codificação} sobre as boas e más práticas \cite{Strauss2007,Saldana2013}. Codificação é o processo pelo qual são extraídos categorias de um conjunto de afirmações através da abstração de ideias centrais e relacões entre as afirmações \cite{Strauss2007}. Durante esse processo, cada resposta recebeu uma ou mais categorias. Também durante esse processo, houveram 30 respostas que não eram triviais de identificar uma categoria ou mesmo de dizer se essas respostas deveriam ser consideradas. Essas respostas foram marcadas como \textit{"talvez"} e reavaliadas ao final. Para toda resposta desconsiderada nesse passo, foi indicado um motivo que pode ser conferido nos arquivos em nosso apêndice online.
 
-Por último realizamos o passo de divisão. Esse passo consistiu em dividir as respostas que receberam mais de uma categoria em duas ou mais respostas, de acordo com o número de categorias identificadas, de forma a resultar em uma categoria por resposta. Por exemplo, a resposta \textit{"Não fazer Activities serem callbacks de execuções assíncronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira oração uma categoria e na segunda oração, outra categoria. Ao dividí-la, mantivemos apenas o trecho da resposta relativo a categoria, como se fossem duas respostas distintas e válidas. Em algumas divisões realizadas, a resposta completa era necessária para entender ambas as categorizações, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de forma diferente. 
+Por último realizamos o passo de \textit{divisão}. Esse passo consistiu em dividir as respostas que receberam mais de uma categoria em duas ou mais respostas, de acordo com o número de categorias identificadas, de forma a resultar em uma categoria por resposta. Por exemplo, a resposta \textit{"Não fazer Activities serem callbacks de execuções assíncronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira oração uma categoria e na segunda oração, outra categoria. Ao dividí-la, mantivemos apenas o trecho da resposta relativo a categoria, como se fossem duas respostas distintas e válidas. Em algumas divisões realizadas, a resposta completa era necessária para entender ambas as categorizações, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de forma diferente. 
 
 Ao final da análise constavam 389 respostas individualmente categorizadas sobre boas e más práticas no \textit{front-end} Android.
 
@@ -141,6 +146,7 @@ Ao final da análise constavam 389 respostas individualmente categorizadas sobre
 
 
 \subsection{Percepção dos Desenvolvedores}
+\label{sub:perception}
 
 Para responder a \textbf{QP2}, buscamos entender a percepção dos desenvolvedores sobre as quatro boas e más práticas classificadas com alta recorrência. Estes dados foram coletados através de um questionário online (\textit{S2}) respondido por 11 desenvolvedores Android. Nossas análises demonstram que de fato, códigos afetados pelas más práticas, são percebidos pelos desenvolvedores como códigos problemáticos.
 
@@ -169,26 +175,26 @@ Os seis códigos apresentadas foram selecionadas aleatoriamente para cada partic
 
 Para reduzir o aprendizado e viés, cada participante recebeu os seis códigos selecionados aleatoriamente em uma ordem aleatória. Além disso, os participantes não estavam cientes de quais classes pertenciam a qual grupo (más práticas Android, cheiros de código tradicionais e limpo). Apenas foi dito que estávamos estudando qualidade de código em aplicações Android. Nenhum limite de tempo foi imposto para que eles concluíssem a tarefa.
 
-\subsubsection{Participantes}
-\label{sub:perception-participants}
-
-\begin{figure*}
+\begin{figure*}[!t]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{exp.jpg}
-  \caption{Desenvolvimento de Software}
-  \label{fig:sub1}
+ \centering
+ \includegraphics[width=.8\linewidth]{exp.jpg}
+ \caption{Desenvolvimento de Software}
+ \label{fig:sub1}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{exp-android.jpg}
-  \caption{Desenvolvimento Android}
-  \label{fig:sub2}
+ \centering
+ \includegraphics[width=.8\linewidth]{exp-android.jpg}
+ \caption{Desenvolvimento Android}
+ \label{fig:sub2}
 \end{subfigure}
 \caption{Experiência dos desenvolvedores em \textit{S2}.}
 \label{fig:survey2-exp}
 \end{figure*}
+
+\subsubsection{Participantes}
+\label{sub:perception-participants}
 
 
 \subsubsection{Análise dos Dados}
