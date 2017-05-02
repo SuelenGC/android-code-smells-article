@@ -1,23 +1,22 @@
 % -*- root: article.tex -*-
-Na Figura 5.3a, apresentamos gráficos de violino da percepção dos desenvolvedores sobre os cheiros Android, tradicionais e códigos limpos. Além disso, relatamos a percepção dos desenvolvedores para cada uma das práticas em Android - Figura 5.3b. No eixo y, 0 (zero) indica classes não percebidas pelos desenvolvedores como problemáticas (ou seja, responder "não" à pergunta: este código apresenta algum problema de design e/ou implementação?), enquanto valores de 1 a 5 indicam o nível de severidade para o problema percebido pelo desenvolvedor.
+Na Figura \ref{fig:all-violin}, apresentamos gráficos de violino da percepção dos desenvolvedores sobre os cheiros Android, tradicionais e códigos limpos. Além disso, relatamos a percepção dos desenvolvedores para cada uma das práticas em Android - Figura \ref{fig:smelly-violin}. No eixo y, 0 (zero) indica classes não percebidas pelos desenvolvedores como problemáticas (ou seja, responder "não" à pergunta: este código apresenta algum problema de design e/ou implementação?), enquanto valores de 1 a 5 indicam o nível de severidade para o problema percebido pelo desenvolvedor.
 
 Os códigos limpos têm uma mediana de gravidade igual a 1,5. Isso indica que, como esperado, os desenvolvedores no geral, não consideram essas classes como problemáticas. Já os códigos afetados por cheiros Android têm mediana = 2 (Q3 = 4,25) e, portanto, são percebidos como problemáticas na maioria dos casos por desenvolvedores. Em relação aos cheiros tradicionais, a mediana de severidade é 3. Isso mostra que as classes afetadas por esses cheiros são percebidas pelos desenvolvedores como problemáticas. No entanto, embora essa diferença na percepção seja clara, observando-se os gráficos de violino na Figura 5.3a, tal diferença não é estatisticamente significativa (valor de p = 0,21). Conjeturamos que isso pode ser devido ao número limitado de pontos de dados (21 participantes).
-
 
 \begin{figure*}
 \centering
 \begin{subfigure}{.4\textwidth}
   \centering
-  \includegraphics[width=.7\textwidth]{all-violin.jpg}
+  \includegraphics[width=.9\textwidth]{all-violin.jpg}
   \caption{\footnotesize{\textit{Limpo=Códigos sem maus cheiros, Android=Códigos afetados pelas boas e más práticas de alta recorrência, Tradicional=Códigos afetados por maus cheiros tradicionais.}}}
-  \label{fig:sub2}
+  \label{fig:all-violin}
 \end{subfigure}% 
 \hspace{5mm}
 \begin{subfigure}{.4\textwidth}
   \centering
-  \includegraphics[width=.7\textwidth]{smelly-violin.jpg}
+  \includegraphics[width=.9\textwidth]{smelly-violin.jpg}
   \caption{\footnotesize{\textit{NLIV=No Logic In View, RNP=Resource Name Pattern, MR=Magic Resource, NL=Nested Layout.}}}
-  \label{fig:sub1}
+  \label{fig:smelly-violin}
 \end{subfigure}
 \caption{Severidade de cada boa e má prática}
 \label{fig:test}
