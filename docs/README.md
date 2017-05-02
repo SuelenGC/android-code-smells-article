@@ -1,1 +1,2 @@
-[Home](/android-code-smells-article) | [Tabelas](tables) <br>
+[Home](/android-code-smells-article) | [Tabelas](tables) 
+<hr/>
