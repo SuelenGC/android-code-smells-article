@@ -6,7 +6,7 @@ Na Figura \ref{fig:CategoriaXRecorrencia} é possível observar que o maior conj
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{grafico-recorrencia.png}
-	\caption{Distribuição das Categorias x Recorrência}
+	\caption{Distribuição das Práticas vs. Recorrência}
 	\label{fig:CategoriaXRecorrencia}
 \end{figure}
 
@@ -21,7 +21,7 @@ A Tabela \ref{tab:Categories} apresenta o número de ocorrências das categorias
 \footnotesize
 \begin{tabular}{@{}p{3.8cm}p{0.3cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.2cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{.4cm}p{0.2cm}@{}}
 \toprule
-\textbf{Categoria} & \multicolumn{1}{c}{\textbf{\#T}} & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 & Q9 & Q10 & Q11 & Q12 & Q13 & Q14 & Q15 & Q16 & Q17 & Q18 &  \multicolumn{1}{c}{\textbf{\#Q}} \\
+\textbf{Recorrência/Prática} & \multicolumn{1}{c}{\textbf{\#T}} & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 & Q9 & Q10 & Q11 & Q12 & Q13 & Q14 & Q15 & Q16 & Q17 & Q18 &  \multicolumn{1}{c}{\textbf{\#Q}} \\
 \hline
 \multicolumn{2}{c}{\scriptsize{\textbf{ALTA RECORRÊNCIA (4)}}} \\
 Lógica em Views					& \multicolumn{1}{c}{60} 	& \multicolumn{1}{c}{14} 	& \multicolumn{1}{c}{15} 	& \multicolumn{1}{c}{8}		& \multicolumn{1}{c}{8}		& \multicolumn{1}{c}{6}		& \multicolumn{1}{c}{8}		& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{1}		& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{7} \\
@@ -64,19 +64,20 @@ Listener Escondido				& \multicolumn{1}{c}{5}  	& \multicolumn{1}{c}{--}  	& \mu
 
 \multicolumn{20}{@{}l}{* Classe Deus \cite{Riel} e Classe Longa \cite{RefactoringFowler1999} são cheiros de código tradicionais previamente definidos em literaturas.} \\
 \multicolumn{20}{@{}l}{** Herança é um conceito da Programação Orientada a Objetos \cite{WikipediaInhiritance}.} \\
-\multicolumn{20}{@{}l}{Coluna \textbf{\#T}: recorrência geral da categoria.} \\
-\multicolumn{20}{@{}l}{Coluna \textbf{\#Q}: total de questões distintas em cada categoria.} \\
+\multicolumn{20}{@{}l}{Coluna \textbf{\#T}: recorrência geral da prática.} \\
+\multicolumn{20}{@{}l}{Coluna \textbf{\#Q}: total de questões distintas por prática.} \\
 \multicolumn{20}{@{}l}{Linha \textbf{\#Totais}: total de respostas obtidas em cada questão.} \\
 \multicolumn{20}{@{}l}{Linha \textbf{\#Categorias}: total de categorias distinstas de cada questão.} \\
 \toprule
 \end{tabular}
-\caption{Lista de categorias de alta, média e baixa recorrência.}
+\caption{Lista de práticas de alta, média e baixa recorrência.}
 \label{tab:Categories}
 \end{table*}
 
 Esta seção está organizada em 4 subseções, respectivamente abordando sobre as categorias de alta, média, baixa e baixíssima recorrência. A quantidade de respostas recebida por cada categoria é apresentada em detalhes na Tabela \ref{tab:Categories}.
 
-\subsection{Categorias de Alta Recorrência}
+% ----------------------- ALTA RECORRÊNCIA -----------------------
+\subsection{Práticas de Alta Recorrência}
 Obtivemos 4 categorias consideradas de alta recorrência: Lógica em Views, Padrão de Nome de Recursos, Recursos Mágicos e Views Aninhados.
 
 \subsubsection{Lógica em Views}
@@ -90,13 +91,14 @@ Dentre as respostas, algumas indicaram padrões de preferência. P11 indica usar
 \subsubsection{Recursos Mágicos}
 Esta categoria reúne respostas que indicam como má prática o uso direto de valores como, por exemplo, strings, números e cores, sem a criação um recurso. De forma similar, respostas indicam como boas práticas o uso de um padrão de nomenclatura a ser usados nos recursos. O nome dessa categoria foi inspirado no cheiro de código \textit{Magic Number} \cite{Martin:2008:CCH:1388398} que trata sobre números usados diretamente no código. Exemplos de frases que indicaram más práticas são: P23 diz \textit{``Strings diretamente no código''}, P31 e P35 falam respectivamente sobre não extrair as strings e sobre não extrair os valores dos arquivos de layout. Exemplos de frases que indicaram boas prática são: P7 diz \textit{``Sempre pegar valores de string ou dp de seus respectivos resources para facilitar''}, P36 diz para \textit{``sempre adicionar as strings em resources para traduzir em diversos idiomas [...]''}. Os elementos que entraram nessa categoria foram: \textsc{Layout Resources}, \textsc{String Resources} e \textsc{Style Resources}. 
 
-
 \mau{essa padrão q vc começa cada grupo está meio repetido (esta categoria ... de forma similar, ...). vc pode eliminar isso, e começar diretamente com o que importa.}
 
 \subsubsection{Views Aninhados} 
 Esta categoria reúne respostas que indicam como má prática o uso de profundos aninhamentos na construção de layouts. De forma similar, respostas indicam como boas práticas evitar ao máximo o aninhamento de \textit{views}. Exemplos de frases que indicaram más práticas são: P26 diz \textit{``Hierarquia de views longas''} (tradução livre), P4 aborda a mesma ideia ao dizer \textit{``Estruturas profundamente aninhadas''} (tradução livre), P39 diz \textit{``Hierarquias desnecessárias''} e P45 diz \textit{``Criar muitos ViewGroups dentro de ViewGroups''}. Exemplos de frases que indicaram boas prática são: P4 diz \textit{``tento usar o mínimo de layout aninhado''}, P19 diz \textit{``Utilizar o mínimo de camadas possível''}, P8 diz \textit{``[...] não fazer uma hierarquia profunda de ViewGroups [...]''}. Apenas o elemento \textsc{Layout Resources} recebeu esta categoria. O site oficial do Android conta com informações e ferramentas automatizadas para lidar com esse sintoma \cite{OptmizingViewHierarchies}. 
 
-\subsection{Categorias de Média Recorrência}
+
+% ----------------------- MÉDIA RECORRÊNCIA -----------------------
+\subsection{Práticas de Média Recorrência}
 Obtivemos 16 categorias consideradas de média recorrência: Acoplamento Entre Views, Padrão MVP, Ciclo de Vida, Use Include, Padrão View Holder, Comportamento Suspeito, Tamanho de Imagens Importam, Classe Deus/Longa, Use Fragment, Use Imagens Vetoriais, Fragment Apenas Se Neces-sário, Use Arquiteturas Conhecidas, Recurso de Estilo Deus, Recurso de Strings Bagunçado e Atributos de Estilos Repetidos.
 
 \subsubsection{Acoplamento Entre Views}
@@ -137,10 +139,8 @@ Os elementos que entraram nesta categoria foram: \textsc{Activity}, \textsc{Frag
 \subsubsection{Tamanho de Imagens Importam}
 Esta categoria reúne respostas que indicam como má prática ter apenas uma imagem para atender a todas as resoluções. De forma similar, respostas indicam como boas práticas ter a mesma imagem em diversos tamanhos para atender a resoluções diferentes. Exemplos de frases que indicaram más práticas são: P31 diz \textit{``ter apenas uma imagem para multiplas densidades''} (tradução livre), P4 diz \textit{``Baixar uma imagem muito grande quando não é necessário. Há melhores formas de usar memória''} (tradução livre), P44 diz \textit{``Não criar [versões da] imagem para todos as resoluções''} (tradução livre). Exemplos de frases que indicaram boas prática são: P34 diz \textit{``Nada especial, apenas mantê-las em seus respectivos diretórios e ter variados tamanhos delas''} (tradução livre), P36 diz \textit{``Criar as pastas para diversas resoluções e colocar as imagens corretas''}. O único elemento que entrou nessa categoria é o que representa imagens, \textsc{Drawable Resource}.
 
-
 \subsubsection{Use Imagens Vetoriais}
 Esta categoria reúne 10 respostas (10 participantes) que indicam como boa prática o uso de \textsc{Drawable Resources} vetoriais. é recomendado sempre que possível usar imagens vetorias sobre outros tipos. Exemplos de frases que indicaram boas prática são: P28 diz \textit{``Utilizar o máximo de Vector Drawables que for possível''}, P40 diz \textit{``evite muitas imagens, use imagens vetoriais sempre que possível''}. O único elemento que entrou nessa categoria é o que representa imagens, \textsc{Drawable Resource}.
-
 
 \subsubsection{Fragment Apenas se Necessário}
 Esta categoria reúne respostas que indicam como má prática o uso de \textsc{Fragments} quando se pode usar \textsc{Activities} e o uso excessivo de \textsc{Fragments}. De forma similar, respostas indicam como boas práticas evitar o uso de \textsc{Fragments} sempre que possível. Exemplos de frases que indicaram más práticas são: P2 diz \textit{``Usar muitos Fragments é uma má prática''}. Exemplos de frases que indicaram boas prática são: P16 diz \textit{``Eu tento evitá-los''}. Os elementos que entraram nessa categoria foram: \textsc{Fragments}. 
@@ -161,7 +161,9 @@ Esta categoria reúne respostas que indicam como má prática arquivos \textsc{S
 Esta categoria reúne respostas que indicam como má prática a repetição de atributos de estilo nos \textsc{Layout Resource}. De forma similar, respostas indicam como boas práticas sempre que identificar atributos repetidos, extraí-los para um estilo. Exemplos de frases que indicaram más práticas são: P32 diz \textit{``Utilizar muitas propriedades em um único componente. Se tiver que usar muitas, prefiro colocar no arquivo de styles.''}. Exemplos de frases que indicaram boas prática são: P34 diz \textit{``Sempre que eu noto que tenho mais de um recurso usando o mesmo estilo, eu tento movê-lo para o meu \textit{style resource}.''} (tradução livre). Os elementos nessa categoria foram: \textsc{Layout Resources} e \textsc{Style Resources}.
 
 
-\subsection{Categorias de Baixa Recorrência}
+
+% ----------------------- BAIXA RECORRÊNCIA -----------------------
+\subsection{Práticas de Baixa Recorrência}
 Obtivemos 8 categorias consideradas de baixa recorrência: Evite Imagens, Activity Inexistente, Ferramentas de DI, Reuso Excessivo de Strings, Adapter Flexível, Operações de IO, Herança e Listener Escondido.
 
 

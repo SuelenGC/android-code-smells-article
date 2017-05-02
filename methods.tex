@@ -1,13 +1,13 @@
 % -*- root: article.tex -*-
 O \emph{objetivo} deste estudo é investigar boas e más práticas no desenvolvimento do \textit{front-end} Android. Portanto, conduzimos um estudo qualitativo e exploratório no qual coletamos dados através de questionário online e experimento controlado com desenvoveldores Android. \mau{defenda aqui o uso de estudos qualitativos, veja como Michaela Greiler fez 'test confessions'}
 
-Para responder a Q1, buscamos entender o que desenvolvedores consideram boas e más práticas no desenvolvimento do \textit{front-end} Android, os dados foram coletados através de um questionário online aplicados a 45 desenvolvedores. Realizamos um processo de codificação aberto sobre os dados, resultando num conjunto com 23 categorias de boas e más práticas Android. Estas categorias foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas que determinada categoria é percebidas, quanto mais respostas, maior a recorrência.
-
-Para responder a Q2, buscamos entender a percepção dos desenvolvedores sobre as quatro boas e más práticas classificadas com alta recorrência, estes dados foram obtidos através de um experimento com 11 desenvolvedores. Extraísmos dados estattísticos que nos mostram que de fato, as más práticas são percebidas pelos desenvolvedores como indícios de códigos problemáticos.
-
 Esta seção descreve de forma detalhada a estrutura dos questionários, os participantes e as análises realizadas sobre as respostas obtidas.
 
-\subsection{Questionário}
+\subsection{Descobrindo Boas e Más Práticas Android}
+
+Para responder a Q1, buscamos entender o que desenvolvedores consideram boas e más práticas no desenvolvimento do \textit{front-end} Android. Os dados foram coletados através de um questionário online respondido por 45 desenvolvedores. Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 categorias de boas e más práticas Android. Estas categorias foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas que determinada categoria é percebidas, quanto mais respostas, maior a recorrência.
+
+\subsubsection{Questionário}
 \label{sub:questionario}
 
 O questionário continha 25 questões divididas em três seções. A primeira seção continha 6 perguntas demográficas, a segunda seção continha 16 perguntas sobre boas e más práticas relacionadas ao \textit{front-end} Android e a terceira seção continha 3 perguntas, 2 para obter últimos pensamentos sobre boas e más práticas e 1 solicitando email caso o participante tivesse interesse em etapas futuras da pesquisa. O questionário foi escrito em inglês porém informava o participante que respostas em inglês ou português eram aceitas. Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android. Todos estes dados estão disponíveis em nosso pacote de replicação\footnote{https://github.com/SuelenGC/android-code-smells-article}.
@@ -63,44 +63,60 @@ Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android e com 
 % \label{tab:RespostasXParticipantes}
 % \end{table*}
 
-\subsection{Participantes}
+\subsubsection{Participantes}
 \label{sub:participantes}
 
 
-\mau{a tabela 1 nao eh tao importante. vc pode coloca-la no apendice online. mencione que ela existe no apendice online.}
+% \mau{a tabela 1 nao eh tao importante. vc pode coloca-la no apendice online. mencione que ela existe no apendice online.}
 
 O questionário foi divulgado em redes sociais como Facebook, Twitter e Linkedin, em grupos de discussão sobre Android como \href{https://groups.google.com/forum/#!forum/androidbrasil-dev}{\textit{Android Dev Brasil}}, \href{https://groups.google.com/forum/\#!forum/android-brasil--projetos}{\textit{Android Brasil Projetos}} e o grupo do \href{http://slack.androiddevbr.org/}{\textit{Slack Android Dev Br}}, maior grupo de desenvolvedores Android do Brasil com 2622 participantes até o momento da escrita deste artigo. 
 O questionário esteve aberto por aproximadamente 3 meses e meio, de 9 de Outubro de 2016 até 18 de Janeiro de 2017. Recebemos um total de 45 respostas. 
 
 80\% dos participantes responderam pelo menos 3 perguntas sobre boas e más práticas no \textit{front-end} Android (7 responderam de 3 a 6, 6 responderam de 8 a 10 e 23 responderam 13 ou mais, sendo que desses, 14 responderam todas) e apenas 20\% responderam uma (2 participantes) ou nenhuma (7 participantes). A pergunta solicitando o email foi respondida por 53\% dos participantes, o que pode indicar um interesse legítimo da comunidade de desenvolvedores Android pelo tema, reforçando a relevância do estudo. A Tabela \ref{tab:RespostasXParticipantes} apresenta a quantidade de respostas obtidas por cada uma das 18 perguntas sobre boas e más práticas, podemos notar que a pergunta mais respondida foi a Q1 e a menos respondida foi a Q18.
 
-Com a análise das questões demográficas foi possível notar que atingimos com sucesso \textit{desenvolvedores Android com variados níveis de experiência e de diversas regiões} pois: 1) 100\% dos participantes indicaram possuir alguma experiência com desenvolvimento Android, 2) menos de 14\% indicaram possuir 1 anos ou menos de experiência com Android e mais de 86\% indicaram 2 anos ou mais (15,5\% 2 anos, 13,3\% 4 anos, 6,5\% 5 anos, 15,5\% 6 anos, 4,4\% 7 anos e 4,4\% 8 anos), 4) 36 respostas foram do Brasil, 7 de países europeus e 1 dos Estados Unidos (Califórnia). Vale lembrar que a plarforma Android completa 10 anos em 2017, ou seja, 5 anos de experiência nessa plataforma representa 50\% do tempo de vida dela desde seu anúncio em 2007. Os dados sobre a experiência dos participantes são apresentados na Tabela \ref{tab:DadosDemograficos}.
+Com a análise das questões demográficas foi possível notar que atingimos com sucesso \textit{desenvolvedores Android com variados níveis de experiência e de diversas regiões} pois: 1) 100\% dos participantes indicaram possuir alguma experiência com desenvolvimento Android, 2) menos de 14\% indicaram possuir 1 anos ou menos de experiência com Android e mais de 86\% indicaram 2 anos ou mais (15,5\% 2 anos, 13,3\% 4 anos, 6,5\% 5 anos, 15,5\% 6 anos, 4,4\% 7 anos e 4,4\% 8 anos), 4) 36 respostas foram do Brasil, 7 de países europeus e 1 dos Estados Unidos (Califórnia). Vale lembrar que a plarforma Android completa 10 anos em 2017, ou seja, 5 anos de experiência nessa plataforma representa 50\% do tempo de vida dela desde seu anúncio em 2007. Os dados sobre a experiência dos participantes são apresentados na Figura \ref{fig:DadosDemograficos-Exp}.
 
-\begin{table}[h]
+\begin{figure*}
 \centering
-\renewcommand*{\arraystretch}{1}
-\small
-\begin{tabular}{@{}l|c|r@{}}
-\toprule
-\textbf{Anos de Experiência} & \textbf{Participantes} & \multicolumn{1}{c}{\textbf{\%}}  \\
-\hline
-1 ano ou menos 	&	 6 		& 	13,3 \%	 \\
-2 anos 			& 	 7 		& 	15,6 \%	 \\
-3 anos 			& 	 12		& 	26,7 \%	 \\
-4 anos 			& 	 6 		& 	13,3 \%	 \\
-5 anos 			& 	 3 		& 	 6,7 \%	 \\
-6 anos 			& 	 7 		& 	15,6 \%	 \\
-7 anos 			& 	 2 		& 	 4,4 \%	 \\
-8 anos 			& 	 2 		& 	 4,4 \%	 \\
-\toprule
-\end{tabular}
-\caption{Experiência dos participantes com desenvolvimento Android.}
-\label{tab:DadosDemograficos}
-\end{table}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{survey1-exp.jpg}
+  \caption{Desenvolvimento de Software}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{survey1-android-exp.jpg}
+  \caption{Desenvolvimento Android}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Experiência dos Desenvolvedores}
+\label{fig:DadosDemograficos-Exp}
+\end{figure*}
 
-\mau{na tabela de dados demográficos, tem muito espaço entre as linhas}
+% \begin{table}[h]
+% \centering
+% \renewcommand*{\arraystretch}{1}
+% \small
+% \begin{tabular}{@{}l|c|r@{}}
+% \toprule
+% \textbf{Anos de Experiência} & \textbf{Participantes} & \multicolumn{1}{c}{\textbf{\%}}  \\
+% \hline
+% 1 ano ou menos 	&	 6 		& 	13,3 \%	 \\
+% 2 anos 			& 	 7 		& 	15,6 \%	 \\
+% 3 anos 			& 	 12		& 	26,7 \%	 \\
+% 4 anos 			& 	 6 		& 	13,3 \%	 \\
+% 5 anos 			& 	 3 		& 	 6,7 \%	 \\
+% 6 anos 			& 	 7 		& 	15,6 \%	 \\
+% 7 anos 			& 	 2 		& 	 4,4 \%	 \\
+% 8 anos 			& 	 2 		& 	 4,4 \%	 \\
+% \toprule
+% \end{tabular}
+% \caption{Experiência dos participantes com desenvolvimento Android.}
+% \label{tab:DadosDemograficos}
+% \end{table}
 
-\subsection{Análise dos Dados}
+\subsubsection{Análise dos Dados}
 \label{sub:smells-definition}
 
 O processo de análise partiu da listagem das 45 respostas do questionário e se deu em 4 passos: verticalização, limpeza dos dados, codificação e divisão. \mau{encaixar o processo de análise com alguma literatura sobre o assunto, veja como a michaela também fez no paper dela ou meu paper no MSR desse ano (está no meu site).}
@@ -114,3 +130,32 @@ Em seguida, realizamos a codificação sobre as boas e más práticas. O process
 Por último realizamos o passo de divisão. Esse passo consistiu em dividir as respostas que receberam mais de uma categoria em duas ou mais respostas, de acordo com o número de categorias identificadas, de forma a resultar em uma categoria por resposta. Por exemplo, a resposta \textit{"Não fazer Activities serem callbacks de execuções assíncronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira oração uma categoria e na segunda oração, outra categoria. Ao dividí-la, mantivemos apenas o trecho da resposta relativo a categoria, como se fossem duas respostas distintas e válidas. Em algumas divisões realizadas, a resposta completa era necessária para entender ambas as categorizações, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de forma diferente. 
 
 Ao final da análise constavam 389 respostas individualmente categorizadas sobre boas e más práticas no \textit{front-end} Android.
+
+
+
+
+
+
+
+
+\subsection{Percepção dos Desenvolvedores}
+
+Para responder a Q2, buscamos entender a percepção dos desenvolvedores sobre as quatro boas e más práticas classificadas com alta recorrência. Estes dados foram coletados através de um experimento controlado com 11 desenvolvedores. Nossas análises demonstram que de fato, códigos afetados pelas más práticas, são percebidos pelos desenvolvedores como códigos problemáticos.
+
+\begin{figure*}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{exp.jpg}
+  \caption{Desenvolvimento de Software}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{exp-android.jpg}
+  \caption{Desenvolvimento Android}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Experiência dos Desenvolvedores}
+\label{fig:test}
+\end{figure*}
