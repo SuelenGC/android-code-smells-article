@@ -3,8 +3,8 @@
 
 Apêndice online do artigo **Maus cheiros de código em aplicativos Android. Um estudo sobre a percepção dos desenvolvedores** submetido ao **SBES 2017: 31st Brazilian Symposium on Software Engineering**.
 
-<br/><br/><br/>
+<br/><br/>
 
-**Abstract** <br/><br/>
+**Abstract:** <br/>
 
 Cheiros de código são aliados na busca pela qualidade de código durante o desenvolvimento de software pois possibilitam a implementação de ferramentas de detecção automática de trechos de códigos problemáticos ou mesmo a inspeção manual. Apesar de já existirem vários cheiros de código catalogados, pesquisas sugerem que tecnologias diferentes podem apresentar cheiros de código específicos, e uma tecnologia que tem chamado a atenção de muitos pesquisadores é o Android. Neste artigo, nós investigamos a existência de cheiros de código em projetos Android. Por meio de um _survey_ com 45 desenvolvedores descobrimos que além de cheiros de código tradicionais, o uso de algumas estruturas específicas da plataforma são amplamente percebidas como más práticas, portanto, possíveis cheiros de código específicos. Identificamos 23 possíveis cheiros de código específicos ao Android dos quais validamos a percepção de 15 desenvolvedores sobre eles. Ao final, discutimos os resultados encontrados, pontos de melhoria e trabalhos futuros.
