@@ -1,11 +1,13 @@
 % -*- root: article.tex -*-
-O \emph{objetivo} deste estudo é investigar boas e más práticas no desenvolvimento do \textit{front-end} Android. Portanto, conduzimos um estudo qualitativo e exploratório no qual coletamos dados através de questionário online e experimento controlado com desenvoveldores Android. \mau{defenda aqui o uso de estudos qualitativos, veja como Michaela Greiler fez 'test confessions'}
+O \emph{objetivo} deste estudo é investigar boas e más práticas no desenvolvimento do \textit{front-end} Android. Portanto, conduzimos um estudo qualitativo e exploratório no qual coletamos dados através de dios questionários online com desenvoveldores Android. O primeiro questionário (\textit{S1}) teve foco em investigar boas e más práticas no desenvolvimento Android. O segundo questionário (\textit{S2}) teve foco em avaliar a percepção dos desenvolvedores sobre as más práticas definidas a partir de \textit{S1}. 
+
+\mau{defenda aqui o uso de estudos qualitativos, veja como Michaela Greiler fez 'test confessions'}
 
 Esta seção descreve de forma detalhada a estrutura dos questionários, os participantes e as análises realizadas sobre as respostas obtidas.
 
-\subsection{Descobrindo Boas e Más Práticas Android}
+\subsection{Boas e Más Práticas Android}
 
-Para responder a Q1, buscamos entender o que desenvolvedores consideram boas e más práticas no desenvolvimento do \textit{front-end} Android. Os dados foram coletados através de um questionário online respondido por 45 desenvolvedores. Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 categorias de boas e más práticas Android. Estas categorias foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas que determinada categoria é percebidas, quanto mais respostas, maior a recorrência.
+Para responder a \textbf{QP1}, buscamos entender o que desenvolvedores consideram boas e más práticas no desenvolvimento do \textit{front-end} Android. Os dados foram coletados através de um questionário online (\textit{S1}) respondido por 45 desenvolvedores. Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 categorias de boas e más práticas Android. Estas categorias foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas que determinada categoria é percebidas, quanto mais respostas, maior a recorrência.
 
 \subsubsection{Questionário}
 \label{sub:questionario}
@@ -16,12 +18,13 @@ O questionário continha 25 questões divididas em três seções. A primeira se
 
 A primeira seção continha 6 questões demográficas obrigatórias de multipla escolha. Abordavam sobre idade (18 ou menos, 19 a 24, 25 a 34 e assim por diante até 55 ou mais), estado de residência (foi dada uma lista com estados do Brasil, Estados Unidos e Europa), anos de experiência com desenvolvimento de software, (1 anos ou menos, 2 anos, 3 anos, e assim por diante até 10 ou mais), anos de experiência com desenvolvimento Android (mesma escala de anos da questão anterior), uma questão sobre linguagens que o participante se considerava proeficiente (Java, Python, Ruby, Android, dentre outras) e sobre o último grau de escolaridade (estudante de bacharelado, bacharel, mestrado e doutorado). As questões sobre idade, região, linguagens e grau de escolaridade continham a opção ``outros'' para o caso de nenhuma das opções atenderem, ao selecionar ``outros'' era possível escrever uma resposta.
 
-A segunda seção continha 16 questões opcionais e dissertativas sobre boas e más práticas relacionadas ao \textit{front-end} Android. Para cada elemento do \textit{front-end} Android foram feitas duas perguntas, uma sobre boas e outra sobre más práticas percebidas pelos participantes. Por exemplo, para o elemento \textsc{Activity} foram feitas as seguintes perguntas:
+A segunda seção continha 16 questões opcionais e dissertativas sobre boas e más práticas relacionadas ao \textit{front-end} Android. Para cada elemento do \textit{front-end} Android foram feitas duas perguntas, uma sobre boas e outra sobre más práticas percebidas pelos participantes. Por exemplo, para o elemento \textsc{Activity} foram feitas as seguintes perguntas: \\
 
-\begin{itemize} 
-	\item Você tem alguma boa prática para lidar com Activities?
-	\item Você considera alguma coisa uma má prática ao lidar com Activities? 
-\end{itemize}
+\noindent
+\textbf{Q1} Você tem alguma boa prática para lidar com Activities? (Resposta aberta) \\
+
+\noindent
+\textbf{Q2} Você considera alguma coisa uma má prática ao lidar com Activities? (Resposta aberta) \\
 
 A terceira seção continha 3 perguntas opcionais e dissertativas, 2 para captar qualquer última ideia sobre boas e más práticas não captadas nas questões anteriores e 1 solicitando o email do participante caso o mesmo tivesse interesse em participar de etapas futuras da pesquisa. 
 
@@ -72,7 +75,10 @@ Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android e com 
 O questionário foi divulgado em redes sociais como Facebook, Twitter e Linkedin, em grupos de discussão sobre Android como \href{https://groups.google.com/forum/#!forum/androidbrasil-dev}{\textit{Android Dev Brasil}}, \href{https://groups.google.com/forum/\#!forum/android-brasil--projetos}{\textit{Android Brasil Projetos}} e o grupo do \href{http://slack.androiddevbr.org/}{\textit{Slack Android Dev Br}}, maior grupo de desenvolvedores Android do Brasil com 2622 participantes até o momento da escrita deste artigo. 
 O questionário esteve aberto por aproximadamente 3 meses e meio, de 9 de Outubro de 2016 até 18 de Janeiro de 2017. Recebemos um total de 45 respostas. 
 
-80\% dos participantes responderam pelo menos 3 perguntas sobre boas e más práticas no \textit{front-end} Android (7 responderam de 3 a 6, 6 responderam de 8 a 10 e 23 responderam 13 ou mais, sendo que desses, 14 responderam todas) e apenas 20\% responderam uma (2 participantes) ou nenhuma (7 participantes). A pergunta solicitando o email foi respondida por 53\% dos participantes, o que pode indicar um interesse legítimo da comunidade de desenvolvedores Android pelo tema, reforçando a relevância do estudo. A Tabela \ref{tab:RespostasXParticipantes} apresenta a quantidade de respostas obtidas por cada uma das 18 perguntas sobre boas e más práticas, podemos notar que a pergunta mais respondida foi a Q1 e a menos respondida foi a Q18.
+80\% dos participantes responderam pelo menos 3 perguntas sobre boas e más práticas no \textit{front-end} Android (7 responderam de 3 a 6, 6 responderam de 8 a 10 e 23 responderam 13 ou mais, sendo que desses, 14 responderam todas) e apenas 20\% responderam uma (2 participantes) ou nenhuma (7 participantes). A pergunta solicitando o email foi respondida por 53\% dos participantes, o que pode indicar um interesse legítimo da comunidade de desenvolvedores Android pelo tema, reforçando a relevância do estudo. A pergunta mais respondida foi a Q1 e a menos respondida foi a Q18, é possível ver detalhes desta análise na Tabela 1 em nosso apêndice online\footnote{https://github.com/SuelenGC/android-code-smells-article/apendice-online}
+
+
+% A Tabela \ref{tab:RespostasXParticipantes} apresenta a quantidade de respostas obtidas por cada uma das 18 perguntas sobre boas e más práticas, podemos notar que a pergunta mais respondida foi a Q1 e a menos respondida foi a Q18.
 
 Com a análise das questões demográficas foi possível notar que atingimos com sucesso \textit{desenvolvedores Android com variados níveis de experiência e de diversas regiões} pois: 1) 100\% dos participantes indicaram possuir alguma experiência com desenvolvimento Android, 2) menos de 14\% indicaram possuir 1 anos ou menos de experiência com Android e mais de 86\% indicaram 2 anos ou mais (15,5\% 2 anos, 13,3\% 4 anos, 6,5\% 5 anos, 15,5\% 6 anos, 4,4\% 7 anos e 4,4\% 8 anos), 4) 36 respostas foram do Brasil, 7 de países europeus e 1 dos Estados Unidos (Califórnia). Vale lembrar que a plarforma Android completa 10 anos em 2017, ou seja, 5 anos de experiência nessa plataforma representa 50\% do tempo de vida dela desde seu anúncio em 2007. Os dados sobre a experiência dos participantes são apresentados na Figura \ref{fig:DadosDemograficos-Exp}.
 
@@ -90,7 +96,7 @@ Com a análise das questões demográficas foi possível notar que atingimos com
   \caption{Desenvolvimento Android}
   \label{fig:sub2}
 \end{subfigure}
-\caption{Experiência dos Desenvolvedores}
+\caption{Experiência dos desenvolvedores em \textit{S1}.}
 \label{fig:DadosDemograficos-Exp}
 \end{figure*}
 
@@ -134,28 +140,75 @@ Ao final da análise constavam 389 respostas individualmente categorizadas sobre
 
 
 
-
-
-
-
 \subsection{Percepção dos Desenvolvedores}
 
-Para responder a Q2, buscamos entender a percepção dos desenvolvedores sobre as quatro boas e más práticas classificadas com alta recorrência. Estes dados foram coletados através de um experimento controlado com 11 desenvolvedores. Nossas análises demonstram que de fato, códigos afetados pelas más práticas, são percebidos pelos desenvolvedores como códigos problemáticos.
+Para responder a \textbf{QP2}, buscamos entender a percepção dos desenvolvedores sobre as quatro boas e más práticas classificadas com alta recorrência. Estes dados foram coletados através de um questionário online (\textit{S2}) respondido por 11 desenvolvedores Android. Nossas análises demonstram que de fato, códigos afetados pelas más práticas, são percebidos pelos desenvolvedores como códigos problemáticos.
+
+\subsubsection{Questionário}
+\label{sub:perception-survey}
+
+
+O questionário foi composto por duas seções principais. A primeira objetivou coletar informações básicas sobre os antecedentes dos participantes e, em particular, sobre sua experiência (dados apresentados na Figura \ref{fig:survey2-exp}). Na segunda seção, os participantes foram solicitados a examinar seis códigos-fonte Android e, para cada uma deles, responder às seguintes perguntas: \\
+
+\noindent
+\textbf{Q1} Na sua opinião, este código apresenta algum problema de design e/ou implementação? (Sim/Não) \\
+
+\noindent
+\textbf{Q2} Se SIM, por favor explique quais são, na sua opinião, os problemas que afetam este código. (Resposta aberta) \\
+
+\noindent
+\textbf{Q3} Se SIM, por favor avalie a severidade do problema de design e/ou implementação selecionando dentre as opções a seguir um ponto. (Escala \textit{Likert} de 5 pontos indo de 1 -- muito baixo -- a 5 -- muito alto) \\
+
+\noindent
+\textbf{Q4} Na sua opinião, este código precisa ser refatorado? (Sim/Não) \\
+
+\noindent
+\textbf{Q5} Se SIM, como você faria esta refatoração? (Resposta aberta) \\
+
+Os seis códigos apresentadas foram selecionadas aleatoriamente para cada participante de um conjunto de 58 códigos, contendo 24 códigos afetadas por uma das quatro más práticas Android de alta recorrência (seis para cada má prática), 10 códigos afetadas por cheiros de códigos tradicionais e 24 códigos limpos. Para reduzir viés, selecionamos apenas códigos relacionados ao \textit{front-end} Android definido no contexto deste artigo, ou seja: \textsc{Activities}, \textsc{Fragments}, \textsc{Adapters}, \textsc{Listeners}, \textsc{Styles}, \textsc{Strings}, \textsc{Drawables} e \textsc{Layouts}. Cada participante avaliou dois códigos selecionados aleatoriamente de cada um desses três grupos. Os 58 códigos foram aleatoriamente coletados de projetos Android de código aberto no GitHub.
+
+Para reduzir o aprendizado e viés, cada participante recebeu os seis códigos selecionados aleatoriamente em uma ordem aleatória. Além disso, os participantes não estavam cientes de quais classes pertenciam a qual grupo (más práticas Android, cheiros de código tradicionais e limpo). Apenas foi dito que estávamos estudando qualidade de código em aplicações Android. Nenhum limite de tempo foi imposto para que eles concluíssem a tarefa.
+
+\subsubsection{Participantes}
+\label{sub:perception-participants}
 
 \begin{figure*}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth]{exp.jpg}
+  \includegraphics[width=.8\linewidth]{exp.jpg}
   \caption{Desenvolvimento de Software}
   \label{fig:sub1}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth]{exp-android.jpg}
+  \includegraphics[width=.8\linewidth]{exp-android.jpg}
   \caption{Desenvolvimento Android}
   \label{fig:sub2}
 \end{subfigure}
-\caption{Experiência dos Desenvolvedores}
-\label{fig:test}
+\caption{Experiência dos desenvolvedores em \textit{S2}.}
+\label{fig:survey2-exp}
 \end{figure*}
+
+
+\subsubsection{Análise dos Dados}
+\label{sub:perception-participants-analysis}
+
+Para comparar as distribuições da gravidade indicada pelos participantes para os três grupos de classes, utilizamos o teste de Mann-Whitney não pareado [27] para analisar a significância estatística das diferenças entre a gravidade atribuída pelos participantes aos problemas que observam em MVC- Tradicional-smelly, e classes limpas. Os resultados são considerados estatisticamente significativos em alfa = 0,05. Também estimamos a magnitude das diferenças medidas usando o Delta de Cliff (ou d), uma medida de tamanho do efeito não paramétrico [49] para dados ordinais. Seguimos diretrizes bem estabelecidas para interpretar os valores do tamanho do efeito: insignificante para | d | menor 0,14, pequeno para 0,14 menor igual | d | menor 0,33, meio para 0,33 menor igual | d | menor 0,474, e grande para | d | maior igual 0,474 [49]. Finalmente, relatamos achados qualitativos derivados das respostas abertas dos participantes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
