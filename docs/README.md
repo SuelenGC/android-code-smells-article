@@ -1,1 +1,1 @@
-Hello!
+![Tabela 1 - Respostas obtidas vs. questões.](https://github.com/SuelenGC/android-code-smells-article/blob/master/images/tabela1.png)
