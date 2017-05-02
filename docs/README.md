@@ -1,1 +1,1 @@
-![Tabela 1 - Respostas obtidas vs. questões.](images/tabela1.png)
+[Tabelas](tables)
