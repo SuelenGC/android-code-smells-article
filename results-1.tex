@@ -108,7 +108,7 @@ A segunda situação é quando o \textsc{Listener} está acoplado à \textsc{Act
 
 A terceira situação é quando o \textsc{Adapter} está acoplado à \textsc{Activities} ou \textsc{Fragments}. P10 indicou como má prática em \textit{Adapters} o \textit{``alto acoplamento com a Activity''} e P45 exprime a mesma ideia ao dizer \textit{``Acessar Activities ou Fragments diretamente''}. 
 
-\mau{essa frase parece jogada} Os elementos que entraram nessa categoria foram: \textsc{Activities}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
+% Os elementos que entraram nessa categoria foram: \textsc{Activities}, \textsc{Fragments}, \textsc{Listeners} e \textsc{Adapters}. 
 
 \subsubsection{Comportamento Suspeito}
 Indicam boas e más práticas ao implementar comportamento para responder a eventos do usuário, como por exemplo, um toque na tela. Um evento do usuário é representado através de \textsc{listeners}, que são interfaces Java onde cada uma representa um tipo de evento, por exemplo, a interface \texttt{OnClickListener} representa o evento de clique. Através das respostas dos participantes identificamos como boas práticas o uso de classes concretas e ferramentas de injeção de eventos e como más práticas o uso de classes an\^onimas e classes internas.
