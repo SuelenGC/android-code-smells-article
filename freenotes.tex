@@ -161,3 +161,199 @@ As vezes o que era indicado como boa pr\'atica para um elemento era um smell per
 % \subsection{Afirma\c{c}\~ao sobre o \textit{front-end} Android}
 
 % Uma opini\~ao que foi un\^anime em muitas respostas foi que de fato, desenvolvedores tratam \textsc{Activitys}, \textsc{Fragments} e \textsc{Adapters} como elementos do front-end Android, conforme constatamos na se\c{c}\~ao 3.1. Isso pode ser observado diversas vezes com respostas por exemplo, P25 indicou como boa pr\'atica na Activity "Nenhuma l\'ogica [de neg\'ocio] aqui" (tradu\c{c}\~ao livre), o P40 afirma sobre m\'a pr\'atica em adapter \'e \textit{"L\'ogica de neg\'ocio em adapters \'e n\~ao-n\~ao"} (tradu\c{c}\~ao livre), ao falarem sobre fragments, muitos indicaram \textit{"O mesmo da Activity"}. Ou seja, primeiramente estas respostas refor\c{c}am nossa defini\c{c}\~ao inicial sobre elementos que compo\^em o front-end Android, e por outro lado, vimos que muitas vezes fragments s\~ao tratados como Activitys, ao se falar de boas e m\'as pr\'aticas de c\'odigo.
+
+
+
+
+
+
+
+%------------------ rascunho do script em R abaixo
+
+install.packages("vioplot")
+install.packages("effsize")
+
+library(vioplot)
+library(effsize)
+ 
+par(cex.lab=1.3, cex.axis=1.3)
+
+# --------- XML smelly vs limpos por smell
+nl_smelly <- c(5,5,4,1,3)
+nl_clean <- c(2,0,0,0,0)
+
+mr_smelly <- c(4,4,3,2,2,0,0,2,0,3)
+mr_clean <- c(4,4,3,2,2,1,0,0,0)
+
+rnp_smelly <- c(3,2,2,2,1,0,1,1,4)
+rnp_clean <- c(4,3,3,3,0,2,0)
+vioplot(nl_smelly, nl_clean, mr_smelly, mr_clean, rnp_smelly, rnp_clean,
+        names=c("NL Cheiroso", "NL Limpo", "MR Cheiroso", "MR Limpo", "RNP Cheiroso", "RNP Limpo", ), col="gold")
+
+
+# --------- all XML smelly vs limpos por smell
+xml_smelly <- c(5,5,4,1,3)
+xml_clean <- c(2,0,0,0,0)
+vioplot(xml_smelly, xml_clean, names=c("Cheiroso", "Limpo"), col="gold")
+
+
+# --------- NLIV Smelly vs NLIV limpo vs Smell Tradicionais
+nliv_smelly <- c(4,4,3,2,2,0,0,2,0,3)
+nliv_clean <- c(4,4,3,2,2,1,0,0,0)
+traditional_smelly <- c()
+vioplot(nliv_smelly, nliv_clean, traditional_smelly, names=c("NLIV Cheiroso", "NLIV Limpo", "Cheiros Tradicionais"), col="gold")
+
+
+# # all smells
+# severity_traditional <-  c(5,5,5,5,5,5,5,5,4,4,3,3,3,3,3,3,3,3,2,2,1,1,3,3,4,2,5,5,4,5)
+# severity_smelly      <- c(5,5,5,5,4,4,4,4,3,3,2,2,2,2,2,1,1,1,0,0,0,0,2,0,1,1,2,4,3,4,3)
+# severity_non_smelly <-  c(4,4,4,3,3,3,3,3,2,2,2,1,0,0,0,0,0,0,0,0,0,0,3,2,0,0,0,0,0,0,0,0)
+# 
+# # boxplot(severity_traditional, severity_non_smelly, severity_smelly, xlab="")
+# labels <- c("Tradicional", "Limpos", "Android")
+# axis(1, at=1:length(labels), labels=labels)
+# vioplot(severity_non_smelly, severity_smelly, severity_traditional, names=c("Limpo", "Android", "Tradicional"), col="gold")
+# 
+# wilcox.test(severity_traditional, severity_non_smelly)
+# cliff.delta(severity_traditional, severity_non_smelly)
+# 
+# wilcox.test(severity_traditional, severity_smelly)
+# cliff.delta(severity_traditional, severity_smelly)
+# 
+# wilcox.test(severity_smelly, severity_non_smelly)
+# cliff.delta(severity_smelly, severity_non_smelly)
+
+
+#-------------- android java smelly VS android java N smelly VS java smelly
+# severity_java_traditional <-  c(5,5,5,5,5,5,4,4,3,3,3,2,2,1,3,5,5,5)
+# severity_androd_java_smelly <- c(5,5,4,1,0,2,4)
+# severity_android_java_non_smelly <-  c(3,0,0,0,0,3,0,0,0,0,0)
+# 
+# # boxplot(severity_traditional, severity_non_smelly, severity_smelly, xlab="")
+# labels <- c("Tradicional", "Android (NLIV)", "Limpo")
+# axis(1, at=1:length(labels), labels=labels)
+# vioplot(severity_java_traditional, severity_androd_java_smelly, severity_android_java_non_smelly, names=c("Tradicional", "Android (NLIV)", "Limpo"), col="gold")
+# 
+# wilcox.test(severity_java_traditional, severity_androd_java_smelly)
+# cliff.delta(severity_java_traditional, severity_androd_java_smelly)
+# 
+# wilcox.test(severity_java_traditional, severity_android_java_non_smelly)
+# cliff.delta(severity_java_traditional, severity_android_java_non_smelly)
+# 
+# wilcox.test(severity_androd_java_smelly, severity_android_java_non_smelly)
+# cliff.delta(severity_androd_java_smelly, severity_android_java_non_smelly)
+
+
+#-------------- android xml smelly VS android xml N smelly
+severity_xml_traditional <- c(5,5,3,3,3,3,3,1,3,4,2,4)
+severity_androd_xml_smelly <- c(5,5,4,4,4,3,3,2,2,2,2,2,1,1,0,0,0,2,0,1,1,4,3,3)
+severity_android_xml_non_smelly <- c(4,4,4,3,3,3,3,2,2,2,1,0,0,0,0,0,0,2,0,0,0)
+
+# boxplot(severity_traditional, severity_non_smelly, severity_smelly, xlab="")
+labels <- c("Tradicional", "Android", "Limpo")
+axis(1, at=1:length(labels), labels=labels)
+vioplot(severity_xml_traditional, severity_androd_xml_smelly, severity_android_xml_non_smelly, names=c("Tradicional", "Android", "Limpo"), col="gold")
+
+wilcox.test(severity_xml_traditional, severity_androd_xml_smelly)
+cliff.delta(severity_xml_traditional, severity_androd_xml_smelly)
+
+wilcox.test(severity_xml_traditional, severity_android_xml_non_smelly)
+cliff.delta(severity_xml_traditional, severity_android_xml_non_smelly)
+
+wilcox.test(severity_androd_xml_smelly, severity_android_xml_non_smelly)
+cliff.delta(severity_androd_xml_smelly, severity_android_xml_non_smelly)
+
+
+# per smell
+no_logic_in_view <- c(5,5,4,1,0,2,4)
+resource_name_pattern <- c(3,2,2,2,1,0,1,1,4)
+magic_resource <- c(4,4,3,2,2,0,0,2,0,3)
+nested_layout <- c(1,4,5,5,3)
+
+boxplot(no_logic_in_view, resource_name_pattern, magic_resource, nested_layout, xlab="")
+labels <- c("NLIV", "RNP", "MR", "NL")
+axis(1, at=1:length(labels), labels=labels)
+vioplot(no_logic_in_view, resource_name_pattern, magic_resource, nested_layout, names=c("NLIV", "RNP", "MR", "NL"), col="gold")
+
+
+
+# per traditional smell
+# complex_class <- c(4,0,0,0,0,0)
+# long_method <- c(4,0,0,4,5,0,0,2,4)
+# long_class <- c(3,3,4,3,4,3,5)
+# cbo <- c(5,4,5,0,0)
+# long_parameter_list <- c(2,0,3,4,0)
+# god_class <- c(5,5,3,3,4,3,4)
+#
+# vioplot(complex_class, long_method, long_class, cbo, long_parameter_list, god_class, names=c("CC", "LM", "LC", "CBO", "LPL", "GC"), col="gold")
+
+# removing only multiple queries
+# severity_traditional <- c(3,5,5,5,1,3,5,2,5,5,4,4,5,3,3,5,2,3,1,3,3,3)
+# severity_smelly      <- c(1,4,4,0,0,4,4,3,2,1,1,2,5,3,0,0,5,5,2,2,5,2)
+# 
+# wilcox.test(severity_traditional, severity_smelly)
+# cliff.delta(severity_traditional, severity_smelly)
+
+
+# --------------------------------------------
+# pie plot praticas vs. recorrência
+install.packages("plotrix")
+library(plotrix)
+slices <- c(27, 6, 15, 4) 
+lbls <- c("Baixíssima", "Baixa", "Média", "Alta")
+pie3D(slices,labels=lbls, theta=pi/4, explode=0, edges=0)
+
+# --------------------------------------------
+# participants experience Survey 2
+
+# Survey 2 - Experiência Android
+# exp=c(1,2,1,4,3)
+# names(exp)=c("2-4 anos", "4-6 anos", "6-8 anos", "8-10 anos", "> 10 anos")
+# barplot(exp, expex.names = 1, col="darkolivegreen3", ylim=c(0,6))
+
+# Survey 2 - Experiência Android
+# exp_web=c(1,2,6,2)
+# names(exp_web)=c("1-2 anos", "2-4 anos", "4-6 anos", "6-8 anos")
+# barplot(exp_web, exp_webex.names = 1, col="darkolivegreen3", ylim=c(0,6))
+
+
+
+# --------------------------------------------
+# participants experience Survey 1
+
+# Survey 1 - Experiência Android 
+# my_vector=c(6,19,9,9,2)
+# names(my_vector)=c("< 1 ano", "2-3 anos", "4-5 anos", "6-7 anos", "8-9 anos")
+# barplot(my_vector, my_vectorex.names = 1, col="darkolivegreen3", ylim=c(0,20))
+
+# Survey 1 - Experiência Software
+# my_vector2=c(3, 6, 6, 20, 3, 7)
+# names(my_vector2)=c("< 1 ano", "2-3 anos", "4-5 anos", "6-7 anos", "8-9 anos", "> 10 anos")
+# barplot(my_vector2, my_vector2ex.names = 1, col="darkolivegreen3", ylim=c(0,20))
+
+
+#---------- Exp. Desenvolvedores Survey 1 (Stacks Bar)
+library(ggplot2)
+anos=c(rep("< 1 ano" , 2) , rep("2-3 anos" , 2) , rep("4-5 anos" , 2) , rep("6-7 anos" , 2), rep("8-9 anos" , 2), rep("> 10 anos" , 2) )
+condição=rep(c("software" , "android") , 12)
+valor=c(3,6,6,19,6,9,20,9,3,2,7,0)
+dataOrder=data.frame(anos,condição,valor)
+dataOrder
+dataOrder$anos = factor(dataOrder$anos, levels=c("< 1 ano", "2-3 anos", "4-5 anos", "6-7 anos", "8-9 anos", "> 10 anos"))
+# Stacked
+ggplot(dataOrder, aes(fill=condição, y=valor, x=anos)) + geom_bar( stat="identity") + theme(text = element_text(size=14), legend.key = element_blank(), legend.title = element_blank()) + labs(x = NULL, y = NULL)
+
+
+#---------- Exp. Desenvolvedores Survey 2 (Stacks Bar)
+#library(ggplot2)
+anos=c(rep("1-2 anos" , 2) , rep("2-4 anos" , 2) , rep("4-6 anos" , 2) , rep("6-8 anos" , 2), rep("8-10 anos" , 2), rep("> 10 anos" , 2) )
+condição=rep(c("software" , "android") , 12)
+valor=c(0,2,2,5,4,6,1,3,4,0,5,0)
+dataOrder=data.frame(anos,condição,valor)
+dataOrder
+dataOrder$anos = factor(dataOrder$anos, levels=c("1-2 anos", "2-4 anos", "4-6 anos", "6-8 anos", "8-10 anos", "> 10 anos"))
+# Stacked
+ggplot(dataOrder, aes(fill=condição, y=valor, x=anos)) + geom_bar( stat="identity") + theme(text = element_text(size=14), legend.key = element_blank(), legend.title = element_blank()) + labs(x = NULL, y = NULL)#+ guides(fill=FALSE)
+
+%------------------ fim rascunho do script em R abaixo
+
