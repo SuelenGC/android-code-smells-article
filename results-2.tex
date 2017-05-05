@@ -1,17 +1,55 @@
 % -*- root: article.tex -*-
 \subsection{Percepção dos Desenvolvedores}
 
+\begin{figure*}
+\centering
+\begin{subfigure}{.22\textwidth}
+  \centering
+  \includegraphics[width=1\textwidth]{plot-lcui-violin3.jpg}
+  \caption{LCUI}
+  \label{fig:lcui}
+\end{subfigure}%
+\begin{subfigure}{.17\textwidth}
+  \centering
+  \includegraphics[width=.85\textwidth]{plot-recursos-violin2.jpg}
+  \caption{Integrados}
+  \label{fig:resources}
+\end{subfigure}%
+\begin{subfigure}{.17\textwidth}
+  \centering
+  \includegraphics[width=.85\textwidth]{plot-lpa-violin2.jpg}
+  \caption{LPA}
+  \label{fig:lpa}
+\end{subfigure}% 
+\begin{subfigure}{.17\textwidth}
+  \centering
+  \includegraphics[width=.85\textwidth]{plot-rm-violin.jpg}
+  \caption{RM}
+  \label{fig:rm}
+\end{subfigure}
+\begin{subfigure}{.17\textwidth}
+  \centering
+  \includegraphics[width=.85\textwidth]{plot-nrd-violin.jpg}
+  \caption{NRD}
+  \label{fig:nrd}
+\end{subfigure}% 
+\caption{Gráficos violino individuais das más práticas que afetam recursos (LPA, RM e NRD).}
+\label{fig:all-resources}
+\vspace{-.7cm} 
+\end{figure*}
+
+
 As Figuras \ref{fig:lcui} e \ref{fig:all-resources} apresentam gráficos de violino sobre a percepção dos desenvolvedores com relação as quatro más práticas de alta recorrência (LCUI, LPA, RM e NRD). 
 
 No eixo y, 0 (zero) indica códigos não percebidos pelos desenvolvedores como problemáticos (ou seja, responder \emph{não} à pergunta: este código apresenta algum problema de design e/ou implementação?), enquanto que valores de 1 a 5 indicam o nível de severidade para o problema percebido pelo desenvolvedor.
 
 \subsubsection{Más práticas que afetam classes Java}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.3\textwidth]{plot-lcui-violin3.jpg}
-	\caption{LCUI}
-	\label{fig:lcui}
-\end{figure}
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.3\textwidth]{plot-lcui-violin3.jpg}
+% 	\caption{LCUI}
+% 	\label{fig:lcui}
+% \end{figure}
 
 Na Figura \ref{fig:lcui} apresentamos três gráficos violinos, respectivamente: percepção dos desenvolvedores sobre códigos afetados pela má prática LCUI, a percepção sobre códigos limpos e por último, a percepção sobre códigos afetados por maus cheiros tradicionais como por exemplo Classe Longa. 
 
@@ -35,35 +73,41 @@ A má prática NRD foi a menos percebida por desenvolvedores, com medianas iguai
 
 De forma geral, os desenvolvedores conseguiram identificar corretamente a má prática em questão, colocando em suas respostas descrições muito próximas as definições dadas a elas. Por exemplo S2P11 ao confrontar um código afetado por LCUI disse ``\textit{[...] Não há nenhuma arquitetura implementada, o que causa a classe fazendo muito mais do que é de sua alçada. O método onListItemClick está muito complexo, contendo 7 condições [...]}'', S2P5 ao confrontar um código afetado por RM disse ``\textit{Valores de cores, tamanhos, animaçoes e distancias, nao estao extraidos fazendo que muitos deles estejam repetidos dificultando uma posterior manutençao ou reusabilidade}'', S2P7 ao confrontar um código afetado por LPA disse ``\textit{Os sucessivos aninhamentos de view groups provavelmente irá causar uma performance ruim}''.
 
-\begin{figure*}
-\centering
-\begin{subfigure}{.23\textwidth}
-  \centering
-  \includegraphics[width=.8\textwidth]{plot-recursos-violin2.jpg}
-  \caption{Integrados}
-  \label{fig:resources}
-\end{subfigure}%
-\begin{subfigure}{.23\textwidth}
-  \centering
-  \includegraphics[width=.8\textwidth]{plot-lpa-violin2.jpg}
-  \caption{LPA}
-  \label{fig:lpa}
-\end{subfigure}% 
-\begin{subfigure}{.23\textwidth}
-  \centering
-  \includegraphics[width=.8\textwidth]{plot-rm-violin.jpg}
-  \caption{RM}
-  \label{fig:rm}
-\end{subfigure}
-\begin{subfigure}{.23\textwidth}
-  \centering
-  \includegraphics[width=.8\textwidth]{plot-nrd-violin.jpg}
-  \caption{NRD}
-  \label{fig:nrd}
-\end{subfigure}% 
-\caption{Gráficos violino individuais das más práticas que afetam recursos (LPA, RM e NRD).}
-\label{fig:all-resources}
-\end{figure*}
+% \begin{figure*}
+% \centering
+% \begin{subfigure}{.19\textwidth}
+%   \centering
+%   \includegraphics[width=1.1\textwidth]{plot-lcui-violin3.jpg}
+%   \caption{LCUI}
+%   \label{fig:lcui}
+% \end{subfigure}%
+% \begin{subfigure}{.19\textwidth}
+%   \centering
+%   \includegraphics[width=.7\textwidth]{plot-recursos-violin2.jpg}
+%   \caption{Integrados}
+%   \label{fig:resources}
+% \end{subfigure}%
+% \begin{subfigure}{.19\textwidth}
+%   \centering
+%   \includegraphics[width=.7\textwidth]{plot-lpa-violin2.jpg}
+%   \caption{LPA}
+%   \label{fig:lpa}
+% \end{subfigure}% 
+% \begin{subfigure}{.19\textwidth}
+%   \centering
+%   \includegraphics[width=.7\textwidth]{plot-rm-violin.jpg}
+%   \caption{RM}
+%   \label{fig:rm}
+% \end{subfigure}
+% \begin{subfigure}{.19\textwidth}
+%   \centering
+%   \includegraphics[width=.7\textwidth]{plot-nrd-violin.jpg}
+%   \caption{NRD}
+%   \label{fig:nrd}
+% \end{subfigure}% 
+% \caption{Gráficos violino individuais das más práticas que afetam recursos (LPA, RM e NRD).}
+% \label{fig:all-resources}
+% \end{figure*}
 
 
 
