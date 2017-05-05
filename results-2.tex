@@ -1,10 +1,10 @@
 % -*- root: article.tex -*-
-\subsection{Percepção dos Desenvolvedores}
+\section{Percepção dos Desenvolvedores}
 As Figuras \ref{fig:lcui} e \ref{fig:all-resources} apresentam gráficos de violino sobre a percepção dos desenvolvedores com relação as quatro más práticas de alta recorrência (LCUI, LPA, RM e NRD). 
 
 No eixo y, 0 (zero) indica códigos não percebidos pelos desenvolvedores como problemáticos (ou seja, responder \emph{não} à pergunta: este código apresenta algum problema de design e/ou implementação?), enquanto que valores de 1 a 5 indicam o nível de severidade para o problema percebido pelo desenvolvedor.
 
-\subsubsection{Más práticas que afetam classes Java}
+\subsection{Más práticas que afetam classes Java}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.3\textwidth]{plot-lcui-violin3.jpg}
@@ -19,7 +19,7 @@ A mediana de classes limpas tem severidade igual a 0 (Q3=0). Isso indica que, co
 % LCIU p-value e d completos/originais/sem quebrar decimal
 % Notamos que, desenvolvedores de fato percebem classes afetadas pela má prática LCUI como problemáticas (p-value 0.003045 e d 0.7222222 (large)). Bem como, classes afetadas por maus cheiros tradicionais também são percebidas como problemáticas (p-value 6.367e-06 e d -0.9130435 (large)). Porém, não podemos afirmar se, maus cheiros tradicionais são considerados mais ou menos importantes do que a má prática LCUI (p-value 0.07667 e d -0.3961353 (medium)). Ao observar as respostas abertas, a maioria dos participantes pontuou a questão de haver lógica na classe de \textit{front-end}, que é o ponto central desta má prática, como o problema. Podemos citar S2P11 que diz ``\textit{[...] Não há nenhuma arquitetura implementada, o que causa a classe fazendo muito mais do que é de sua alçada. O método onListItemClick está muito complexo, contendo 7 condições [...]}''.
 
-\subsubsection{Más práticas que afetam recursos}
+\subsection{Más práticas que afetam recursos}
 
 A Figura \ref{fig:all-resources} reúne 4 diferentes pares de gráficos violinos. O primeiro compara recusos afetados por quaisquer das 3 más práticas, LPA, RM e NRD, com recursos limpos. O segundo, terceiro e quarto, trata de cada má prática individualmente, ou seja, recursos afetadas por aquela má prática em comparação com recursos limpos. 
 

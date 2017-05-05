@@ -1,12 +1,14 @@
 % -*- root: article.tex -*-
 % \lettrine[nindent=0em,lines=3]{L}orem ipsim ult as 
-Escrever código com qualidade tem se tornado cada vez mais importante com o aumento da complexidade de tecnologias e anseio dos usuários por novas funcionalidade e atualizações \cite{Hecht2015,MobileSmells:13}. Existem diferentes técnicas que auxiliam os desenvolvedores a escreverem código com qualidade, incluindo \textit{design patterns} \cite{gof} e cheiros de código \cite{Refactoring:99}. A falta de qualidade pode resultar em defeitos de software que podem custar a empresas quantias significativas, especialmente quando conduzem a falhas de software \cite{Nagappan:2005, briand1993modeling}. Evolução e manutenção de software também já se provaram como os maiores gastos com aplicações \cite{RefactoringAndImprovements:10}.
+Escrever código com qualidade tem se tornado cada vez mais importante com o aumento da complexidade de tecnologias e anseio dos usuários por novas funcionalidade e atualizações \cite{Hecht2015,MobileSmells:13}. Existem diferentes práticas, padrões e ferramentas que auxiliam os desenvolvedores a escreverem código com qualidade, incluindo \textit{design patterns} \cite{gof} e cheiros de código \cite{Refactoring:99}. A falta de qualidade resulta em defeitos de software que custam a empresas quantias significativas, especialmente quando conduzem a falhas de software \cite{Nagappan:2005, briand1993modeling}. Evolução e manutenção de software também já se provaram como os maiores gastos com aplicações \cite{RefactoringAndImprovements:10}.
 
 Uma das formas de aumentar a qualidade de software é identificar trechos de códigos ruins e refatorá-los, ou seja, alterar o código sem alterar o comportamento \cite{Refactoring:99}. Desta forma, temos que cheiros de código são aliados importantes na busca por qualidade de código pois, representam sintomas que podem indicar problemas mais profundos no software, não necessariamente, sendo o problema em si \cite{CodeSmell:06}. Seu mapeamento possibilita a definição de heurísticas que, por sua vez, possibilitam a implementação de ferramentas que os identificam de modo automático no código. PMD \cite{PMD2016}, Checkstyle e FindBugs são exemplos de ferramentas que identificam automaticamente alguns tipos de cheiros de código em projetos Java.
 
 
 Enquanto que maus cheiros de código em projetos Java já foram extensivamente estudados \cite{Riel, Refactoring:99, Martin:2008:CCH:1388398}, ainda há muito a se pesquisar sobre cheiros de código em projetos Android.
-Umme et al. \cite{Mannan_Dig_Ahmed_Jensen_Abdullah_Almurshed} recentemente levantaram que, das principais conferências de manutenção de software (ICSE, FSE, OOPSLA/SPLASH, ASE, ICSM/ICSME, MRS e ESEM), dentre 2008 a 2015, apenas 10\% dos artigos consideraram em suas pesquisas, projetos Android. Nenhuma outra plataforma móvel foi considerada.  
+
+% Umme et al. \cite{Mannan_Dig_Ahmed_Jensen_Abdullah_Almurshed} recentemente levantaram que, das principais conferências de manutenção de software (ICSE, FSE, OOPSLA/SPLASH, ASE, ICSM/ICSME, MRS e ESEM), dentre 2008 a 2015, apenas 10\% dos artigos consideraram em suas pesquisas, projetos Android. Nenhuma outra plataforma móvel foi considerada.  
+
 No entanto, determinar o que é ou não um mau cheiro de código é subjetivo e pode variar de acordo com a tecnologia, desenvolvedor, metodologia de desenvolvimento dentre outros aspectos \cite{WikiCodeSmell}. Em particular, Aniche et al. \cite{MvcSmells:16,aniche2016satt} mostraram que a arquitetura do software é um fator importante e que deve ser levada em conta ao analisar a qualidade de um sistema.
 Outros estudos identificaram cheiros de código específicos Android relacionados ao consumo inteligente de recursos do dispositivo, como bateria e memória, usabilidade, dentre outros \cite{EnergyAndroidSmells, ReimannBrylski2013}. 
 
@@ -19,9 +21,9 @@ Nossa pesquisa complementa as anteriores no sentido de que também buscamos por 
 % E enquanto que cheiros de código em projetos Java já foram extensivamente estudados \cite{Riel, Refactoring:99, Martin:2008:CCH:1388398}, o \textit{front-end} Android ainda carece de estudo e possui peculiaridades não encontradas em código Java tradicional \cite{Mannan_Dig_Ahmed_Jensen_Abdullah_Almurshed}. Alguns exemplos dessas peculiaridas são o ciclo de vida de \textsc{Activities} e \textsc{Fragments} e a criação da interface visual que é feita através de arquivos XML chamados de \textsc{layout resources}.
  
 
-Por meio de um questionário online com perguntas sobre boas e más práticas no desenvolvimento do \textit{front-end} Android respondido por 45 desenvolvedores, derivamos 23 más práticas. Validamos a percepção dos desenvolvedores sobre essas más práticas através de um experimento com outros 16 desenvolvedores. Os resultados mostram que \mau{continuar}.
+Por meio de um questionário online com perguntas sobre boas e más práticas no desenvolvimento do \textit{front-end} Android respondido por 45 desenvolvedores, derivamos 23 más práticas. Validamos a percepção dos desenvolvedores sobre essas más práticas através de um experimento com outros 20 desenvolvedores. Os resultados mostram que de fato existem boas e más práticas específicas ao \textit{front-end} Android. Ainda que tenhamos validado com sucesso a percepção dos desenvolvedores sobre apenas duas, esperamos que este catálogo de más práticas possa contribuir com ideias iniciais para outras pesquisas sobre qualidade de codigo em projetos Android.
 
-% Esperamos que este catálogo de más práticas possa contribuir com ideias iniciais para a definição de cheiros de código e heurísticas para a detecção sistematizada das mesmas em projetos Android, além de contribuir com sugestões de como mitigá-las.
+ % para a definição de cheiros de código e heurísticas para a detecção sistematizada das mesmas em projetos Android, além de contribuir com sugestões de como mitigá-las.
 
 As contribuições deste trabalho são:
 
@@ -29,11 +31,12 @@ As contribuições deste trabalho são:
 
 	\item Catálogo com 23 más práticas e sugestões de soluções no desenvolvimento do \textit{front-end} Android, derivadas a partir dos resultados obtidos com a aplicação de um questionário online respondido por 45 desenvolvedores.
 
-	\item A percepção de desenvolvedores sobre as quatro más práticas mais recorrentes através de um questionário online com 16 desenvolvedores.
+	\item A percepção de desenvolvedores sobre as quatro más práticas de alta recorrência através de um questionário online com 20 desenvolvedores. Sendo que obtivemos um resultado positivo e estatisticamente válido sobre duas delas.
 
 	\item Apêndice online~\cite{apendice} com roteiros dos questionários e outras informações da pesquisa para que outros pesquisadores possam replicar nosso estudo.
 
 \end{enumerate}
+
 
 % \begin{enumerate}
 % 	\item Catálogo com 23 más práticas no desenvolvimento do \textit{front-end} Android, derivadas a partir dos resultados obtidos com a aplicação de um questionário online respondido por 45 desenvolvedores.
@@ -41,4 +44,4 @@ As contribuições deste trabalho são:
 % 	\item Apêndice online \footnote{Apêndice online: http://suelengc.com/android-code-smells-article} com roteiros dos quetionários e outras informações da pesquisa para que outros pesquisadores possam replicar nosso estudo.
 % \end{enumerate}
 
-% As seções seguintes deste artigo estão organizadas da seguinte forma: a Seção \ref{metodologia} aborda a metodologia de pesquisa. A Seção \ref{resultados} apresenta os resultados. A Seção \ref{discussao} discute pontos relevantes. A Seção \ref{ameacas} aborda as ameaças à validade do estudo. A Seção \ref{relacionados} discute os trabalhos relacionados e o estado da arte sobre Android e cheiros de código. E por fim, a Seção \ref{conclusao} conclui.
+As seções seguintes deste artigo estão organizadas da seguinte forma: a Seção \ref{metodologia} aborda a metodologia de pesquisa. A Seção \ref{resultados} apresenta o catálogo de más práticas a percepção de desenvovledores sobre as quatro mais recorrêntes. A Seção \ref{discussao} discute pontos relevantes. A Seção \ref{ameacas} aborda as ameaças à validade do estudo. A Seção \ref{relacionados} discute os trabalhos relacionados e o estado da arte sobre Android e cheiros de código. E por fim, a Seção \ref{conclusao} conclui.

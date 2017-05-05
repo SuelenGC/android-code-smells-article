@@ -5,10 +5,12 @@ O \emph{objetivo} deste estudo é investigar a existência de boas e más práti
 	\sloppy
 	\item[\textbf{QP1.}] \textbf{O que desenvolvedores consideram boas e más práticas no desenvolvimento Android?}
 
-	\item[\textbf{QP2.}] \textbf{Códigos afetados por estas más práticas são percebidos pelos desenvolvedores como problemáticos?}
+	% \item[\textbf{QP2.}] \textbf{Estas boas práticas podem ser usadas como soluções as más práticas identificadas?}
+
+	\item[\textbf{QP4.}] \textbf{Códigos afetados por estas más práticas são percebidos pelos desenvolvedores como problemáticos?}
 \end{itemize}
 
-Para alcançar nosso objetivo, conduzimos um estudo qualitativo e exploratório no qual coletamos dados através de um questionário e, na sequência, conduzimos um experimento online para capturar a percepção de desenvolvedores Android em relação à classes afetadas pelos maus cheiros. 
+Para alcançar nosso objetivo, conduzimos um estudo qualitativo e exploratório no qual coletamos dados através de um questionário e, na sequência, conduzimos um estudo online para capturar a percepção de desenvolvedores Android em relação à classes afetadas pelos maus cheiros. 
 
 
 Esta Seção está organizada da seguinte forma: na Seção \ref{sub:smells} abordamos o processo de descoberta das boas e más práticas Android e na Seção \ref{sub:perception} abordamos o processo de validação da percepção dos desenvolvedores sobre as boas e más práticas definidas. 
@@ -24,15 +26,15 @@ Segundo Strauss e Corbin \cite{Strauss2007}, há muitos motivos válidos para se
 
 Algumas características básicas da pesquisa qualitativa, como \textit{a)} o foco na interpretação que os participantes possuem quanto à situação investigada e \textit{b)} o fato de enfatizar a subjetividade e a flexibilidade, orientando-se para o processo e não para o resultado, justificam seu uso neste artigo \cite{Prates2015, King1994}.
 
-Para definirmos quais elementos representam o \textit{front-end} Android, fizemos umas extensa revisão da documentação oficial e chegamos nos seguintes itens: \textsc{Activities}, \textsc{Fragments}, \textsc{Listeners}, \textsc{Adapters} e os recursos do aplicativo, que são arquivos XML ou imagens utilizados na interface visual, como por exemplo \textsc{Drawables}, \textsc{Layouts}, \textsc{Styles} e \textsc{Colors}. Como existem muitos tipos de recursos do aplicativo \cite{AndroidResourcesOverview}, selecionamos quatro: \textsc{Layout}, \textsc{Styles}, \textsc{String} e \textsc{Drawable}. Optamos por esses recursos pois os mesmos estão presentes no template padrão do Android Studio \cite{FirstApp2017}, IDE oficial para desenvolvimento de projetos da plataforma Android \cite{AndroidStudio}.
+Para definirmos quais elementos representam o \textit{front-end} Android, fizemos umas extensa revisão da documentação oficial e chegamos nos seguintes itens: \textsc{Activities}, \textsc{Fragments}, \textsc{Listeners}, \textsc{Adapters} e os recursos do aplicativo, que são arquivos XML ou imagens utilizados na interface visual, como por exemplo \textsc{Drawables}, \textsc{Layouts}, \textsc{Styles} e \textsc{Colors}. Como existem muitos tipos de recursos do aplicativo \cite{AndroidResourcesOverview}, selecionamos quatro: \textsc{Layout}, \textsc{Styles}, \textsc{String} e \textsc{Drawable}. Optamos por esses recursos pois estão presentes no template padrão do Android Studio \cite{FirstApp2017}, IDE oficial para desenvolvimento de projetos da plataforma Android \cite{AndroidStudio}.
 
-O questionário foi composto por 25 questões divididas em três seções. A primeira seção foi composta por 6 perguntas demográficas, a segunda seção foi composta por 16 perguntas sobre boas e más práticas relacionadas ao \textit{front-end} Android e a terceira seção foi composta por 3 perguntas, 2 para obter últimos pensamentos sobre boas e más práticas e 1 solicitando email caso o participante tivesse interesse em etapas futuras da pesquisa. O questionário foi escrito em inglês, porém informava o participante que respostas em inglês ou português eram aceitas. Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android onde os \textit{feedbacks} nos fizeram configurar as perguntas da segunda e terceira seção como opcionais. As respostas dos participantes piloto foram desconsideradas para efeitos de viés. O questionário completo pode ser encontrado em nosso apêndice online.
+O questionário é composto por 25 questões divididas em três seções. A primeira seção é composta por 6 perguntas demográficas, a segunda seção é composta por 16 perguntas sobre boas e más práticas relacionadas ao \textit{front-end} Android e a terceira seção é composta por 3 perguntas, 2 para obter últimos pensamentos sobre boas e más práticas e 1 solicitando email caso o participante tivesse interesse em etapas futuras da pesquisa. O questionário é escrito em inglês, porém informava o participante que respostas em inglês ou português eram aceitas. Antes da divulgação, realizamos um piloto com 3 desenvolvedores Android onde os \textit{feedbacks} nos fizeram configurar as perguntas da segunda e terceira seção como opcionais. As respostas dos participantes piloto foram desconsideradas para efeitos de viés. O questionário completo pode ser encontrado em nosso apêndice online.
 
-% A primeira seção foi composta por 6 questões demográficas obrigatórias de multipla escolha. Abordavam sobre idade (18 ou menos, 19 a 24, 25 a 34 e assim por diante até 55 ou mais), estado de residência (foi dada uma lista com estados do Brasil, Estados Unidos e Europa), anos de experiência com desenvolvimento de software, (1 anos ou menos, 2 anos, 3 anos, e assim por diante até 10 ou mais), anos de experiência com desenvolvimento Android (mesma escala de anos da questão anterior), uma questão sobre linguagens que o participante se considerava proeficiente (Java, Python, Ruby, Android, dentre outras) e sobre o último grau de escolaridade (estudante de bacharelado, bacharel, mestrado e doutorado). As questões sobre idade, região, linguagens e grau de escolaridade foi composto porm a opção ``outros'' para o caso de nenhuma das opções atenderem, ao selecionar ``outros'' era possível escrever uma resposta.
+% A primeira seção é composta por 6 questões demográficas obrigatórias de multipla escolha. Abordavam sobre idade (18 ou menos, 19 a 24, 25 a 34 e assim por diante até 55 ou mais), estado de residência (é dada uma lista com estados do Brasil, Estados Unidos e Europa), anos de experiência com desenvolvimento de software, (1 anos ou menos, 2 anos, 3 anos, e assim por diante até 10 ou mais), anos de experiência com desenvolvimento Android (mesma escala de anos da questão anterior), uma questão sobre linguagens que o participante se considerava proeficiente (Java, Python, Ruby, Android, dentre outras) e sobre o último grau de escolaridade (estudante de bacharelado, bacharel, mestrado e doutorado). As questões sobre idade, região, linguagens e grau de escolaridade é composto porm a opção ``outros'' para o caso de nenhuma das opções atenderem, ao selecionar ``outros'' era possível escrever uma resposta.
 
-A primeira seção foi composta por questões cujo objetivo era traçar o perfil demográfico do participante (idade, estado de residência, experiência em desenvolvimento de software e em desenvolvimento Android).
-A segunda seção foi composta por 16 questões opcionais e dissertativas sobre boas e más práticas relacionadas ao \textit{front-end} Android. Para cada elemento do \textit{front-end} Android foram feitas duas perguntas abertas, onde a participante deveria discutir sobre boas e más práticas percebidas por ela naquele elemento. 
-A terceira seção foi composta por 3 perguntas opcionais e dissertativas, 2 para captar qualquer última ideia sobre boas e más práticas não captadas nas questões anteriores e 1 solicitando o email do participante caso o mesmo tivesse interesse em participar de etapas futuras da pesquisa. 
+A primeira seção é composta por questões cujo objetivo era traçar o perfil demográfico do participante (idade, estado de residência, experiência em desenvolvimento de software e em desenvolvimento Android).
+A segunda seção é composta por 16 questões opcionais e dissertativas sobre boas e más práticas relacionadas ao \textit{front-end} Android. Para cada elemento do \textit{front-end} Android foram feitas duas perguntas abertas, onde a participante deveria discutir sobre boas e más práticas percebidas por ela naquele elemento. 
+A terceira seção é composta por 3 perguntas opcionais e dissertativas, 2 para captar qualquer última ideia sobre boas e más práticas não captadas nas questões anteriores e 1 solicitando o email do participante caso o mesmo tivesse interesse em participar de etapas futuras da pesquisa. 
 
 % Por exemplo, para o elemento \textsc{Activity} foram feitas as seguintes perguntas: \\
 
@@ -51,7 +53,7 @@ O questionário esteve aberto por aproximadamente 3 meses e meio, de 9 de Outubr
 Ao final, o questionário foi respondido por 45 desenvolvedores. 
 
 Para análise dos dados seguimos a abordagem de \textit{Ground Theory} (GT), um método de pesquisa exploratória originada nas ciências sociais \cite{Strauss2007, GlaserStrauss1999}, mas cada vez mais popular em pesquisas de engenharia de software \cite{Adolph2011}. A GT é uma abordagem indutiva, pelo qual dados provindos, por exemplo de, entrevistas ou questionários, são analisadas para derivar uma teoria. O objetivo é descobrir novas perspectivas mais do que confirmar alguma já existente.
-Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 categorias de boas e más práticas Android. Estas categorias foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas que determinada categoria é percebidas, quanto mais respostas, maior a recorrência.
+Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 categorias de boas e más práticas Android. Essas categorias foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas que determinada categoria é percebidas, quanto mais respostas, maior a recorrência.
 Explicamos o processo de análise com mais detalhes na Seção~\ref{sub:smells-definition}.
 
 
@@ -129,13 +131,13 @@ Com a análise das questões demográficas, notamos que atingimos com sucesso \t
 \centering
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=.95\linewidth]{s1.jpeg}
+ \includegraphics[width=.95\linewidth]{s1-3.jpeg}
  \caption{\textit{S1}}
  \label{fig:ExpDevsS1}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
  \centering
- \includegraphics[width=.95\linewidth]{s2.jpeg}
+ \includegraphics[width=.95\linewidth]{s2-3.jpeg}
  \caption{\textit{S2}}
  \label{fig:ExpDevsS2}
 \end{subfigure}
@@ -177,23 +179,21 @@ O passo seguinte foi realizar a \textit{limpeza dos dados}. Esse passo consistiu
 
 Em seguida, realizamos a \textit{codificação} sobre as boas e más práticas \cite{Strauss2007,Saldana2013}. Codificação é o processo pelo qual são extraídos categorias de um conjunto de afirmações através da abstração de ideias centrais e relacões entre as afirmações \cite{Strauss2007}. Durante esse processo, cada resposta recebeu uma ou mais categorias. Também durante esse processo, houveram 30 respostas que não eram triviais de identificar uma categoria ou mesmo de dizer se essas respostas deveriam ser consideradas. Essas respostas foram marcadas como \textit{"talvez"} e reavaliadas ao final. Para toda resposta desconsiderada nesse passo, foi indicado um motivo que pode ser conferido nos arquivos em nosso apêndice online.
 
-Por último realizamos o passo de \textit{divisão}. Esse passo consistiu em dividir as respostas que receberam mais de uma categoria em duas ou mais respostas, de acordo com o número de categorias identificadas, de forma a resultar em uma categoria por resposta. Por exemplo, a resposta \textit{"Não fazer Activities serem callbacks de execuções assíncronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira oração uma categoria e na segunda oração, outra categoria. Ao dividí-la, mantivemos apenas o trecho da resposta relativo a categoria, como se fossem duas respostas distintas e válidas. Em algumas divisões realizadas, a resposta completa era necessária para entender ambas as categorizações, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de forma diferente. 
+Por último realizamos o passo de \textit{divisão}. Esse passo consistiu em dividir as respostas que receberam mais de uma categoria em duas ou mais respostas, de acordo com o número de categorias identificadas, de modo a resultar em uma categoria por resposta. Por exemplo, a resposta \textit{"Não fazer Activities serem callbacks de execuções assíncronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira oração uma categoria e na segunda oração, outra categoria. Ao dividí-la, mantivemos apenas o trecho da resposta relativo à categoria, como se fossem duas respostas distintas e válidas. Em algumas divisões realizadas, a resposta completa era necessária para entender ambas as categorizações, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de modo diferente. 
 
 Ao final da análise constavam 389 respostas individualmente categorizadas sobre boas e más práticas no \textit{front-end} Android.
-
-
 
 
 \subsection{QP2: Percepção dos Desenvolvedores}
 \label{sub:perception}
 
-Para responder a \textbf{QP2}, buscamos entender a percepção dos desenvolvedores sobre as quatro boas e más práticas classificadas com alta recorrência. Estes dados foram coletados através de um experimento online (\textit{S2}) respondido por 20 desenvolvedores Android. Nossas análises demonstram que de fato, códigos afetados pelas más práticas, são percebidos pelos desenvolvedores como códigos problemáticos.
+Para responder a \textbf{QP2}, buscamos entender a percepção dos desenvolvedores sobre as quatro boas e más práticas classificadas com alta recorrência. As opiniões foram coletadas através de um estudo online (\textit{S2}) respondido por 20 desenvolvedores Android. Nossas análises demonstram que de fato, códigos afetados pelas más práticas são percebidos pelos desenvolvedores como códigos problemáticos.
 
 % \subsubsection{Questionário}
 % \label{sub:perception-survey}
 
 
-O experimento foi composto por duas seções principais. A primeira objetivou coletar informações básicas sobre os antecedentes dos participantes e, em particular, sobre sua experiência. Na segunda seção, os participantes foram solicitados a examinar seis códigos-fonte Android e, para cada uma deles, responder às seguintes perguntas:
+O experimento foi composto por duas seções principais. A primeira objetivou coletar informações básicas sobre os antecedentes dos participantes e, em particular, sobre sua experiência. Na segunda seção, os participantes foram solicitados a examinar seis códigos-fonte Android e, para cada uma deles, responder as seguintes perguntas:
 
 \begin{itemize}
 	\item[Q1.] Na sua opinião, este código apresenta algum problema de design e/ou implementação? (Sim/Não) 
@@ -207,11 +207,11 @@ O experimento foi composto por duas seções principais. A primeira objetivou co
 	\item[Q5.] Se SIM, como você faria esta refatoração? (Resposta aberta)
 \end{itemize}
 
-Os seis códigos apresentadas foram selecionadas aleatoriamente para cada participante de um conjunto de 58 códigos, contendo 24 códigos afetadas por uma das quatro más práticas Android de alta recorrência (seis para cada má prática), 10 códigos afetadas por cheiros de códigos tradicionais e 24 códigos limpos. Para reduzir viés, selecionamos apenas códigos relacionados ao \textit{front-end} Android definido no contexto deste artigo, ou seja: \textsc{Activities}, \textsc{Fragments}, \textsc{Adapters}, \textsc{Listeners}, \textsc{Styles}, \textsc{Strings}, \textsc{Drawables} e \textsc{Layouts}. Cada participante avaliou dois códigos selecionados aleatoriamente de cada um desses três grupos, totalizando 6 códigos avaliados por participante. Os 58 códigos foram aleatoriamente coletados de projetos Android de código aberto no GitHub.
+Os seis códigos apresentadas foram selecionadas aleatoriamente para cada participante de um conjunto de 58 códigos, contendo 24 códigos afetadas por uma das quatro más práticas Android de alta recorrência (seis para cada má prática), 10 códigos afetadas por cheiros de códigos tradicionais e 24 códigos limpos. Para possibilitar que os códigos fossem apresentados dessa forma, desenvolvemos um software específico. Para reduzir viés, selecionamos apenas códigos relacionados ao \textit{front-end} Android definido no contexto deste artigo, ou seja: \textsc{Activities}, \textsc{Fragments}, \textsc{Adapters}, \textsc{Listeners}, \textsc{Styles}, \textsc{Strings}, \textsc{Drawables} e \textsc{Layouts}. Cada participante avaliou dois códigos selecionados aleatoriamente de cada um desses três grupos, totalizando 6 códigos avaliados por participante. Os 58 códigos foram aleatoriamente coletados de projetos Android de código aberto no GitHub.
 
 Para também reduzir viés de aprendizado, cada participante recebeu os seis códigos selecionados aleatoriamente em uma ordem aleatória. Além disso, os participantes não estavam cientes de quais classes pertenciam a qual grupo (más práticas Android, cheiros de código tradicionais e limpo). Apenas foi dito que estávamos estudando qualidade de código em aplicações Android. Nenhum limite de tempo foi imposto para que eles concluíssem a tarefa.
 
-No teste piloto realizado com 2 desenvolvedores não foram identificados ponto a otimizar, essas respostas foram desconsideradas para reduzir viés. O questionário do experimento este disponível por 8 dias, de 27 de Abril a 4 de Maio de 2017. Sua divulgação foi feita em duas etapas, na primeira, foi enviada ao grupo do Slack Android Dev Br, uma chamada a desenvolvedores com mais de 3 anos e experiência em Android, desta forma, desenvolvedores que tinham interesse de responder o questionário e, atendiam ao requisito de experiência, entravam em contato e enviávamos um email convite. Na segunda etapa, abrimos o questionário para participação de qualquer desenvolvedor Android. A divulgação nesta etapa, foi a mesma utilizada na divulgação em \textit{S1}. 
+No teste piloto realizado com 2 desenvolvedores não foram identificados ponto a otimizar, essas respostas foram desconsideradas para reduzir viés. O questionário do experimento esteve disponível por 8 dias, de 27 de Abril a 4 de Maio de 2017. Sua divulgação foi feita em duas etapas, na primeira, foi enviada ao grupo do Slack Android Dev Br, uma chamada a desenvolvedores com mais de 3 anos e experiência em Android, desta forma, desenvolvedores que tinham interesse de responder o questionário e, atendiam ao requisito de experiência, entravam em contato e enviávamos um email convite. Na segunda etapa, abrimos o questionário para participação de qualquer desenvolvedor Android. A divulgação nesta etapa, foi a mesma utilizada na divulgação em \textit{S1}. 
 
 % \begin{figure*}[!t]
 % \centering
