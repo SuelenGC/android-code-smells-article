@@ -1,5 +1,7 @@
 % -*- root: article.tex -*-
-Durante o processo de codificação emergiram 52 boas e más práticas. Classificamos essas práticas de acordo com sua recorrência: alta (acima de 20 respostas), média (de 8 a 20 respostas), baixa (de 3 a 7 respostas) ou baixíssima (menos de 3 respostas). 
+Durante o processo de codificação emergiram 23 boas e más práticas. Classificamos essas práticas de acordo com sua recorrência: alta (acima de 20 respostas), média (de 8 a 20 respostas) e baixa (de 3 a 7 respostas). Obtivemos 4 de alta recorrência, 14 de média e 5 de baixa. Por limitações de espaço, neste artigo só apresentamos as de alta e média recorrência porém o catálogo completo pode ser consultado em nosso apêndice online.
+
+% ou baixíssima (menos de 3 respostas). 
 % Na Figura \ref{fig:CategoriaXRecorrencia} é possível observar a distribuição das práticas de acordo com sua recorrência. 
 
 % \begin{figure}[!htb]
@@ -9,9 +11,11 @@ Durante o processo de codificação emergiram 52 boas e más práticas. Classifi
 % 	\label{fig:CategoriaXRecorrencia}
 % \end{figure}
 
-A Tabela \ref{tab:Categories} apresenta o total de ocorrências de cada prática (\textit{S1}). A última linha da tabela, \#Categorias, apresenta quantas categorias emergiram de cada questão, como cada questão está diretamente ligada a um elemento do \textit{front-end} Android, podemos interpretá-la da seguinte forma: \emph{quais são os pontos de atenção a serem analisados em determinado elemento Android?} A última coluna da tabela, \#Q, apresenta em quantas questões cada categoria surgiu, podemos interpretá-la da seguinte forma: \emph{com base na categoria, quais elementos devem ser investigados?} Duas práticas, Classe Deus/Longa \cite{Riel, RefactoringFowler1999} e Herança \cite{WikipediaInhiritance}, são conceitos pré-existentes e portanto não são tratados neste artigo. 
+A Tabela \ref{tab:Categories} apresenta o total de ocorrências de cada prática (\textit{S1}). A última linha da tabela, \textbf{\#Categorias}, apresenta quantas categorias emergiram de cada questão, como cada questão está diretamente ligada a um elemento do \textit{front-end} Android, podemos interpretá-la da seguinte forma: \emph{quais são os pontos de atenção a serem analisados em determinado elemento Android?} A última coluna da tabela, \textbf{\#Q}, apresenta em quantas questões cada categoria surgiu, podemos interpretá-la da seguinte forma: \emph{com base na categoria, quais elementos devem ser investigados?}. 
 
+% O cheiro de código \emph{Classe Deus/Longa} \cite{Riel, RefactoringFowler1999} são conceitos pré-existentes e portanto não são tratados neste artigo. 
 
+% e Herança \cite{WikipediaInhiritance}
 % Quando se criam categorizações para auxiliar desenvolvedores a identificar pontos de atenção a serem avaliados e onde este pontos devem ser investigados especificamente no código, pensando em qualidade de código dá-se o nome de \textit{smells}. Portanto, nesta seção iremos compilar este conjunto de Android \textit{code smells} que identificamos através das categorizações.
 
 
@@ -29,13 +33,13 @@ A Tabela \ref{tab:Categories} apresenta o total de ocorrências de cada prática
 \textsc{Layout Profundamente Aninhado}		& \multicolumn{1}{c}{21} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{1}		& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{9}		& \multicolumn{1}{c}{9}		& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{1}		& \multicolumn{1}{c}{5} \\
 
 \vspace{1sp} \\
-\multicolumn{2}{l}{\scriptsize{\textbf{MÉDIA RECORRÊNCIA (15)}}} \\ 
+\multicolumn{2}{l}{\scriptsize{\textbf{MÉDIA RECORRÊNCIA (14)}}} \\ 
 \textsc{Classes de UI Acopladas}           	& \multicolumn{1}{c}{18} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{4}	 	& \multicolumn{1}{c}{6} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{3} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{6} \\
 \textsc{Comportamento Suspeito}            	& \multicolumn{1}{c}{18} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{7} 	& \multicolumn{1}{c}{3} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{4} \\
 \textsc{Mau Uso do Ciclo de Vida}          	& \multicolumn{1}{c}{15} 	& \multicolumn{1}{c}{4} 	& \multicolumn{1}{c}{3} 	& \multicolumn{1}{c}{3}	 	& \multicolumn{1}{c}{5} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{5} \\
 \textsc{Layout Longo ou Repetido}          	& \multicolumn{1}{c}{15} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{12} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{3} \\
 \textsc{Não Uso de Padrão View Holder}     	& \multicolumn{1}{c}{13} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{11} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{2} \\
-\textsc{Classe Deus/Longa*}                	& \multicolumn{1}{c}{13} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{4} 	& \multicolumn{1}{c}{2}	 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{6} \\
+% \textsc{Classe Deus/Longa*}                	& \multicolumn{1}{c}{13} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{4} 	& \multicolumn{1}{c}{2}	 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{6} \\
 \textsc{Não Uso de Arquiteturas Conhecidas}	& \multicolumn{1}{c}{13} 	& \multicolumn{1}{c}{4} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{2}	 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{6} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{4} \\
 \textsc{Tamanho Único de Imagem}           	& \multicolumn{1}{c}{12} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{4}		& \multicolumn{1}{c}{6} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{7} \\
 \textsc{Uso Excessivo de Fragment}         	& \multicolumn{1}{c}{11} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{8}	 	& \multicolumn{1}{c}{3} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--}	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{--} 	& \multicolumn{1}{c}{4} \\
@@ -66,7 +70,7 @@ A Tabela \ref{tab:Categories} apresenta o total de ocorrências de cada prática
 \multicolumn{2}{r}{\textbf{\#Categorias}} & \multicolumn{1}{c}{8} 	& \multicolumn{1}{c}{7} 	& \multicolumn{1}{c}{8} 	& \multicolumn{1}{c}{6} 	& \multicolumn{1}{c}{4} 	& \multicolumn{1}{c}{6} 	& \multicolumn{1}{c}{2} 	& \multicolumn{1}{c}{4} 	& \multicolumn{1}{c}{6} 	& \multicolumn{1}{c}{6} 	& \multicolumn{1}{c}{4} 	& \multicolumn{1}{c}{5} 	& \multicolumn{1}{c}{3} 	& \multicolumn{1}{c}{3} 	& \multicolumn{1}{c}{3} 	& \multicolumn{1}{c}{1} 	& \multicolumn{1}{c}{5} 	& \multicolumn{1}{c}{2} \\
 \hline
 
-\multicolumn{20}{@{}l}{* Classe Deus \cite{Riel} e Classe Longa \cite{RefactoringFowler1999} são cheiros de código tradicionais previamente definidos na literatura.} \\
+% \multicolumn{20}{@{}l}{* Classe Deus \cite{Riel} e Classe Longa \cite{RefactoringFowler1999} são cheiros de código tradicionais previamente definidos na literatura.} \\
 % \multicolumn{20}{@{}l}{** Herança é um conceito da Programação Orientada a Objetos \cite{WikipediaInhiritance}.} \\
 \multicolumn{20}{@{}l}{Coluna \textbf{\#T}: recorrência geral da prática.} \\
 \multicolumn{20}{@{}l}{Coluna \textbf{\#R}: total de respostas distintas por prática.} \\
@@ -74,12 +78,14 @@ A Tabela \ref{tab:Categories} apresenta o total de ocorrências de cada prática
 \multicolumn{20}{@{}l}{Linha \textbf{\#Categorias}: total de categorias distinstas de cada questão.} \\
 \toprule
 \end{tabular}
-\caption{Lista de práticas de alta, média e baixa recorrência.}
+\caption{Lista de práticas de alta e média recorrência.}
 \label{tab:Categories}
 \vspace{-.5cm} 
 \end{table*}
 
-Esta seção está organizada em 4 subseções onde, nas três primeiras, definimos as práticas de alta, média e baixa recorrência, \emph{totalizando 23 más práticas}. Na última subseção apresentamos os resultados obtidos no estudo sobre a percepção de desenvolvedores com relação às más práticas de alta recorrência. As práticas de baixíssima recorrência são brevemente discutidas na Seção \ref{discussao}.
+Esta seção está organizada em três subseções onde, nas duas primeiras, definimos as práticas de alta e média recorrência, \emph{totalizando 19 más práticas}. Na última subseção apresentamos os resultados obtidos no estudo sobre a percepção de desenvolvedores com relação às más práticas de alta recorrência. 
+
+% As práticas de baixíssima recorrência são brevemente discutidas na Seção \ref{discussao}.
 
 % ----------------------- ALTA RECORRÊNCIA -----------------------
 \subsection{Más Práticas de Alta Recorrência}
