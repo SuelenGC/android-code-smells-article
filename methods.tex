@@ -46,7 +46,7 @@ A primeira seção é composta por questões cujo objetivo foi traçar o perfil 
 
 O questionário foi divulgado em redes sociais como Facebook, Twitter e Linkedin, em grupos de discussão sobre Android como \href{https://groups.google.com/forum/#!forum/androidbrasil-dev}{\textit{Android Dev Brasil}}, \href{https://groups.google.com/forum/\#!forum/android-brasil--projetos}{\textit{Android Brasil Projetos}} e o grupo do \href{http://slack.androiddevbr.org/}{\textit{Slack Android Dev Br}}, maior grupo de desenvolvedores Android do Brasil com 2622 participantes até o momento da escrita deste artigo. O questionário esteve aberto por aproximadamente 3 meses e meio, de 9 de Outubro de 2016 até 18 de Janeiro de 2017. Ao final, o questionário foi respondido por 45 desenvolvedores. 
 
-Para análise dos dados seguimos a abordagem de \textit{Ground Theory} (GT), um método de pesquisa exploratória originada nas ciências sociais \cite{Strauss2007, GlaserStrauss1999}, mas cada vez mais popular em pesquisas de engenharia de software \cite{Adolph2011}. A GT é uma abordagem indutiva, pelo qual dados provindos, por exemplo de, entrevistas ou questionários, são analisadas para derivar uma teoria. O objetivo é descobrir novas perspectivas mais do que confirmar alguma já existente. Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 más práticas Android. Essas más práticas foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas em que cada má prática é percebida, ou seja, quanto mais respostas, maior a recorrência. Explicamos o processo de análise com mais detalhes na Seção~\ref{sub:smells-definition}.
+Para análise dos dados seguimos a abordagem de \textit{Ground Theory} (GT), um método de pesquisa exploratória originada nas ciências sociais \cite{Strauss2007, GlaserStrauss1999}, mas cada vez mais popular em pesquisas de engenharia de software \cite{Adolph2011}. A GT é uma abordagem indutiva, pelo qual dados provindos, por exemplo de, entrevistas ou questionários, são analisadas para derivar uma teoria. O objetivo é descobrir novas perspectivas mais do que confirmar alguma já existente. Realizamos um processo de codificação aberta sobre os dados, resultando num conjunto com 23 más práticas Android. Essas más práticas foram agrupadas de acordo com sua recorrência nas respostas, ou seja, a quantidade de respostas em que cada má prática é percebida. Explicamos o processo de análise com mais detalhes na Seção~\ref{sub:smells-definition}.
 
 % Todas as 18 questões sobre boas e más práticas (16 na segunda seção e 2 da terceira) são apresentadas na Tabela \ref{tab:RespostasXParticipantes}.
 
@@ -172,13 +172,13 @@ Em seguida, realizamos a \textit{codificação} sobre as boas e más práticas \
 
 Por último realizamos o passo de \textit{divisão}. Esse passo consistiu em dividir as respostas que receberam mais de uma categoria em duas ou mais respostas, de acordo com o número de categorias identificadas, de modo a resultar em uma categoria por resposta. Por exemplo, a resposta \textit{"Não fazer Activities serem callbacks de execuções assíncronas. Herdar sempre das classes fornecidas pelas bibliotecas de suporte, nunca diretamente da plataforma"} indica na primeira oração uma categoria e na segunda oração, outra categoria. Ao dividí-la, mantivemos apenas o trecho da resposta relativo à categoria, como se fossem duas respostas distintas e válidas. Em algumas divisões realizadas, a resposta completa era necessária para entender ambas as categorizações, nesses casos, mantivemos a resposta original, mesmo que duplicada, e categorizamos cada uma de modo diferente. 
 
-Ao final da análise constavam 389 respostas individualmente categorizadas sobre boas e más práticas. A partir desses dados derivamos 23 más práticas no \textit{front-end} Android.
+Ao final da análise constavam 389 respostas individualmente categorizadas sobre boas e más práticas. A partir dessas respostas derivamos 23 más práticas no \textit{front-end} Android agrupadas por recorrência: alta (acima de 20 respostas), média (de 8 a 20 respostas) e baixa (de 3 a 7 respostas).
 
 
 \subsection{QP2: Percepção dos Desenvolvedores}
 \label{sub:perception}
 
-Para responder a \textbf{QP2}, buscamos entender a percepção dos desenvolvedores sobre as más práticas derivadas. Como primeiro passo, focamos em quatro más práticas, as que apresentaram maior recorrência nas respostas. As opiniões foram coletadas através de um estudo online (\textit{S2}) respondido por 20 desenvolvedores Android. Nossas análises demonstram que de fato, códigos afetados pelas más práticas são percebidos pelos desenvolvedores como códigos problemáticos.
+Para responder a \textbf{QP2}, buscamos entender a percepção dos desenvolvedores sobre as más práticas derivadas. Como primeiro passo, focamos nas más práticas que apresentaram alta recorrência. As opiniões foram coletadas através de um estudo online (\textit{S2}) respondido por 20 desenvolvedores Android. Nossas análises demonstram que de fato, códigos afetados pelas más práticas são percebidos pelos desenvolvedores como códigos problemáticos.
 
 % \subsubsection{Questionário}
 % \label{sub:perception-survey}
@@ -224,9 +224,7 @@ No teste piloto realizado com 2 desenvolvedores não foram identificados ponto a
 
 \subsubsection{Participantes}
 \label{sub:perception-participants}
-Todos os participantes exceto 1, são atualmente desenvolvedores Android profissionais, ou seja, atuam profissionalmente com a plataforma Android. 70\% responderam com seu email para receber resultados da pesquisa, tal como em \textit{S1}, pode ser um indicativo de interesse legítimo da comunidade sobre esta temática. Questionamos da experiência com desenvolvimento de sofware, bem como com desenvolvimento Android, notamos que 55\% relataram ter mais de 5 aplicativos publicados e 47\% tinham mais de 4 anos de experiência com Android. 
-
-% A experiência dos desenvolvedores pode ser visualizada na Figura \ref{fig:ExpDevsS2}. 
+Todos os participantes exceto 1, são atualmente desenvolvedores Android profissionais, ou seja, atuam profissionalmente com a plataforma Android. 70\% responderam com seu email para receber resultados da pesquisa, tal como em \textit{S1}, pode ser um indicativo de interesse legítimo da comunidade sobre esta temática. Questionamos da experiência com desenvolvimento de software, bem como com desenvolvimento Android, notamos que 55\% relataram ter mais de 5 aplicativos publicados e 47\% tinham mais de 4 anos de experiência com Android. A experiência dos desenvolvedores pode ser visualizada na Figura \ref{fig:ExpDevsS2}. 
 
 \subsubsection{Análise dos Dados}
 \label{sub:perception-participants-analysis}
